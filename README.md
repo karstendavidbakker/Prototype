@@ -16,7 +16,6 @@ Lalalalala wwee woo
 =======
 Did you read this?
 
-8=======D -----
 
 Sure bro
 <<<<<<< HEAD
