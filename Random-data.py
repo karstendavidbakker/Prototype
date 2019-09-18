@@ -5,7 +5,6 @@ from dcd.entities.property import PropertyType
 from dotenv import load_dotenv
 import os
 
-
 def generate_dum_property_values(the_property):
     values = (random(), random(), random())
     the_property.update_values(values)
@@ -22,7 +21,6 @@ print(my_thing.to_json())
 my_property = my_thing.find_or_create_property("My Random Property", PropertyType.THREE_DIMENSIONS)
 print(my_property.to_json())
 
-
 while True:
     generate_dum_property_values(my_property)
-    time.sleep*=(2)
+    time.sleep(2)
