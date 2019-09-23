@@ -19,6 +19,7 @@ BLUETOOTH_DEVICE_MAC = os.environ['BLUETOOTH_DEVICE_MAC']
 
 # UUID of the GATT characteristic to subscribe
 GATT_CHARACTERISTIC_ORIENTATION = "02118833-4455-6677-8899-AABBCCDDEEFF"
+GATT_CHARACTERISTIC_BUTTON = "02118833-4455-6677-8899-AABBCCDDEEFE"
 
 # Many devices, e.g. Fitbit, use random addressing, this is required to connect.
 ADDRESS_TYPE = pygatt.BLEAddressType.random
@@ -42,6 +43,8 @@ def handle_orientation_data(handle, value_bytes):
     values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
     find_or_create("Left Wheel Orientation 2",
                    PropertyType.FOUR_DIMENSIONS).update_values(values)
+
+#handle_button_data(...)
 
 def discover_characteristic(device):
     """List characteristics of a device"""
