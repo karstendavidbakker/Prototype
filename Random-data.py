@@ -8,6 +8,7 @@ import os
 def generate_dum_property_values(the_property):
     values = (random(), random(), random())
     the_property.update_values(values)
+    print(values)
 
 load_dotenv()
 THING_ID = os.environ['THING_ID']
