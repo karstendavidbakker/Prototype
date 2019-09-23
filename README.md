@@ -63,6 +63,17 @@ Arduino
 
 RB
 
+Lecture 2:
+Added
+
+
+Acceloratmeter - IMU: (frequenty meter, gyroscope) To clasify terrain and obstacles. Frequenty of terain, height of obstacles
+     
+GPS (Mobile Phone): Location & elavation tracking in coordinates
+
+Capacity sensor: (Presure sensor): Duration a frequenty of handle contact
+
+
 
 
 *   bluetooth
@@ -92,11 +103,11 @@ Interface				-->UX company
 
 ##Steps
 
-1. [x] button running on Arduino
-2. [ ] Serial data to webserver on pc
-3. [ ] Serial data to Rpi
-4. [ ] Accelerometer running on Arduino
-5. [ ] Serial data to webserver on pc
-6. [ ] Serial data to Rpi
-7. [ ] Rpi to bluetooth
-8. [ ] Phone to Cloud
+1. button running on Arduino
+2. Serial data to webserver on pc
+3. Serial data to Rpi
+4. Accelerometer running on Arduino
+5. Serial data to webserver on pc
+6. Serial data to Rpi
+7. Rpi to bluetooth
+8. Phone to Cloud
