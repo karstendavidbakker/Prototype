@@ -68,7 +68,7 @@ Added
 
 
 Acceloratmeter - IMU: (frequenty meter, gyroscope) To clasify terrain and obstacles. Frequenty of terain, height of obstacles
-     
+
 GPS (Mobile Phone): Location & elavation tracking in coordinates
 
 Capacity sensor: (Presure sensor): Duration a frequenty of handle contact
@@ -95,7 +95,14 @@ Interface				-->UX company
 *   Tilt sensor: potentio meter?
 *   Force? - push resistance?
 
+# login raspberry:
 # ssh pi@goodthing.local
+
+# cd (change to folder)
+# ls (list)
+# cd .. (folder above)
+# python3 [filename] //to run file
+# control z //to stop script
 
 # to do:
 - make a architecture
