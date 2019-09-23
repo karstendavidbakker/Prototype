@@ -85,3 +85,18 @@ Interface				-->UX company
 *   Force? - push resistance?
 
 # ssh pi@goodthing.local
+
+# to do:
+- make a architecture
+- reserve a slot?
+
+##Steps
+
+1. button running on Arduino
+2. Serial data to webserver on pc
+3. Serial data to Rpi
+4. Accelerometer running on Arduino
+5. Serial data to webserver on pc
+6. Serial data to Rpi
+7. Rpi to bluetooth
+8. Phone to Cloud
