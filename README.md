@@ -111,6 +111,10 @@ Interface				-->UX company
 ##Steps
 
 1. button running on Arduino
+troubleshoot usb serial port error
+comment all lines in the used code
+get the random-data.py script to send data to the dcd Hub
+get the serial-data.py script to send data to the dcd hub.
 2. Serial data to webserver on pc
 3. Serial data to Rpi
 4. Accelerometer running on Arduino
