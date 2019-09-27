@@ -7,10 +7,10 @@ import os
 load_dotenv()
 
 # Start reading the serial port
-ser = serial.Serial(
-    port = os.environ['SERIAL'],
-    baudrate = 9600,
-    timeout = 2)
+try:
+  ser = serial.Serial('/dev/ttyACM0',9600, timeout=2)
+except :
+  ser = serial.Serial('/dev/ttyACM1',9600, timeout=2)
 
 # Read the next line from the serial port
 # and update the property values
@@ -21,10 +21,11 @@ def serial_to_property_values():
     if len(line_bytes) > 0:
         # Convert the bytes into string
         line = line_bytes.decode('utf-8')
-        # Split the string using commas as separator, we get a list of strings
+        # Split the string using commas as separatoqr, we get a list of strings
         values = line.split(',')
         print(values)
 
 
 while True:
     serial_to_property_values()
+    time.sleep(2)
