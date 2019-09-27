@@ -1,1 +1,30 @@
-To begin, a button feature was assembled on the Arduino Mega. 
+Week 1:
+
+To begin, a button feature was assembled on the Arduino Mega.
+
+-Connected to DCD driver
+
+
+Week 2:
+
+
+Succesfully connected to the bluetooth feather
+Received output on DCD driver
+
+
+Goal:
+Adjusted Arduino code to have button communicating with the server
+
+- Added button characteristics (Arduino)
+- reading value button by added line (Arduino)
+- Changed button line for: AT+GATTADDCHAR=
+
+- Ran "9999" as a test
+
+- Failed to  ble.print( buttonCharId );
+
+- Failed: Did not deliver end of string
+
+- Adjusted MIN_LEN=1,MAX_LEN=30 to deliver required amount of variables
+
+-
