@@ -24,10 +24,6 @@ def serial_to_property_values():
         values = line.split(',')
         print(values)
 
-        # Otherwise, we show a warning
-        else:
-            print('Warning: unknown property ' + property_name)
-
 
 while True:
     serial_to_property_values()
