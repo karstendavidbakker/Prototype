@@ -1,3 +1,4 @@
+import time
 import serial
 
 from dotenv import load_dotenv
