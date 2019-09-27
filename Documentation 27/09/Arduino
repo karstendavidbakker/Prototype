@@ -1,1 +1,7 @@
-To begin, a button feature was assembled on the Arduino Mega. 
+To begin, a button feature was assembled on the Arduino Mega in order to capture when the user experienced difficulty with a particular hazard.
+The Arduino was programmed to relay to the serial monitor "1'' when the button is pressed, refreshing each second.
+A digital momentary push button was used in this case.
+A debounce feature was used to ensure more predictable behavior.
+Whilst the Arduino captures information and labels the terrain, pressing the button will transmit and log the past ten seconds of terrain info to the user's phone.
+
+Next, the Arduino was removed from the serial connection on the PC and connected to the USB port of the Pi.
