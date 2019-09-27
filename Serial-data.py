@@ -22,11 +22,6 @@ ser = serial.Serial(
     baudrate = 9600,
     timeout = 2)
 
-def generate_dum_property_values(the_property):
-    values = (random(), random(), random())
-    the_property.update_values(values)
-    print(values)
-
 # Read the next line from the serial port
 # and update the property values
 def serial_to_property_values():
@@ -38,18 +33,17 @@ def serial_to_property_values():
         line = line_bytes.decode('utf-8')
         # Split the string using commas as separator, we get a list of strings
         values = line.split(',')
+        print(values)
         # Use the first element of the list as property id
         property_name = values.pop(0)
         # Get the property from the thing
-        prop = my_thing.find_or_create_property(property_name, PropertyType.TEN_DIMENSIONS)
+        prop = my_thing.find_or_create_property(property_name, PropertyType.ONE_DIMENSIONS)
         # If we find the property, we update the values (rest of the list)
         if prop is not None:
             prop.update_values([float(x) for x in values])
         # Otherwise, we show a warning
         else:
             print('Warning: unknown property ' + property_name)
-
-
 
 
 
