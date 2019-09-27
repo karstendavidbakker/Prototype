@@ -28,4 +28,3 @@ def serial_to_property_values():
 
 while True:
     serial_to_property_values()
-    time.sleep(2)
