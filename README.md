@@ -108,6 +108,9 @@ Interface				-->UX company
 - make a architecture
 - reserve a slot?
 
+Name of bottem right serial port raspberry;
+/dev/ttyACM0
+
 ##Steps
 
 1. button running on Arduino
