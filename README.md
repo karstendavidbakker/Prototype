@@ -73,7 +73,8 @@ GPS (Mobile Phone): Location & elavation tracking in coordinates
 
 Capacity sensor: (Presure sensor): Duration a frequenty of handle contact
 
-
+#find serial port command
+ls /dev/tty*
 
 
 *   bluetooth
@@ -113,15 +114,35 @@ Name of bottem right serial port raspberry;
 
 ##Steps
 
-1. button running on Arduino
-troubleshoot usb serial port error
-comment all lines in the used code
-get the random-data.py script to send data to the dcd Hub
-get the serial-data.py script to send data to the dcd hub.
-2. Serial data to webserver on pc
-3. Serial data to Rpi
-4. Accelerometer running on Arduino
-5. Serial data to webserver on pc
-6. Serial data to Rpi
-7. Rpi to bluetooth
-8. Phone to Cloud
+1.[x] button running on Arduino
+[]troubleshoot usb serial port error
+[ ]
+[ ] comment all lines in the used code
+[ ] get the random-data.py script to send data to the dcd Hub
+[ ] get the serial-data.py script to send data to the dcd hub.
+2.[ ] Serial data to webserver on pc
+3.[ ] Serial data to Rpi            
+4.[ ] Accelerometer running on Arduino
+5.[ ] Serial data to webserver on pc
+6.[ ] Serial data to Rpi
+7.[ ] Rpi to bluetooth
+8.[ ] Phone to Cloud
+
+# Is there a cloud connection on the app
+
+# raspberry eduroam connection
+
+# writing line of code on bluetooth
+
+# Steps OK?
+
+# comment
+# take a slice of time and link that to a frequency. Look at amounts of zero crossing. How much is your max and your min in relation to 1 Sec.
+
+# webserver running on raspberry pi - D3 libaries to chose from, able to adapt to what to do.
+
+# jupiter notebook to do static analysis
+
+# next week: intensively collect data.
+
+# Use hub: combinate the data
