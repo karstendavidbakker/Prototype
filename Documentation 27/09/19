@@ -32,3 +32,23 @@ Adjusted Arduino code to have button communicating with the server
 - re-enaled: Subscribing the GATT service which was controversial?!
 
 - Python: added: handle_button_data(handle, value_bytes)
+
+
+
+
+Got feather to work:
+- Edit output.
+
+Wanted to do button to server
+
+Changed:
+App to server
+raspberry pi to server
+
+Edit data on the server.
+
+Today: Accelorameter on frame.
+
+Test: Different characteristics of terrain.
+If > ...
+Measure Zero and peak values without server
