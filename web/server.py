@@ -1,5 +1,5 @@
 #import flask
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 #name site(created by flask) app
 app = Flask(__name__)
