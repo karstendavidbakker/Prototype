@@ -21,8 +21,8 @@ def serial_to_property_values():
 
     # If the line is not empty
     #if len(line_bytes) > 0:
-s[0] = str(int (ser.readline(),16))
-print s[0]
+    s[0] = str(int (ser.readline(),16))
+    print s[0]
         # Convert the bytes into string
         #line = line_bytes.decode('utf-8')
         # Split the string using commas as separatoqr, we get a list of strings
