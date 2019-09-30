@@ -6,10 +6,7 @@ sensors = ['sensor1', 'sensor2', 'sensor3']
 
 @app.route('/')
 def hello_world():
-    return 'Hello, World Vlammen Team!'
-
-if __name__ == '__main__':
-    app.run()
+    return 'Hello, World Vlammen!'
 
 @app.route('/api/sensors', methods = ['GET'])
 def list():
@@ -25,7 +22,7 @@ def create():
     sensors.append(request.json["sensorName"])
     return 'Added sensor!'
 
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-
-#This means that your server will accept incoming request from any source.
+    #to give everyone from every pc access to web
