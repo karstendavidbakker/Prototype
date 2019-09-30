@@ -25,7 +25,7 @@ def serial_to_property_values():
         # Split the string using commas as separatoqr, we get a list of strings
 #        values = line.split(',')
 #        print(line_bytes)
-      print(line)
+        print(line)
 #        print(values)
 
 
