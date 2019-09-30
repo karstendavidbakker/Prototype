@@ -8,16 +8,16 @@ load_dotenv()
 
 # Start reading the serial port
 try:
-  ser = serial.Serial('/dev/ttyACM0',9600, timeout=2)
+  ser = serial.Serial('/dev/ttyACM0',115200, timeout=2)
 except :
-  ser = serial.Serial('/dev/ttyACM1',9600, timeout=2)
+  ser = serial.Serial('/dev/ttyACM1',115200, timeout=2)
 
 # Read the next line from the serial port
 # and update the property values
 def serial_to_property_values():
-    print(ser.readline())
+
     # Read one line
-#    line_bytes = ser.readline()
+    line_bytes = ser.readline()
     # If the line is not empty
     if len(line_bytes) > 0:
         # Convert the bytes into string
