@@ -1,10 +1,13 @@
-from flask import Flask, request, render_template
+#import flask
+from flask import Flask, request
 
+#name site(created by flask) app
 app = Flask(__name__)
-
+#define amount of sensors
 sensors = ['sensor1', 'sensor2', 'sensor3']
-
+#functions for the root folder
 @app.route('/')
+#display welcome message
 def hello_world():
     return 'Hello, World Vlammen!'
 
