@@ -1,5 +1,8 @@
-from flask import Flask
+from flask import Flask, request
+
 app = Flask(__name__)
+
+sensors = ['sensor1', 'sensor2', 'sensor3']
 
 @app.route('/')
 def hello_world():
