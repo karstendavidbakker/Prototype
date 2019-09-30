@@ -29,6 +29,9 @@ def create():
     sensors.append(request.json["sensorName"])
     return 'Added sensor!'
 
+@app.route('/gauge')
+def gauge():
+    return render_template('gauge.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
