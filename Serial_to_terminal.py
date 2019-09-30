@@ -19,13 +19,13 @@ def serial_to_property_values():
     # Read one line
 #    line_bytes = ser.readline()
     # If the line is not empty
-#    if len(line_bytes) > 0:
+    if len(line_bytes) > 0:
         # Convert the bytes into string
-#        line = line_bytes.decode('utf-8')
+        line = line_bytes.decode('utf-8')
         # Split the string using commas as separatoqr, we get a list of strings
 #        values = line.split(',')
 #        print(line_bytes)
-#        print(line)
+      print(line)
 #        print(values)
 
 
