@@ -1,13 +1,16 @@
+#import flask
 from flask import Flask, request
 
+#name site(created by flask) app
 app = Flask(__name__)
-
+#define amount of sensors
 sensors = ['sensor1', 'sensor2', 'sensor3']
-
+#functions for the root folder
 @app.route('/')
+#display welcome message
 def hello_world():
     return 'Hello, World Vlammen!'
-
+#the sensors rout gives the list of sensors
 @app.route('/api/sensors', methods = ['GET'])
 def list():
     return str(sensors)
