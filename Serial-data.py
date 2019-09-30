@@ -17,10 +17,10 @@ THING_TOKEN = os.environ['THING_TOKEN']
 my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 
 # Start reading the serial port
-ser = serial.Serial(
-    port = os.environ['SERIAL'],
-    baudrate = 9600,
-    timeout = 2)
+try:
+  ser = serial.Serial('/dev/ttyACM0',9600, timeout=2)
+except :
+  ser = serial.Serial('/dev/ttyACM1',9600, timeout=2)
 
 # Read the next line from the serial port
 # and update the property values
@@ -56,4 +56,3 @@ print(my_property.to_json())
 
 while True:
     serial_to_property_values(my_property)
-    time.sleep(2)
