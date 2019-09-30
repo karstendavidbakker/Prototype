@@ -14,7 +14,7 @@ Our mission is to develop a connected wheelchair that can help cities and disabl
 
 # What is the goal of your product?
 
-
+IP adress: 145.94.218.61
 
 *   Making the lives of disabled people in wheelchairs easier by warning them for obstacles in cities
 *   Extracting data about wheelchair obstacles in cities to improve the cities architecture

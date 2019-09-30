@@ -10,7 +10,11 @@ sensors = ['sensor1', 'sensor2', 'sensor3']
 #display welcome message
 def hello_world():
     return 'Hello, World Vlammen!'
-#the sensors rout gives the list of sensors
+
+@app.route('/home')
+def home():
+    return render_template('index.html')
+
 @app.route('/api/sensors', methods = ['GET'])
 def list():
     return str(sensors)
