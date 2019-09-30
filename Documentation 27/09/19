@@ -34,32 +34,12 @@ Adjusted Arduino code to have button communicating with the server
 - Python: added: handle_button_data(handle, value_bytes)
 
 
+____________________
 
+Jordan: Arduino
 
-Got feather to work:
-- Edit output.
-
-Wanted to do button to server
-
-Changed:
-App to server
-raspberry pi to server
-
-Edit data on the server.
-
-Today: Accelorameter on frame.
-
-Test: Different characteristics of terrain.
-If > ...
-Measure Zero and peak values without server
-
-Week 3
-
-switched from hotspot to eduroam connection
-now working with pi@145.94.250.175
-
-did this by making .services which can run in the background
-and get started on startup.
-
-ran into problems connecting over ssh. probably used wrong ip.
-Also found out that wrong python was installed now updated to 3.5.3
+Today, to begin the IMU was setup to display constant stream of data on the serial port.
+Next, the button was configured and then a de-bounce was added to improve stability.
+Enabled the serial monitor to display the IMU data whilst the button was pushed.
+Next, a for clause was integrated into the code to record data for 10 seconds once the button was pushed.
+Attempted to add a debounce feature to the 10 seconds recordings but proved unsuccesful.
