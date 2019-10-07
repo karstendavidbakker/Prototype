@@ -1,15 +1,44 @@
 <<<<<<< HEAD
-To begin, a button feature was assembled on the Arduino Mega in order to capture when the user experienced difficulty with a particular hazard.
-The Arduino was programmed to relay to the serial monitor "1'' when the button is pressed, refreshing each second.
-A digital momentary push button was used in this case.
-A debounce feature was used to ensure more predictable behavior.
-Whilst the Arduino captures information and labels the terrain, pressing the button will transmit and log the past ten seconds of terrain info to the user's phone.
 
-Next, the Arduino was removed from the serial connection on the PC and connected to the USB port of the Pi.
+WEEK4:
+
+Goal:
+
+    To enable the Arduino Mega to capture ten seconds of IMU data at the push of a button.
+
+Method:
+
+    To begin, a button feature was assembled on the Arduino Mega in order to capture when the user experienced difficulty with a particular hazard.
+    The push button was connected to digital pin 2, while the V in and GND were connected with a 10K Ohm resistor.
+    The Arduino was programmed to relay to the serial monitor "1'' when the button is pressed, refreshing each second.
+    A digital momentary push button was used in this case.
+    The button feature worked, however the behavior was unpredictable. At times it would trigger without being pressed, and other times pressing the button did nothing.
+    A de-bounce feature could be used to ensure more predictable behavior, where the Arduino records the last time that the button was pressed and assesses if a predetermined period of time has elapsed since, in order to remove noise.
+    Firstly, the Ardunio IDE Was programmed to run the IMU as soon as the button was pressed, with an IF/ELSE clause.
+    Next, a FOR clause was integrated, calling the funtion i to repeat 200 times, or exactly ten seconds of data. These 200 instances of XYZ data points are hypothezised to be enough for terrain labelling, pending trialling.
+    The debounce function worked correctly, and the ten seconds of data is available to view in the serial monitor.
+    Next, the Arduino was removed from the serial connection on the PC and connected to the USB port of the Pi.
+
+Week 5:
+
+Goal:
+
+    To enable the Arduino to capture and send the previous ten seconds of IMU data at the push of a button.
+    Whilst the Arduino captures information and labels the terrain, pressing the button will transmit and log the past ten seconds of terrain info to the hub.
+
+Method:
+
+    This
+
+Week 6:
+
+    Goal: to pass the captured IMU data to the DCD hub.
+    To visualise this IMU data in a comprehensible manner.
+
 =======
 Week 1:
 
-To begin, a button feature was assembled on the Arduino Mega.
+    To begin, a button feature was assembled on the Arduino Mega.
 
 -Connected to DCD driver
 
