@@ -16,7 +16,7 @@ Method:
     A de-bounce feature could be used to ensure more predictable behavior, where the Arduino records the last time that the button was pressed and assesses if a predetermined period of time has elapsed since, in order to remove noise.
     Firstly, the Ardunio IDE Was programmed to run the IMU as soon as the button was pressed, with an IF/ELSE clause.
     Next, a FOR clause was integrated, calling the funtion i to repeat 200 times, or exactly ten seconds of data. These 200 instances of XYZ data points are hypothezised to be enough for terrain labelling, pending trialling.
-    The debounce function worked correctly, and the ten seconds of data is available to view in the serial monitor.
+    The de-bounce function worked correctly, and the ten seconds of data is available to view in the serial monitor.
     Next, the Arduino was removed from the serial connection on the PC and connected to the USB port of the Pi.
 
 Week 5:
