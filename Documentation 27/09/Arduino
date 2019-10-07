@@ -19,6 +19,20 @@ Method:
     The de-bounce function worked correctly, and the ten seconds of data is available to view in the serial monitor.
     Next, the Arduino was removed from the serial connection on the PC and connected to the USB port of the Pi.
 
+
+Hardware:
+
+      To house the electronic components on the wheelchair in a manner that protected delicate electronics and joints whilst also ensuring usability, three 3D printed components are ulilised.
+      One component houses the Push-button component, and provides a larger button surface.
+      One component secures the IMU in place on the wheelchair frame.
+      The final component houses the Arduino and Pi, and power source securely on the wheelchair frame.
+      The first iteration of these parts was developed to check the fit on the wheelchair, and with the electronic parts.
+      Alterations were made in revision 2 to adjust certain dimensions to ensure fit, based on findings from the first revision.
+      
+
+
+
+
 Week 5:
 
 Goal:
