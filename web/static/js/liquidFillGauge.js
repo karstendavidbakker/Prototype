@@ -186,6 +186,7 @@ function loadLiquidFillGauge(elementId, value, config) {
 
     if(config.waveAnimate) animateWave();
 
+//create function which is called out in html to get animation working
     function animateWave() {
         wave.attr('transform','translate('+waveAnimateScale(wave.attr('T'))+',0)');
         wave.transition()

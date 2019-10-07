@@ -24,6 +24,10 @@ def read(sensor_id):
     global sensors
     return sensors[sensor_id]
 
+@app.route('/test')
+def home():
+    return render_template('testvisual.html')
+
 @app.route('/api/sensors', methods = ['POST'])
 def create():
     sensors.append(request.json["sensorName"])
