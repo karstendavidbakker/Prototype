@@ -18,6 +18,7 @@ def home():
 def gauge():
     return render_template('gauge.html')
 
+#added to test
 @app.route('/barchart')
 def barchart():
     return render_template('barchart.html')
