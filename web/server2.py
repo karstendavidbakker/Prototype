@@ -14,7 +14,6 @@ def hello_world():
 def home():
     return render_template('index.html')
 
-
 @app.route('/gauge')
 def gauge():
     return render_template('gauge.html')
@@ -22,3 +21,4 @@ def gauge():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
     #to give everyone from every pc access to web
+    #subscribe by: http://localhost:5000/home

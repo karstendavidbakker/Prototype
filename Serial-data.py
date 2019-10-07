@@ -22,11 +22,14 @@ try:
 except :
   ser = serial.Serial('/dev/ttyACM1',9600, timeout=2)
 
+ #haalt data (connectie) uit serial van raspberry pie, Na try leest hij die poort uit, of anders na except een andere poort.
+
 # Read the next line from the serial port
 # and update the property values
 def serial_to_property_values():
     # Read one line
     line_bytes = ser.readline()
+    #lezen van lijn/functie
     # If the line is not empty
     if len(line_bytes) > 0:
         # Convert the bytes into string
@@ -45,7 +48,7 @@ def serial_to_property_values():
         else:
             print('Warning: unknown property ' + property_name)
 
-
+#main script:
 
 my_thing.read()
 
