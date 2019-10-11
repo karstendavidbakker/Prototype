@@ -32,7 +32,7 @@ def find_or_create(property_name, property_type):
                                  property_type=property_type)
     return my_thing.find_property_by_name(property_name)
 
-#every time that the bluetooth publishes this funtcions is called
+# every time that the bluetooth publishes this funtcions is called
 def handle_orientation_data(handle, value_bytes):
     """
     handle -- integer, characteristic read handle the data was received on
@@ -44,6 +44,7 @@ def handle_orientation_data(handle, value_bytes):
     find_or_create("Left Wheel Orientation",
                    PropertyType.THREE_DIMENSIONS).update_values(values)
 
+
 def handle_button_data(handle, value_bytes):
     """
     handle -- integer, characteristic read handle the data was received on
@@ -54,6 +55,7 @@ def handle_button_data(handle, value_bytes):
     values = [float(x) for x in value_bytes.decode('utf-8').split(",")]
     find_or_create("Left Wheel button",
                    PropertyType.ONE_DIMENSION).update_values(values)
+
 
 def discover_characteristic(device):
     """List characteristics of a device"""
