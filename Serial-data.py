@@ -34,8 +34,9 @@ def serial_to_property_values():
     if len(line_bytes) > 0:
         # Convert the bytes into string
         line = line_bytes.decode('utf-8')
+
         # Split the string using commas as separator, we get a list of strings
-        values = line.split(',')
+        values = line.replace(':',',').split(',')
         print(values)
         # Use the first element of the list as property id
         property_name = values.pop(0)
@@ -53,9 +54,9 @@ def serial_to_property_values():
 my_thing.read()
 
 print(my_thing.to_json())
-my_property = my_thing.find_or_create_property("My Serial Property", PropertyType.THREE_DIMENSIONS)
+#my_property = my_thing.find_or_create_property("My Serial Property", PropertyType.THREE_DIMENSIONS)
 
-print(my_property.to_json())
+#print(my_property.to_json())
 
 while True:
     serial_to_property_values(my_property)
