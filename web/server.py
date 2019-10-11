@@ -25,7 +25,7 @@ def read(sensor_id):
     return sensors[sensor_id]
 
 @app.route('/test')
-def home():
+def test():
     return render_template('testvisual.html')
 
 @app.route('/api/sensors', methods = ['POST'])
