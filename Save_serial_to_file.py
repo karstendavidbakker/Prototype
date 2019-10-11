@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-file = open("my-property.csv", "a")
+file = open("web/static/my-property.csv", "a")
 # Start reading the serial port
 try:
     ser = serial.Serial('/dev/ttyACM0', 115200, timeout=2)
@@ -16,9 +16,7 @@ except:
         ser = serial.Serial('COM8', 115200, timeout=2)
 
 
-def write_in_csv(values):
-    file.write(','.join(values))
-    file.write('\n')
+
 # Read the next line from the serial port
 # and update the property values
 
@@ -37,6 +35,9 @@ def serial_to_property_values():
 #        print(line)
         print(values)
 
+def write_in_csv(values):
+    file.write(','.join(values))
+    file.write('\n')
 
 try:
     # finally, we call our function to start saving serial values
