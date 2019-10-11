@@ -40,7 +40,7 @@ def serial_to_property_values():
         # Use the first element of the list as property id
         property_name = values.pop(0)
         # Get the property from the thing
-        prop = my_thing.find_or_create_property(property_name, PropertyType.Four_DIMENSIONS)
+        prop = my_thing.find_or_create_property(property_name, PropertyType.FOUR_DIMENSIONS)
         # If we find the property, we update the values (rest of the list)
         if prop is not None:
             prop.update_values([float(x) for x in values])
