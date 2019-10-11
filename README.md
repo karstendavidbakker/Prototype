@@ -97,7 +97,7 @@ Interface				-->UX company
 *   Force? - push resistance?
 
 # login raspberry:
-# ssh pi@goodthing.local
+# ssh pi@145.94.250.17
 
 # cd (change to folder)
 # ls (list)
@@ -114,19 +114,17 @@ Name of bottem right serial port raspberry;
 
 ##Steps
 
-1.[x] button running on Arduino
-[]troubleshoot usb serial port error
-[ ]
-[ ] comment all lines in the used code
-[ ] get the random-data.py script to send data to the dcd Hub
-[ ] get the serial-data.py script to send data to the dcd hub.
-2.[ ] Serial data to webserver on pc
-3.[ ] Serial data to Rpi            
-4.[ ] Accelerometer running on Arduino
-5.[ ] Serial data to webserver on pc
-6.[ ] Serial data to Rpi
-7.[ ] Rpi to bluetooth
-8.[ ] Phone to Cloud
+before monday: to get ready for data collection
+[x] get ssh connection
+[x] debounce Button
+  [x] debounce while hooked up to imu
+    [x] get serial output of imu and Button
+      [x] get a send two factors to dcd hub script
+[] tokens setup
+[] send to dcdhub
+[] array of last 10
+[] d3js csv implementation
+[] gather a ton of data
 
 # Is there a cloud connection on the app
 
