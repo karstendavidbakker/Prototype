@@ -1,5 +1,6 @@
 from random import random
 import time
+import string
 
 import serial
 
@@ -36,8 +37,7 @@ def serial_to_property_values():
         line = line_bytes.decode('utf-8')
 
         # Split the string using commas as separator, we get a list of strings
-        values = line.replace(":",",")
-                     .split(',')
+        values = line.replace(":",",").split(',')
         print(values)
         # Use the first element of the list as property id
         property_name = values.pop(0)

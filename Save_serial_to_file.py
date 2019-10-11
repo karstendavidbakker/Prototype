@@ -29,8 +29,7 @@ def serial_to_property_values():
         # Convert the bytes into string
         line = line_bytes.decode('utf-8')
         # Split the string using commas as separatoqr, we get a list of strings
-        values = line.replace(":",",")
-            	     .split(',')
+        values = line.replace(":",",").split(',')
 #        print(line_bytes)
 #        print(line)
         print(values)
