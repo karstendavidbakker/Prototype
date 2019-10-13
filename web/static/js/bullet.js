@@ -1,5 +1,14 @@
 (function() {
 
+  //KARSTEN NOTES: extracted by inspection on dj3 webpage. downloaded bullet.js file.
+  //added as follows in barchart.html file to address bullet.js on local location
+//  </style>
+//  <button>Update</button>
+//  <script src="//d3js.org/d3.v3.min.js"></script>
+//  <script src="{{ url_for('static', filename='js/bullet.js') }}"></script>
+//  <script>
+
+
 // Chart design based on the recommendations of Stephen Few. Implementation
 // based on the work of Clint Ivy, Jamie Love, and Jason Davies.
 // http://projects.instantcognition.com/protovis/bulletchart/
@@ -239,4 +248,3 @@ function bulletWidth(x) {
 }
 
 })();
-//extracted by inspection on dj3 webpage.
