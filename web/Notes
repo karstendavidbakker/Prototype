@@ -1,0 +1,28 @@
+
+
+problems:
+ with editing background colour
+
+ google maps Website
+    -dynamic display like maps not possible on static browers?
+    -Instal right java script?
+ connection to /gauge
+
+Done
+create key for google maps API:
+  key=AIzaSyD5Ta592tcRaPkglMFLRcFqLCyzM4oppts
+Made connection to
+/home
+/sensors
+edited h-titels
+
+Edited different titels
+
+
+Notes
+CMD c to stop running the script and open new terminal helps
+
+Got liquidFillGauge file by right mouse click for inspect on viewing visuals representation of data.
+Refresh and extract .js file
+
+http://bl.ocks.org/brattonc/raw/5e5ce9beee483220e2f6/

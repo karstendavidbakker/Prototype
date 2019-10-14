@@ -9,9 +9,9 @@ load_dotenv()
 
 # Start reading the serial port
 ser = serial.Serial(
-    port = os.environ['SERIAL'],
-    baudrate = 9600,
-    write_timeout = 0)
+    port=os.environ['SERIAL'],
+    baudrate=9600,
+    write_timeout=0)
 
 while True:
     ser.write('1'.encode())
