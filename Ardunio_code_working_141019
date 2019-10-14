@@ -74,7 +74,7 @@ void getdata() {
   bno.getEvent(&event);
 
   /* Display the floating point data */
-  Serial.print( "IMU: ");
+  Serial.print( "IMU, ");
   Serial.print(event.orientation.x, 4);
   Serial.print( ",");
   Serial.print(event.orientation.y, 4);
