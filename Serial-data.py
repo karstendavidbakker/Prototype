@@ -17,7 +17,10 @@ my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 try:
     ser = serial.Serial('/dev/ttyACM0', 115200, timeout=2)
 except:
-    ser = serial.Serial('/dev/ttyACM1', 115200, timeout=2)
+    try:
+        ser = serial.Serial('/dev/ttyACM1', 115200, timeout=2)
+    except:
+        ser = serial.Serial('COM12', 115200, timeout=2)
 
 
  # haalt data (connectie) uit serial van raspberry pie, Na try leest hij die poort uit, of anders na except een andere poort.
