@@ -29,6 +29,9 @@ def read(sensor_id):
     global sensors
     return sensors[sensor_id]
 
+<<<<<<< HEAD
+@app.route('/api/sensors', methods = ['POST'])
+=======
 
 @app.route('/test')
 def test():
@@ -41,6 +44,7 @@ def go():
 
 
 @app.route('/api/sensors', methods=['POST'])
+>>>>>>> 0fbd1ac26f9b7c48014104795a6b18555de14a64
 def create():
     sensors.append(request.json["sensorName"])
     return 'Added sensor!'
@@ -50,6 +54,13 @@ def create():
 def gauge():
     return render_template('gauge.html')
 
+<<<<<<< HEAD
+#added to test
+@app.route('/barchart')
+def barchart():
+    return render_template('barchart.html')
+=======
+>>>>>>> 0fbd1ac26f9b7c48014104795a6b18555de14a64
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
