@@ -34,6 +34,9 @@ button {
 <h1>Wheelchair city locations log-time</h1>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="{{ url_for('static', filename='js/bullet.js') }}"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+                  integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I="
+                  crossorigin="anonymous"></script>
 
 
 
@@ -43,6 +46,7 @@ onclick="document.getElementById('demo').innerHTML = Date()">
 Get time.</button>
 
 <p id="demo"></p>
+
 
 <script>
 
@@ -104,3 +108,22 @@ function randomizer(d) {
 console.log("Hello world!");
 
 </script>
+
+<script type="text/javascript" charset="utf-8">
+  var socket = io();
+  var xvalue = 0;
+
+  socket.on('connect', function(){
+    //socket.emit('json', {data: 'I'm connectee! :)''});
+  });
+
+  socket.on('x-axis', function(xaxis_obj){
+    const json = JSON.parse(xaxis_obj);
+    console.log(json);
+
+    if (json.axisX !== undefined){
+      xvalue = parseFloat(json.axisX);
+      console.log(x_Value);
+    }
+  });
+  </script>
