@@ -8,7 +8,11 @@ sensors = ['sensor1', 'sensor2', 'sensor3']
 # functions for the root folder
 
 
+<<<<<<< HEAD
 @app.route('/') #testcomment
+=======
+@app.route('/') #bla
+>>>>>>> 775e922d06aa3c3a2b06f2542e5033c957f86d2e
 # display welcome message
 def hello_world():
     return 'Hello, World Vlammen!'

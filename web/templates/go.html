@@ -9,11 +9,34 @@ body {
   position: relative;
   width: 960px;
 }
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
 </style>
 
 <script src="//d3js.org/d3.v3.min.js"></script>
-<script>
-d3.csv("static/my-property.csv", function(data){
-    console.log(data)
-});
-</script>
+<center>
+  <div id="paired-line-chart">
+    <script type="text/javascript">
+    //  d3.csv("static/my-property.csv", function(error, data){
+    //    if (error) throw error;
+    var data=[10, 30, 80, 100, 324];
+        console.log(data);
+
+        d3.select(".paired-line-chart")
+        .data(data)
+          .enter()
+          .append("div")
+          .style("width", function(d) { return d + "px"})
+          .text(function(d) { return d; });
+;
+    </script>
+    <br>
+  </div>
+</center>
