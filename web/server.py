@@ -8,7 +8,7 @@ sensors = ['sensor1', 'sensor2', 'sensor3']
 # functions for the root folder
 
 
-@app.route('/')
+@app.route('/') #testcomment
 # display welcome message
 def hello_world():
     return 'Hello, World Vlammen!'
@@ -58,7 +58,8 @@ def gauge():
 #added to test
 @app.route('/barchart')
 def barchart():
-    return render_template('barchart.html')
+    return render_template('barchart2.html')
+    #return render_template('barchart.html')
 
 
 if __name__ == '__main__':
