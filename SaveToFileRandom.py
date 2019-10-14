@@ -35,7 +35,7 @@ try:
 
 except Exception:
         file.close()
-        fileJSON.close();
+        #fileJSON.close();
 
         # have a 2-second break
         time.sleep(2)

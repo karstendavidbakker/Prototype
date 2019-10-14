@@ -12,7 +12,7 @@ except:
     try:
         ser = serial.Serial('/dev/ttyACM1', 115200, timeout=2)
     except:
-        ser = serial.Serial('COM8', 115200, timeout=2)
+        ser = serial.Serial('COM12', 115200, timeout=2)
 
 def serial_to_property_values():
 
@@ -23,13 +23,14 @@ def serial_to_property_values():
         # Convert the bytes into string
         line = line_bytes.decode('utf-8')
         # Split the string using commas as separatoqr, we get a list of strings
+        global values
         values = line.replace(":", ",").split(',')
 #        print(line_bytes)
 #        print(line)
         print(values)
 
 def write_in_csv(values2):
-    file.write(','.join(values2))
+    file.write(','.join(values))
     file.write('\n')
 
 #added:
@@ -50,14 +51,13 @@ try:
         print(current_time)
         values2 = (str(current_time), str(values))
         write_in_csv(values2)
-
         write_to_json(values2)
         #have a 2-second break
         time.sleep(2)
 
 except Exception:
     file.close()
-    fileJSON.close()
+    #fileJSON.close();
 
     # have a 2-second break
     time.sleep(2)
