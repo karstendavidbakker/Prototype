@@ -31,7 +31,7 @@ try:
 
         write_to_json(values)
         #have a 2-second break
-        time.sleep(2)
+        #time.sleep(2)
 
 except Exception:
         file.close()
