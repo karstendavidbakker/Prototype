@@ -1,0 +1,74 @@
+<html>
+    <head>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+                integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I="
+                crossorigin="anonymous"></script>
+
+      <script type="text/javascript" charset="utf-8">
+        var socket = io();
+        socket.on('connect', function() {
+          // socket.emit('json', {data: 'I\'m connected!'});
+        });
+
+        socket.on('json', function(msg, cb) {
+          if (msg.distance !== undefined) {
+            document.getElementById("myBar").with = msg.distance;
+          }
+        });
+
+
+
+
+
+        socket.on('position', function(dist_obj) {  //subscribe to part
+          const json = JSON.parse(dist_obj);      //parse makes the string a json object. json= easy way organising data
+          console.log(json);
+          console.log(json.lat);                  //catch the "lat" part of the string?
+          console.log(json.lng);                //console log means like serial print. but than on console.
+          if (json.distance !== undefined) {
+          //  document.getElementById("myBar").with = json.distance;
+
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 17,
+                      center: {lat:lat[0], lng: lng[0]},
+                    });
+
+                            new google.maps.Marker({position: {lat:json.lat, lng:json.lng}, map: map});
+          }
+        });
+
+
+
+
+
+
+        // function sendMessage(message) {
+        //   socket.emit('json', {data: NewValue()});
+        // }
+        function move() {
+          var elem = document.getElementById("myBar");
+          var width = {{ distBar }};
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (width >= 100) {
+              clearInterval(id);
+            } else {
+              elem.style.width = width;
+              // + '%';
+            }
+          }
+        }
+        window.onload = move;
+      </script>
+        <title>Our App</title>
+        <link rel="stylesheet" type="text/css"
+              href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+
+    <body>
+        <h1>Welcome to our application!</h1>
+        <div id="myProgress">
+          <div id="myBar"></div>
+        </div>
+    </body>
+</html>

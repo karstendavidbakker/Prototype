@@ -66,6 +66,10 @@ def create():
 def gauge():
     return render_template('gauge.html')
 
+@app.route('/map')
+def map():
+    return render_template('maplocation4.html')
+
 
 #added to test
 @app.route('/barchart')
