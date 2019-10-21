@@ -1,1 +1,6 @@
-[{"title":"x","subtitle":"TARGET motion in x direction","ranges":[20,25,30],"measures":[0.22691905849709781,23],"markers":[26]},{"title":"y","subtitle":"ORIENTATION motion in y direction","ranges":[350,500,600],"measures":[0.7498939128022888,320],"markers":[550]},{"title":"z","subtitle":"BUMB motion in z direction","ranges":[5000,20000,25000],"measures":[0.8425650399073095,1650],"markers":[2100]}]
+<<<<<<< HEAD
+[{"title":"x","subtitle":"TARGET motion in x direction","ranges":[20,25,30],"measures":[0.8408791398327055,23],"markers":[26]},{"title":"y","subtitle":"ORIENTATION motion in y direction","ranges":[350,500,600],"measures":[0.5868802277720818,320],"markers":[550]},{"title":"z","subtitle":"BUMB motion in z direction","ranges":[5000,20000,25000],"measures":[0.4707715948972159,1650],"markers":[2100]}]
+=======
+[{"title":"x","subtitle":"TARGET motion in x direction","ranges":[20,25,30],"measures":[ 0.0000,23],"markers":[26]},{"title":"y","subtitle":"ORIENTATION motion in y direction","ranges":[350,500,600],"measures":[74.6875,320],"markers":[550]},{"title":"z","subtitle":"BUMB motion in z direction","ranges":[5000,20000,25000],"measures":[-22.7500
+,1650],"markers":[2100]}]
+>>>>>>> f84bb1df08fd62bb5ffac823e4ff2ec76f8999d1
