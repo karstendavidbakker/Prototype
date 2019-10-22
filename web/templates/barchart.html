@@ -29,17 +29,20 @@ button {
 
 </style>
 <button>Update</button>
+<h1>Wheelchair city locations log-time</h1>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="{{ url_for('static', filename='js/bullet.js') }}"></script>
-<script>
 
-<h1>Wheelchair city locations log-time</h1>
+
+
 
 <button type="button"
 onclick="document.getElementById('demo').innerHTML = Date()">
 Get time.</button>
 
 <p id="demo"></p>
+
+<script>
 
 var margin = {top: 5, right: 40, bottom: 20, left: 120},
     width = 960 - margin.left - margin.right,

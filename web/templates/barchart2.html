@@ -8,7 +8,6 @@ body {
   padding-top: 40px;
   position: relative;
   width: 960px;
-
 }
 
 button {
@@ -18,25 +17,29 @@ button {
 }
 
 .bullet { font: 10px sans-serif; }
-.bullet .marker { stroke: #000; stroke-width: 2px; }
-.bullet .tick line { stroke: #666; stroke-width: .5px; }
-.bullet .range.s0 { fill: #eee; }
-.bullet .range.s1 { fill: #ddd; }
+.bullet .marker { stroke: #000; stroke-width: 4px; }
+.bullet .tick line { stroke: #666; stroke-width: 2.5px; }
+<!-- lijntje bij waarden -->
+.bullet .range.s0 { fill: black; }
+.bullet .range.s1 { fill: black; }
 .bullet .range.s2 { fill: #ccc; }
-.bullet .measure.s0 { fill: lightsteelblue; }
-.bullet .measure.s1 { fill: steelblue; }
-.bullet .title { font-size: 14px; font-weight: bold; }
+.bullet .measure.s0 { fill: blue; }
+.bullet .measure.s1 { fill: white; }
+<!-- chart eerste deel -->
+.bullet .title { font-size: 20px; font-weight: bold; }
 .bullet .subtitle { fill: #999; }
 
 </style>
 <button>Update</button>
+<h1>Wheelchair city locations log-time</h1>
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script src="{{ url_for('static', filename='js/bullet.js') }}"></script>
-<script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+                  integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I="
+                  crossorigin="anonymous"></script>
 
 
 
-<h1>Wheelchair city locations log-time</h1>
 
 <button type="button"
 onclick="document.getElementById('demo').innerHTML = Date()">
@@ -45,10 +48,11 @@ Get time.</button>
 <p id="demo"></p>
 
 
+<script>
 
-var margin = {top: 5, right: 40, bottom: 20, left: 120},
-    width = 960 - margin.left - margin.right,
-    height = 50 - margin.top - margin.bottom;
+var margin = {top: 10, right: 40, bottom: 20, left: 120},
+    width = 900 - margin.left - margin.right,
+    height = 200 - margin.top - margin.bottom;
 
 var chart = d3.bullet()
     .width(width)
@@ -63,7 +67,7 @@ d3.json('static/data.json', function(error, data) {
     .enter().append("svg")
       .attr("class", "bullet")
       .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
+      .attr("height", height + 70 + margin.top + margin.bottom)
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
       .call(chart);
@@ -101,4 +105,25 @@ function randomizer(d) {
   };
 }
 
+console.log("Hello world!");
+
 </script>
+
+<script type="text/javascript" charset="utf-8">
+  var socket = io();
+  var xvalue = 0;
+
+  socket.on('connect', function(){
+    //socket.emit('json', {data: 'I'm connectee! :)''});
+  });
+
+  socket.on('x-axis', function(xaxis_obj){
+    const json = JSON.parse(xaxis_obj);
+    console.log(json);
+
+    if (json.axisX !== undefined){
+      xvalue = parseFloat(json.axisX);
+      console.log(x_Value);
+    }
+  });
+  </script>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Marker Clustering</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      var i;
+      var latitude; //(not defined yet)
+      var longtitude; //(need to get from gps, add them to lat and lng array)
+      var lat = [52.001737,52,51,56];
+      var lng = [4.372825,5,53,5];
+      var loc = {};
+      var locations = [];
+
+      function initMap() {
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {lat:lat[0], lng: lng[0]},
+        });
+
+        new google.maps.Marker({position: {lat:lat[0], lng:lng[0]}, map: map});
+
+        //put it in a function: When you receive a
+
+      //   while (i<4) {         //in future, not 4
+      //     var dot = new google.maps.Circle({
+      //     strokeColor: '#FF0000',
+      //     strokeOpacity: 0.8,
+      //     strokeWeight: 1,
+      //     fillColor: '#FF0000',
+      //     fillOpacity: 0.8,
+      //     map:map,
+      //     center: {lat:lat[i], lng:lng[i]},
+      //     radius: 10
+      //   })
+      //   i++;
+      // }
+
+    }
+
+
+      // for (i=0;i<4;i++){
+      //   loc = {lat:lat[i],lng:lng[i]};
+      //   locations.push(loc);
+      // }
+      //   // Create an array of alphabetical characters used to label the markers.
+      //   var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      //
+      //   // Add some markers to the map.
+      //   // Note: The code uses the JavaScript Array.prototype.map() method to
+      //   // create an array of markers based on a given "locations" array.
+      //   // The map() method here has nothing to do with the Google Maps API.
+      //   var markers = locations.map(function(locations, i) {
+      //     return new google.maps.Marker({
+      //       position: locations,
+      //       label: labels[i % labels.length]
+      //     });
+      //   });
+      //
+      //   // Add a marker clusterer to manage the markers.
+      //   var markerCluster = new MarkerClusterer(map, markers,
+      //       {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+      // }
+
+
+
+    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5Ta592tcRaPkglMFLRcFqLCyzM4oppts&callback=initMap">
+    </script>
+  </body>
+</html>
