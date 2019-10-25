@@ -36,10 +36,14 @@ prop_data = my_thing.find_or_create_property(DATA_PROP_NAME, DATA_PROP_TYPE)
 # Open a serial connection
 def open_serial():
     # Start reading the serial port
-    return serial.Serial(
-        port=os.environ['SERIAL'],
-        baudrate=115200,
-        timeout=2)
+        # Start reading the serial port
+        try:
+            ser = serial.Serial('/dev/ttyACM0', 115200, timeout=2)
+        except:
+            try:
+                ser = serial.Serial('/dev/ttyACM1', 115200, timeout=2)
+            except:
+                ser = serial.Serial('COM12', 115200, timeout=2)
 
 
 # Read the next line from the serial port
@@ -76,9 +80,9 @@ def serial_to_property_values(class_index, ser):
 
 
 # How many samples do we want for each class
-MAX_SAMPLES = 300
+MAX_SAMPLES = 500
 # How much time (in seconds) to leave between the collection of each class
-DELAY_BETWEEN_POSTURE = 7
+DELAY_BETWEEN_POSTURE = 20
 
 
 # Collect data for a given posture
