@@ -91,7 +91,8 @@ def write_in_csv(values):
     file.write('\n')
 
 def write_to_json(values):
-    fileJSON = open("/home/pi/Prototype/web/static/data.json", "w") # we write
+    fileJSON = open("/static/data.json", "w") # we write
+#    fileJSON = open("~/Prototype/web/static/data.json", "w") # we write
     fileJSON.write('[{"title":"x","subtitle":"TARGET motion in x direction","ranges":[20,25,30],"measures":[' + values[1] + ',23],"markers":[26]},{"title":"y","subtitle":"ORIENTATION motion in y direction","ranges":[350,500,600],"measures":['+ values[2] +',320],"markers":[550]},{"title":"z","subtitle":"BUMB motion in z direction","ranges":[5000,20000,25000],"measures":['+values[3]+',1650],"markers":[2100]}]')
     fileJSON.close();
     #print(values[1])
