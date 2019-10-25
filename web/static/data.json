@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"title":"x","subtitle":"TARGET motion in x direction","ranges":[20,25,30],"measures":[0.34531702751683324,23],"markers":[26]},{"title":"y","subtitle":"ORIENTATION motion in y direction","ranges":[350,500,600],"measures":[0.540610402640407,320],"markers":[550]},{"title":"z","subtitle":"BUMB motion in z direction","ranges":[5000,20000,25000],"measures":[0.08107568881792637,1650],"markers":[2100]}]
+=======
+[{"title":"x","subtitle":"TARGET motion in x direction","ranges":[20,25,30],"measures":[0.6482210038043458,23],"markers":[26]},{"title":"y","subtitle":"ORIENTATION motion in y direction","ranges":[350,500,600],"measures":[0.1384633525214276,320],"markers":[550]},{"title":"z","subtitle":"BUMB motion in z direction","ranges":[5000,20000,25000],"measures":[0.33125408704951287,1650],"markers":[2100]}]
+>>>>>>> 6d6bb5f6f504e7aebb48ba971524ca02b749f372
