@@ -30,7 +30,7 @@ Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28);   // some details about the sen
 
 void displaySensorStatus(void)       // Function to display sensor details in the serial monitor
 {
-                                                             
+
   uint8_t system_status, self_test_results, system_error;                     // Get the system status values (mostly for debugging purposes) //
   system_status = self_test_results = system_error = 0;                       // Get the system status values (mostly for debugging purposes) //
   bno.getSystemStatus(&system_status, &self_test_results, &system_error);     // Get the system status values (mostly for debugging purposes) //
@@ -39,7 +39,7 @@ void displaySensorStatus(void)       // Function to display sensor details in th
 
 void displayCalStatus(void)                                   // Function to read sensor calibration details in the serial monitor
 {
-  
+
   uint8_t system, gyro, accel, mag;                           // Get the four calibration values (0..3) //
   system = gyro = accel = mag = 0;                            // Any sensor data reporting 0 should be ignored //
   bno.getCalibration(&system, &gyro, &accel, &mag);           // 3 means 'fully calibrated" //
@@ -57,11 +57,11 @@ void displayCalStatus(void)                                   // Function to rea
   Serial.print(accel, DEC);        // Display the individual values //
   Serial.print(" M:");             // Display the individual values //
   Serial.print(mag, DEC);          // Display the individual values //
-  
+
 }
 void getdata() {                            // Function to read sensor details and display them in the serial monitor
 
-  sensors_event_t event;                    // Fetch data from the sensor //          
+  sensors_event_t event;                    // Fetch data from the sensor //
   bno.getEvent(&event);                     // Fetch data from the sensor //
 
 
@@ -76,14 +76,14 @@ void getdata() {                            // Function to read sensor details a
   Serial.print(", ");
   Serial.print(accel2.z());
   Serial.print("\t\t");
- 
- // Serial.print( "IMU, ");                       
+
+ // Serial.print( "IMU, ");
 //  Serial.print(event.orientation.x, 4);     // Display the floating point data //
 //  Serial.print( ",");                       // Seperate with a comma for ease of use in .csv file //
 //  Serial.print(event.orientation.y, 4);     // Display the floating point data //
 //  Serial.print( ",");                       // Seperate with a comma for ease of use in .csv file //
  // Serial.print(event.orientation.z, 4);     // Display the floating point data //
-  
+
   int i= i+1 ;                              // i increases
   Serial.println("");                       // New line for the next sample //
   delay(BNO055_SAMPLERATE_DELAY_MS);        // Wait the specified delay before requesting nex data //
@@ -91,12 +91,12 @@ void getdata() {                            // Function to read sensor details a
 
 
 void setup() {
-  
+
   pinMode(buttonPin, INPUT);          // Declare the button as an input //
   Serial.begin(115200);               // Set the baud rate //
 
   if(!bno.begin())                    // Initialise the sensor //
-  
+
   bno.setExtCrystalUse(true);
 
   GPS.begin(9600);
@@ -126,7 +126,7 @@ char c = GPS.read();
   buttonState = digitalRead(buttonPin);                       // Sample the state of the button - is it pressed or not? //
   if ( (millis() - lastDebounceTime) > debounceDelay) {       // Filter out any noise by setting a time buffer //
 
-  if (buttonState == HIGH)  { 
+  if (buttonState == HIGH)  {
 
 
       Serial.print ("GPS,") ;
@@ -143,6 +143,5 @@ char c = GPS.read();
         }
 
          lastDebounceTime = millis();                         //set the current time
-  } 
+  }
   }}
-  
