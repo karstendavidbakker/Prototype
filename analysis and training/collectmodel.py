@@ -1,11 +1,16 @@
 # Import required library
 from dotenv import load_dotenv
+import random
 import os
 import serial
 import time
+import pandas as pd
+import numpy as np
 
 from dcd.entities.thing import Thing
 from dcd.entities.property import PropertyType
+
+
 
 # The thing ID and access token
 load_dotenv()
@@ -48,25 +53,50 @@ def open_serial():
 
 # Read the next line from the serial port
 # and update the property values
-def serial_to_property_values(class_index, ser):
+def serial_to_property_values(class_index): #,ser)
+    values = []
+    #repeat until values array is full
+    while len(values) < 15:
     # Read one line
-    line_bytes = ser.readline()
-    # If the line is not empty
-    if len(line_bytes) > 0:
-        # Convert the bytes into string
-        try:
-            line = line_bytes.decode('utf-8')
-        except UnicodeDecodeError:
+        # line_bytes = ser.readline()
+        # # If the line is not empty
+        # if len(line_bytes) > 0:
+        #     # Convert the bytes into string
+        #     try:
+        #         line = line_bytes.decode('utf-8')
+        #     except UnicodeDecodeError:
+        #         return False
+        #     # Split the string using commas as separator, we get a list of strings
+        #     str_values = line.split(',')
+        #     # Remove the first id
+        #     str_values.pop(0)
+        #     # Transform the array of string values into float values (numbers)
+        #     try:
+        #         values = [float(x) for x in str_values]
+        #     except ValueError:
+        #         return False
+        values = (random(), random(), random())
+
+    # part to transform x,y,z to sdt, zero crossing, enz.
+        # print str_values guess("x","y","z")
+        print(values)
+        # save last 5 data points in array
+        data = []
+        data = data.append(values)
+        # check if 5 lines in array
+        print(data)
+        if len(data) == 15:
+            # use analysis on this Window
+            data.to_json()
+            statisticValues = np.array(data)
+            #std
+            #zerocross
+            #
+        else:
             return False
-        # Split the string using commas as separator, we get a list of strings
-        str_values = line.split(',')
-        # Remove the first id
-        str_values.pop(0)
-        # Transform the array of string values into float values (numbers)
-        try:
-            values = [float(x) for x in str_values]
-        except ValueError:
-            return False
+# save in form of ("std","zerocross","enz.")
+
+# role window 1 further
 
         # get the current time in milliseconds
         current_ts_ms = int(round(time.time() * 1000))
@@ -74,6 +104,9 @@ def serial_to_property_values(class_index, ser):
         # With the same timestamp, so we can easily connect label and raw data later
         prop_label.update_values([class_index], current_ts_ms)
         prop_data.update_values(values, current_ts_ms)
+
+        if len(data) >= 15:
+            data.pop(0)
 
         return True
     return False
@@ -95,15 +128,15 @@ def collect(class_index):
 
     # Open the serial connection
     print("Collecting data for posture " + CLASSES[class_index])
-    ser = open_serial()
+    #ser = open_serial()
 
     # Start reading serial port with the posture index, start at sample 0.
     sample = 0
     while sample < MAX_SAMPLES:
-        if serial_to_property_values(class_index, ser):
+        if serial_to_property_values(class_index): #,ser)
             sample += 1
             print("Remaining samples: " + str(MAX_SAMPLES - sample))
-    ser.close()
+    #ser.close()
 
 
 class_index = 0
