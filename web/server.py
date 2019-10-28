@@ -8,7 +8,7 @@ from random import random
 
 from numpy import genfromtxt
 from threading import Thread
-sample_data = genfromtxt("data-group6.csv", delimiter=",")
+sample_data = genfromtxt("data-group6.csv", delimiter=",") 
 index_data = 0
 
 file = open("my-property.csv", "a") #we append to barchart
