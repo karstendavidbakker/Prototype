@@ -6,6 +6,11 @@ import datetime
 import time
 from random import random
 
+from numpy import genfromtxt
+from threading import Thread
+sample_data = genfromtxt("data-group6.csv", delimiter=",") 
+index_data = 0
+
 file = open("my-property.csv", "a") #we append to barchart
 current_time = int(datetime.datetime.utcnow().timestamp()*1000)
 values = (str(current_time), str(random()), str(random()), str(random()))
@@ -66,10 +71,13 @@ def create():
 def gauge():
     return render_template('gauge.html')
 
-@app.route('/map')
-def map():
-    return render_template('maplocation4.html')
+@app.route('/map3')
+def map3():
+    return render_template('maplocation3.html')
 
+@app.route('/map4')
+def map4():
+    return render_template('maplocation4.html')
 
 #added to test
 @app.route('/barchart')
@@ -139,6 +147,21 @@ def write_to_json(values):
 #         file.close()
 write_in_csv(values)
 write_to_json(values)
+
+def fake_gps_data():
+    global sample_data
+    global index_data
+    while True:
+        print("emiting gps location")
+        print(sample_data[index_data,1:3])
+        json = {"gps": sample_data[index_data,1:3].tolist()}
+        socketio.emit('gpslocation', json, broadcast=True)
+        index_data = index_data + 1
+        time.sleep(1)
+
+
+thread = Thread(target=fake_gps_data)
+thread.start()
 
 if __name__ == '__main__':
     socketio.run(app, host = '0.0.0.0')

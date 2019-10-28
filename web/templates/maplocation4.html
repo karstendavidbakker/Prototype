@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
     <title>Marker Clustering</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
                 integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I="
                 crossorigin="anonymous"></script>
+
+
+
+
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5Ta592tcRaPkglMFLRcFqLCyzM4oppts&callback=initMap">
+    </script>
+
     <script>
+      var map;
       var socket = io();
       socket.on('connect', function() {
         console.log("connected");
         // socket.emit('json', {data: 'I\'m connected!'});
       });
+
+      socket.on('gpslocation', function(data) {
+          //subscribe to part //IS POSITION CORRECT HERE????
+          console.log(data);
+          const latitude = data.gps[0];
+          const longitude = data.gps[1]
+        // const json = JSON.parse(locationobject);      //parse makes the string a json object. json= easy way organising data
+        // console.log(json);
+        // console.log(json.lat);                  //catch the "lat" part of the string?
+        // console.log(json.lng);                //console log means like serial print. but than on console.
+        // if ((json.lat!== undefined) && (json.lng !== undefined)) {     //IS POSITION CORRECT HERE????
+        //  document.getElementById("myBar").with = json.distance;
+            // var map = new google.maps.Map(document.getElementById('map'), {
+            //   zoom: 17,
+            //   center: {lat:lat[0], lng: lng[0]},
+            // });
+
+            new google.maps.Marker({position: {lat:latitude, lng:longitude}, map: map}); //IS POSITION CORRECT to copy to above code?
+        // }
+      });
+
+
+
     </script>
     <style>
       /* Always set the map height explicitly to define the size of the div
@@ -20,58 +61,86 @@
       #map {
         height: 100%;
       }
+
+      h1{
+        font-size: 90px;
+        color: #FFFFFF;
+        font: Helvetica;
+      }
+
+      h2{
+        font-size: 60px;
+        color: blue;
+        font: Helvetica;
+      }
+
+      h3{
+        font-size: 60px;
+        color:  #FFFFFF;
+        font: Helvetica;
+      }
+
+      h4{
+        font-size: 20px;
+        color:  #FFFFFF;
+        font: Helvetica;
+      }
       /* Optional: Makes the sample page fill the window. */
       html, body {
         height: 100%;
-        margin: 0;
+        margin: 1;
         padding: 0;
       }
+
+
     </style>
   </head>
+
   <body>
-    <h3>My city wheelchair tracker YEAH!</h3>
+
+
+    <i class="fas fa-map-marker-alt" style=font-size:100px;color:black;>       <i class="fab fa-accessible-icon"style=font-size:100px;color:black;></i></i>
+    <h4>WheeallCare© City Map</h4>
+
+    <h1><center>WheeallCare© City Map</center></h1>
+
+    <h2><center>- Avoid inaccesible wheelchair spots</center></h2>
+
+    <h2><center>- Share difficult obstacles with other wheelchair users </center></h2>
+    <h2><center>- Allow manicuplaties to improve the city & your wheelchair trip</center></h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center><i class="fas fa-map-marker-alt" style=font-size:350px;color:blue;>       <i class="fab fa-accessible-icon"style=font-size:350x;color:blue;></i></i><h2>Drop Your Mark with WheallCare© Module</center></h2>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3><center><i>Make the city Wheelchair proof & Enjoy careless rolling ...</i></center></h3>
+
     <div id="map"></div>
     <script>
     var i;
     var latitude; //(not defined yet)
     var longtitude; //(need to get from gps, add them to lat and lng array)
-    var lat = [52.001737,52,51,56];
-    var lng = [4.372825,5,53,5];
+    var lat //= [52.001737,52,51,56];
+    var lng //= [4.372825,5,53,5];
     var loc = {};
     var locations = [];
 
     function initMap() {
 
-
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 11,
-        center: {lat:lat[0], lng: lng[0]},
+      map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 18,
+        center: {lat:52.001737, lng: 4.372825},
       });
-
-      socket.on('position', function(locationobject) {  //subscribe to part
-        const json = JSON.parse(locationobject);      //parse makes the string a json object. json= easy way organising data
-        console.log(json);
-        console.log(json.lat);                  //catch the "lat" part of the string?
-        console.log(json.lng);                //console log means like serial print. but than on console.
-        if (json.distance !== undefined) {
-        //  document.getElementById("myBar").with = json.distance;
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 17,
-              center: {lat:lat[0], lng: lng[0]},
-            });
-
-            new google.maps.Marker({position: {lat:json.lat, lng:json.lng}, map: map});
-        }
-      })
     }
 
     </script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5Ta592tcRaPkglMFLRcFqLCyzM4oppts&callback=initMap">
-    </script>
   </body>
+  <body style="background-color:grey;">
 </html>
 
 <!-- //put it in a function: When you receive a
