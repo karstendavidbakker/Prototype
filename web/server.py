@@ -19,13 +19,15 @@ from threading import Thread
 
 load_dotenv()
 
-GPS_data = [0, 0]
+GPS_data = ["0", "0"]
 
 THING_ID = os.environ['THING_ID']
 THING_TOKEN = os.environ['THING_TOKEN']
 
 # define my thing using
 my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
+
+my_thing.read()
 
 # Start reading the serial port
 try:
@@ -48,23 +50,33 @@ def serial_to_property_values():
         # Convert the bytes into string
         line = line_bytes.decode('utf-8')
         print(line)
+        property_name = line[0:3]
+        print(line[0:3])
         # Split the string using commas as separator, we get a list of strings
-        values = line.replace("N","").replace("E","").replace(":", ",").split(',')
+        if property_name == "GPS":
+            values = line.replace("N","").replace("E","").replace(".","")
+            values2 = values[:6]+"."+values[6:15]+"."+values[15:]
+            values3 = values2.replace(":", ",").split(',')
+        else:
+            values3 = line.replace(":", ",").split(',')
+        print(values3)
         # Use the first element of the list as property id
-        property_name = values.pop(0)
+        property_name = values3.pop(0)
+        print(property_name)
         # gps values get put into gps data variable
         if property_name == "GPS":
-            GPS_values = [float(i) for i in values]
+            GPS_values = [float(i) for i in values3]
             print(GPS_values)
             return GPS_values
         # update IMU values
         else:
-            # Get the property from the thing
-            prop = my_thing.find_or_create_property(property_name, PropertyType.THREE_DIMENSIONS)
+            print(property_name)
+            prop_123 = my_thing.find_or_create_property(property_name,
+                                                           PropertyType.THREE_DIMENSIONS)
             # If we find the property, we update the values (rest of the list)
-            if prop is not None:
-                prop.update_values([float(x) for x in values])
-            # Otherwise, we show a warning
+            if prop_123 is not None:
+                prop_123.update_values([float(x) for x in values3])
+            # # Otherwise, we show a warning
             else:
                 print('Warning: unknown property ' + property_name)
 
