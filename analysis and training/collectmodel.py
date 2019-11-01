@@ -81,6 +81,7 @@ def serial_to_property_values(class_index): #,ser)
         # print str_values guess("x","y","z")
         print(values)
         # save last 5 data points in array
+        #loopy boi
         data = []
         data = data.append(values)
         # check if 5 lines in array
