@@ -62,7 +62,7 @@ def serial_to_property_values():
         print(values3)
 
         for x in values3:
-            print(x.trim())
+            print(x.strip())
         # Use the first element of the list as property id
         property_name = values3.pop(0)
         print(property_name)
