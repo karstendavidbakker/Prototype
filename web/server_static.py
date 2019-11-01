@@ -28,26 +28,27 @@ THING_TOKEN = os.environ['THING_TOKEN']
 my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 
 # Start reading the serial port
-try:
-    ser = serial.Serial('/dev/ttyACM0', 115200, timeout=2)
-except:
-    try:
-        ser = serial.Serial('/dev/ttyACM1', 115200, timeout=2)
-    except:
-        ser = serial.Serial('COM12', 115200, timeout=2)
+# try:
+#     ser = serial.Serial('/dev/ttyACM0', 115200, timeout=2)
+# except:
+#     try:
+#         ser = serial.Serial('/dev/ttyACM1', 115200, timeout=2)
+#     except:
+#         ser = serial.Serial('COM12', 115200, timeout=2)
 
 # Read the next line from the serial port
 # and update the property values
 def serial_to_property_values():
     # Read one line
-    line_bytes = ser.readline()
+    # line_bytes = ser.readline()
+    test = True
     # lezen van lijn/functie
     # If the line is not empty
-    if len(line_bytes) > 0:
-
+    #if len(line_bytes) > 0:
+    if test == True:
         # Convert the bytes into string
-        line = line_bytes.decode('utf-8')
-        print(line)
+        #line = line_bytes.decode('utf-8')
+        line = "GPS, 52.0020209N, 4.3699424E"
         # Split the string using commas as separator, we get a list of strings
         values = line.replace("N","").replace("E","").replace(":", ",").split(',')
         # Use the first element of the list as property id
