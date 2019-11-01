@@ -98,6 +98,7 @@ Interface				-->UX company
 
 # login raspberry:
 # ssh pi@145.94.250.17
+# ssh pi@145.94.251.94
 
 # cd (change to folder)
 # ls (list)
