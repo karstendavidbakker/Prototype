@@ -1,13 +1,11 @@
 
 // HERE WE ARE GOING TO DEFINE SOME VARIABLES THAT CAN BE RECALLED LATER IN THE SCRIPT //
 
-const int buttonPin = 2;        // declare the number of the pushbutton pin
+const int buttonPin = 3;        // declare the number of the pushbutton pin
 int buttonState = 0;            // variable for reading the pushbutton status
 long lastDebounceTime = 0;      // the last time the output pin was toggled
 long debounceDelay = 50;        // the debounce time; increase if the output flickers
-uint32_t timer = millis();      // set the counter time
-Adafruit_GPS GPS(&GPSSerial);   // define some serial stuff
-Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28);   // some details about the sensor
+
 
 // HERE WE ARE GOING TO INCLUDE SOME LIBRARIES USED TO RUN THE SENSORS AND INTERPRET THE DATA //
 
@@ -20,8 +18,13 @@ Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28);   // some details about the sen
 // HERE WE DEFINE SOME FACTORS AND ATTRIBUTES OF THE SCRIPT AND ITS COMPONENTS //
 
 #define GPSSerial Serial1                          // define the serial hardware used here for the GPS sensor
+Adafruit_GPS GPS(&GPSSerial);                      // define some serial stuff
 #define BNO055_SAMPLERATE_DELAY_MS (100)           // set the time delay between accelerometer readings
 #define GPSECHO false                              // set the echo to false otherwise raw data is pumped out
+uint32_t timer = millis();                         // set the counter time
+
+
+Adafruit_BNO055 bno = Adafruit_BNO055(55, 0x28);   // some details about the sensor
 
 // HERE WE DEFINE THE SCRIPT USED TO DISPLAY THE IMU SENSOR DETAILS //
 
@@ -154,4 +157,4 @@ void loop() {
 
    lastDebounceTime = millis();                         //reset the current time
 
-  } }}
+  }}}
