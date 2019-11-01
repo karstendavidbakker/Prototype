@@ -60,12 +60,15 @@ def serial_to_property_values():
         else:
             values3 = line.replace(":", ",").split(',')
         print(values3)
+
+        for x in values3:
+            print(x.trim())
         # Use the first element of the list as property id
         property_name = values3.pop(0)
         print(property_name)
         # gps values get put into gps data variable
         if property_name == "GPS":
-            GPS_values = [float(i.trim()) for i in values3]
+            GPS_values = [float(i) for i in values3]
             print(GPS_values)
             return GPS_values
         # update IMU values
