@@ -94,7 +94,6 @@ current_time = int(datetime.datetime.utcnow().timestamp()*1000)
 # name site(created by flask) app
 app = Flask(__name__)
 
-app.config['SECRET KEY'] = 'secret!'
 socketio = SocketIO(app)
 # functions for the root folder
 
@@ -131,22 +130,8 @@ def map4():
     return render_template('maplocation4.html')
 
 
-# thread = Thread(target=serial_gps_data)
-# thread.start()
-
-@socketio.on('json')
-def handle_json(json):
-    print('######## ######## ##### received json: ' + str(json))
-    socketio.emit('hello', json, broadcast=True)
-
-def test():
-    while True:
-        global socketio
-        socketio.emit('hello', 'test', broadcast=True)
-        time.sleep(1)
-
-threadTest = Thread(target=test)
-threadTest.start()
+thread = Thread(target=serial_gps_data)
+thread.start()
 
 try:
     if __name__ == '__main__':
