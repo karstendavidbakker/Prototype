@@ -19,7 +19,7 @@ from threading import Thread
 
 load_dotenv()
 
-GPS_data = ["0", "0"]
+GPS_data = ["00.00000", "0.000000"]
 
 THING_ID = os.environ['THING_ID']
 THING_TOKEN = os.environ['THING_TOKEN']
