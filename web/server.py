@@ -72,12 +72,12 @@ def serial_gps_data():
     try:
         while True:
             print("emiting gps location")
-            try:
-                print("begin serial_to_property_values")
-                GPS_data = serial_to_property_values()
-            except:
-                print("exception on serial_to_property_values")
-                GPS_data = [0,0]
+            #try:
+            print("begin serial_to_property_values")
+            GPS_data = serial_to_property_values()
+            #except:
+            print("exception on serial_to_property_values")
+            #GPS_data = [0,0]
             print(GPS_data)
             if GPS_data is not None:
                 json = {"gps": GPS_data}
