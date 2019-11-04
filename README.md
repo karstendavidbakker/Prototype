@@ -4,7 +4,7 @@
 
 Jordan Kelly		- 4917189
 
-Casper Beers		- 4975421
+Casper Beeris		- 4975421
 
 Karsten Bakker	- 4278887
 
