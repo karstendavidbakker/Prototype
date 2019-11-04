@@ -38,7 +38,7 @@ Final report- Team 6
 
 Submission date: Monday 4th November 2019
 
-Team members: \
+Team members:
 
 
 Jordan Kelly - 4917189
@@ -147,7 +147,7 @@ For this project the purpose of this prototype was to validated the accuracy of 
 
 
 
-**Tips & Tricks: 	**General and basic instructions to take into account when executing this (IoT) project.
+**Tips & Tricks: 	**General and basic instructions to take into account when executing this (IoT) project.**
 
 
 
@@ -169,35 +169,12 @@ For this project the purpose of this prototype was to validated the accuracy of 
     Therefore the the following were seen as a problems and solutions taken in to account:
 
 
-<table>
-  <tr>
-   <td>
-Wishes
-   </td>
-   <td>solutions
-   </td>
-  </tr>
-  <tr>
-   <td>Wheelchair users should be <strong>motivated to share</strong> their data
-   </td>
-   <td>Sharing data is allows wheelchair user to <strong>get their problems solved</strong> by municipalities
-   </td>
-  </tr>
-  <tr>
-   <td>Wheelchair users should <strong>benefit from the data</strong>
-   </td>
-   <td>Wheelchair users can avoid obstacles in cities
-<p>
-And thereby <strong>travel safer and faster </strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Wheelchair data is of <strong>interest to third parties </strong>(manicipalities)
-   </td>
-   <td>Municipalities get <strong>direct customers feedback</strong> in a structured way
-   </td>
-  </tr>
-</table>
+
+| Wishes | Solutions |
+|--------|-----------|
+| Wheelchair users should be **motivated to share** their data | sharing data is allows wheelchair user to **get their problems solved** by municipalities|
+|Wheelchair users should **benefit from the data** | Wheelchair users can avoid obstacles in cities And thereby **travel safer and faster** |
+| Wheelchair data is of **interest to third parties**(municipalities) | Municipalities get **direct customers feedback** in a structured way |
 
 
 
