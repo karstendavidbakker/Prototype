@@ -68,7 +68,7 @@ def serial_to_property_values():
             values3 = line.replace(":", ",").split(',')
         #strip of special tokens like /n /r enz.
         for i in values3:
-            i.strip("/n")
+            i.replace(\x, "").replace(\r\n,"")
         print(values3)
         # Use the first element of the list as property id
         property_name = values3.pop(0)
