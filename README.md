@@ -8,22 +8,6 @@ Casper Beers		- 4975421
 
 Karsten Bakker	- 4278887
 
-![Front Page](images/0.png)
-
-![Logo](images/2.png)
-
-![Wheel Chair Problem Spotted](images/3.1.png  | width=100)
-
-
-
-![Avoid obstacles by the online access to the marked locations](images/3.2.png =250x250)
-
-![Manucipalities have access to Wheelchair problems locations and the executed wheel chair behaviour. Based on this data the stakeholder can give priority to the biggest problems and chose the prefered maintaince](images/3.3.png)
-
-![IoT architecture](images/1.jpeg)
-
-![Open source Webserver to all wheelchair users - Connected to Wheallcare service to mark inaccesible locations](images/4.png)
-
 
 ID5415 - Prototyping Connected Products
 
@@ -61,6 +45,7 @@ Karsten Bakker - 4278887
 3. Method
 4. Recommendations
 5. Reflection
+
 1. Introduction
 
     This report serves to outline the design development process for the WheelCare system - a connected Internet of Things product that hopes to aid in the improvement of facilities for wheelchair users.
@@ -77,7 +62,7 @@ Karsten Bakker - 4278887
 
     The project hopes to integrate the local computing system into an internet-based data management platform, where the gathered information can be processed and made into comprehensible insights for the users of the system. and About the Internet of Things:
 
-2. Concept
+2. Concept description
 
     The WheelCare system is an IoT device used to identify locations and hazards that are unsafe or unsuitable for wheelchair users. Using the device, movement and location data can be captured and accessed online, where wheelchair users can be warned about treacherous or difficult journeys. Furthermore, this information can be used by government bodies and proprietors alike to make improvements to their buildings and facilities.
 
@@ -95,13 +80,13 @@ Karsten Bakker - 4278887
 The local system is powered using a standard power bank, and can operate for up to FIXME hours on a single charge.
 
 
-    The online platform makes use of TU Delft’s Data Centric Design Hub for the information processing system.
+The online platform makes use of TU Delft’s Data Centric Design Hub for the information processing system.
 
 
-    The local system represents the integration of the coding languages C++ and Python, and the online platform utilises HTML, CSS & JavaScript.
+The local system represents the integration of the coding languages C++ and Python, and the online platform utilises HTML, CSS & JavaScript.
 
 
-**Tutorial: **
+**Tutorial:**
 
 **How to built a “city wheelchair problem mapping” prototype? **
 
@@ -156,7 +141,7 @@ For this project the purpose of this prototype was to validated the accuracy of 
 *   Integrated print() functions in between lines of code to validate the output of your program
 *   Note that setting up IoT connections are in general difficult. Testing pieces of code individually could ease tackling this complexity. Recommended when rewriting files is to make a backup from the last operating status.
 *   
-3. Method: \
+3. Method:
 
     1. Concept Selection
 
@@ -659,3 +644,19 @@ The arduino GPS data turned out to be precise but not too accurate. Additionally
    </td>
   </tr>
 </table>
+
+![Front Page](images/0.png)
+
+![Logo](images/2.png)
+
+![Wheel Chair Problem Spotted](images/3.1.png  | width=100)
+
+
+
+![Avoid obstacles by the online access to the marked locations](images/3.2.png =250x250)
+
+![Manucipalities have access to Wheelchair problems locations and the executed wheel chair behaviour. Based on this data the stakeholder can give priority to the biggest problems and chose the prefered maintaince](images/3.3.png)
+
+![IoT architecture](images/1.jpeg)
+
+![Open source Webserver to all wheelchair users - Connected to Wheallcare service to mark inaccesible locations](images/4.png)
