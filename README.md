@@ -132,7 +132,7 @@ For this project the purpose of this prototype was to validated the accuracy of 
 
 
 
-**Tips & Tricks: 	**General and basic instructions to take into account when executing this (IoT) project.**
+**Tips & Tricks: General and basic instructions to take into account when executing this (IoT) project.**
 
 
 
@@ -140,7 +140,7 @@ For this project the purpose of this prototype was to validated the accuracy of 
 *   For debugging output to a web server use right mouse click “inspect” to find errors not appearing in your coding program.
 *   Integrated print() functions in between lines of code to validate the output of your program
 *   Note that setting up IoT connections are in general difficult. Testing pieces of code individually could ease tackling this complexity. Recommended when rewriting files is to make a backup from the last operating status.
-*   
+
 3. Method:
 
     1. Concept Selection
@@ -173,7 +173,7 @@ The prototype features three 3D printed hardware components located at the follo
 
 
 
-![alt_text](images/Housing Diagram-01.png "image_tooltip")
+![alt_text](images/image5.png "image_tooltip")
 
 
 Each part was modelled using Fusion 360 and printed using a Prusa I3 MK3s FDM printer in PLA material.
@@ -226,7 +226,6 @@ Description: This iteration served as a stepping stone on which to test the rela
 
     Rationale: final prototype housing production.
 
-![alt_text](images/Housing Diagram_REV3-01.png "image_tooltip")
 
      \
 Description:
@@ -244,7 +243,6 @@ L-R: electronics housing, button holder, IMU holder.
 
 Located on the wheelchair frame, the arduino Mega2560 microcontroller serves as the first system that the user interacts with in the WheelCare concept
 
-![alt_text](images/System_diagram_rev2-01.png "image_tooltip")
 .
 
 The responsibility of the Arduino Microcontroller is
