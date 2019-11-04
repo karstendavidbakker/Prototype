@@ -519,10 +519,10 @@ Serial to server
 
 Collecting
 
-![Flat ground - nominal terrain](images/Terrain_4)
-![Cobblestones - light terrain](images/Terrain_1)
-![Grass - intermediate terrain](images/Terrain_3)
-![Steps - extreme terrain](images/Terrain_2)
+![Flat ground - nominal terrain](images/Terrain_4.jpg)
+![Cobblestones - light terrain](images/Terrain_1.jpg)
+![Grass - intermediate terrain](images/Terrain_3.jpg)
+![Steps - extreme terrain](images/Terrain_2.jpg)
 
 
 Processing
