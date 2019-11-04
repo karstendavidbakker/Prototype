@@ -148,13 +148,13 @@ For this project the purpose of this prototype was to validated the accuracy of 
 
     1. Concept Selection
 
-    To begin, a period of brainstorming was conducted with the team members to choose a suitable wheelchair-based solution.
+To begin, a period of brainstorming was conducted with the team members to choose a suitable wheelchair-based solution.
 
 
     **To give expensive IoT devices the right to exists incentives to share data are of big interest:**
 
 
-    Therefore the the following were seen as a problems and solutions taken in to account:
+Therefore the the following were seen as a problems and solutions taken in to account:
 
 
 
@@ -166,7 +166,7 @@ For this project the purpose of this prototype was to validated the accuracy of 
 
 
 
-    Firstly, a range of sensors and actuators were established. Next, the team identified potential applications of the technologies. From this, three concepts emerged….?
+Firstly, a range of sensors and actuators were established. Next, the team identified potential applications of the technologies. From this, three concepts emerged….?
 
 
 
@@ -190,20 +190,20 @@ The housings were employed to achieve the following goals:
 *   To securely affix the IMU in place on the frame, ensuring repeatability and validity between various readings. Should the sensor move throughout its lifetime, the way in which accelerometer data recorded across the three axes may change, resulting in incorrect or inaccurate labelling.
 *   To provide ease of use for users with reduced hand dexterity and motor function when interacting with small features (such as push-buttons and power switches).
 
-    In total, three iterations of housings were made. Incremental improvements were made to the system as follows:
+In total, three iterations of housings were made. Incremental improvements were made to the system as follows:
 
 
     **MK1 housings**
 
 
-    Rationale: for the first time integrate the components onto the wheelchair frame.
+Rationale: for the first time integrate the components onto the wheelchair frame.
 
 
      \
 Description: this iteration proved successful in that the entire system could be integrated within the wheelchair frame, powered on its own source and operating autonomously.
 
 
-    To improve: The zip-tie method for affixing the parts proved unstable, and should be replaced with a bolt-on feature. The location of the electronics housing should be changed to ensure that the wheelchair can be folded and stowed.
+To improve: The zip-tie method for affixing the parts proved unstable, and should be replaced with a bolt-on feature. The location of the electronics housing should be changed to ensure that the wheelchair can be folded and stowed.
 
 
 
@@ -214,20 +214,20 @@ Description: this iteration proved successful in that the entire system could be
 **MK2 housings**
 
 
-    Rationale: incorporate bolt-on fixings and test new housing location.
+Rationale: incorporate bolt-on fixings and test new housing location.
 
 
 
 Description: This iteration served as a stepping stone on which to test the relationship of the fixing hardware
 
 
-    To improve: The layout of the internal components must be altered to ensure that the frame can be folded properly.
+To improve: The layout of the internal components must be altered to ensure that the frame can be folded properly.
 
 
-    **MK3 housings**
+**MK3 housings**
 
 
-    Rationale: final prototype housing production.
+Rationale: final prototype housing production.
 
 
 ![alt_text](images/Housing Diagram_REV4-01.png)
