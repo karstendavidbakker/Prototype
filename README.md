@@ -264,11 +264,13 @@ The development process of the Arduino microcontroller was as follows:
 8. GPS data parsed and formatted to give readable information for the DCD hub.
 9. Final code formulated to include x1 GPS location and IMU data in a serial monitor readout once the button is pressed.
 
-System diagram:
-
-
+Arduino system diagram:
 
 ![alt_text](images/image3.png "image_tooltip")
+
+![alt_text](System_diagram_rev2-01.png)
+
+Hardware diagram:
 
 ![alt_text](System_diagran-01.png)
 
