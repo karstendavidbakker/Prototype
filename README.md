@@ -60,23 +60,26 @@ Karsten Bakker - 4278887
     _‘While the population of wheelchair users is growing worldwide, it becomes urgent to design supportive technologies that fit their needs. We aim to develop products for improvement of the wheelchair users’ well-being. This design is a connected product that collects data from sensors, processes it in order to actuate user interactions embedded on the wheelchair.’_
 
 
-    The project hopes to integrate the local computing system into an internet-based data management platform, where the gathered information can be processed and made into comprehensible insights for the users of the system. and About the Internet of Things:
+The project hopes to integrate the local computing system into an internet-based data management platform, where the gathered information can be processed and made into comprehensible insights for the users of the system. and About the Internet of Things:
 
 2. Concept description
 
-    The WheelCare system is an IoT device used to identify locations and hazards that are unsafe or unsuitable for wheelchair users. Using the device, movement and location data can be captured and accessed online, where wheelchair users can be warned about treacherous or difficult journeys. Furthermore, this information can be used by government bodies and proprietors alike to make improvements to their buildings and facilities.
+The WheelCare system is an IoT device used to identify locations and hazards that are unsafe or unsuitable for wheelchair users. Using the device, movement and location data can be captured and accessed online, where wheelchair users can be warned about treacherous or difficult journeys. Furthermore, this information can be used by government bodies and proprietors alike to make improvements to their buildings and facilities.
+
+![alt_text](images/Button_1.png)
+
+Should a user encounter a potential hazard or unsuitable terrain they can log this to the online site by using the system’s button module.  An accelerometer module affixed to the chair’s frame then logs a period of movement data and transmits this to the cloud where it is processed to identify the scale or type of the hazard. This information is then available to view on a map, to chart an area’s risks and their severity for wheelchair users.
+
+![alt_text](images/PB040299.jpg)
+
+The system architecture is described in the above diagram. At the heart is a Raspberry Pi, which is used to capture and send data to the cloud. An Arduino Mega microcontroller is responsible for operating the accelerometer and the push-button module.
 
 
-    Should a user encounter a potential hazard or unsuitable terrain they can log this to the online site by using the system’s button module.  An accelerometer module affixed to the chair’s frame then logs a period of movement data and transmits this to the cloud where it is processed to identify the scale or type of the hazard. This information is then available to view on a map, to chart an area’s risks and their severity for wheelchair users.
+It is hoped that the system will be purchased by wheelchair users who want to ensure a more convenient and autonomous life by foreseeing and thus avoiding potential hazards that might otherwise require assistance. Likewise, government bodies and proprietors who wish to provide safe and wheelchair-friendly facilities can purchase this system for use in mapping and research applications.
 
 
-    The system architecture is described in the above diagram. At the heart is a Raspberry Pi, which is used to capture and send data to the cloud. An Arduino Mega microcontroller is responsible for operating the accelerometer and the push-button module.
+![alt_text](images/image1.png)
 
-
-    It is hoped that the system will be purchased by wheelchair users who want to ensure a more convenient and autonomous life by foreseeing and thus avoiding potential hazards that might otherwise require assistance. Likewise, government bodies and proprietors who wish to provide safe and wheelchair-friendly facilities can purchase this system for use in mapping and research applications.
-
-
-![alt_text](images/image1.png "image_tooltip")
 The local system is powered using a standard power bank, and can operate for up to FIXME hours on a single charge.
 
 
@@ -145,13 +148,13 @@ For this project the purpose of this prototype was to validated the accuracy of 
 
     1. Concept Selection
 
-    To begin, a period of brainstorming was conducted with the team members to choose a suitable wheelchair-based solution.
+To begin, a period of brainstorming was conducted with the team members to choose a suitable wheelchair-based solution.
 
 
     **To give expensive IoT devices the right to exists incentives to share data are of big interest:**
 
 
-    Therefore the the following were seen as a problems and solutions taken in to account:
+Therefore the the following were seen as a problems and solutions taken in to account:
 
 
 
@@ -163,7 +166,7 @@ For this project the purpose of this prototype was to validated the accuracy of 
 
 
 
-    Firstly, a range of sensors and actuators were established. Next, the team identified potential applications of the technologies. From this, three concepts emerged….?
+Firstly, a range of sensors and actuators were established. Next, the team identified potential applications of the technologies. From this, three concepts emerged….?
 
 
 
@@ -187,20 +190,20 @@ The housings were employed to achieve the following goals:
 *   To securely affix the IMU in place on the frame, ensuring repeatability and validity between various readings. Should the sensor move throughout its lifetime, the way in which accelerometer data recorded across the three axes may change, resulting in incorrect or inaccurate labelling.
 *   To provide ease of use for users with reduced hand dexterity and motor function when interacting with small features (such as push-buttons and power switches).
 
-    In total, three iterations of housings were made. Incremental improvements were made to the system as follows:
+In total, three iterations of housings were made. Incremental improvements were made to the system as follows:
 
 
     **MK1 housings**
 
 
-    Rationale: for the first time integrate the components onto the wheelchair frame.
+Rationale: for the first time integrate the components onto the wheelchair frame.
 
 
      \
 Description: this iteration proved successful in that the entire system could be integrated within the wheelchair frame, powered on its own source and operating autonomously.
 
 
-    To improve: The zip-tie method for affixing the parts proved unstable, and should be replaced with a bolt-on feature. The location of the electronics housing should be changed to ensure that the wheelchair can be folded and stowed.
+To improve: The zip-tie method for affixing the parts proved unstable, and should be replaced with a bolt-on feature. The location of the electronics housing should be changed to ensure that the wheelchair can be folded and stowed.
 
 
 
@@ -211,28 +214,30 @@ Description: this iteration proved successful in that the entire system could be
 **MK2 housings**
 
 
-    Rationale: incorporate bolt-on fixings and test new housing location.
+Rationale: incorporate bolt-on fixings and test new housing location.
 
 
-     \
+
 Description: This iteration served as a stepping stone on which to test the relationship of the fixing hardware
 
 
-    To improve: The layout of the internal components must be altered to ensure that the frame can be folded properly.
+To improve: The layout of the internal components must be altered to ensure that the frame can be folded properly.
 
 
-    **MK3 housings**
+**MK3 housings**
 
 
-    Rationale: final prototype housing production.
+Rationale: final prototype housing production.
 
 
-     \
+![alt_text](images/Housing Diagram_REV4-01.png)
+
+
 Description:
 
 
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/image6.png)
 
 
 L-R: electronics housing, button holder, IMU holder.
@@ -482,10 +487,16 @@ Serial to server
 Collecting
 
 ![Flat ground - nominal terrain](images/Terrain_4.jpg)
-![Cobblestones - light terrain](images/Terrain_1.jpg)
-![Grass - intermediate terrain](images/Terrain_3.jpg)
-![Steps - extreme terrain](images/Terrain_2.jpg)
+Flat ground - nominal Terrain
 
+![Cobblestones - light terrain](images/Terrain_1.jpg)
+Cobblestones - light terrain
+
+![Grass - intermediate terrain](images/Terrain_3.jpg)
+Grass - intermediate terrain
+
+![Steps - extreme terrain](images/Terrain_2.jpg)
+Steps - extreme terrain
 
 Processing
 
