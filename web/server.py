@@ -67,8 +67,6 @@ def serial_to_property_values():
             #format to a list type
             values3 = line.replace(":", ",").split(',')
         #strip of special tokens like /n /r enz.
-        for i in values3:
-            i.replace(\x, "").replace(\r\n,"")
         print(values3)
         # Use the first element of the list as property id
         property_name = values3.pop(0)
@@ -83,11 +81,14 @@ def serial_to_property_values():
             prop_123 = my_thing.find_or_create_property(property_name,
                                                            PropertyType.THREE_DIMENSIONS)
             # If we find the property, we update the values (rest of the list)
-            if prop_123 is not None:
-                prop_123.update_values([float(x) for x in values3])
-            # # Otherwise, we show a warning
-            else:
-                print('Warning: unknown property ' + property_name)
+            try:
+                if prop_123 is not None:
+                    prop_123.update_values([float(x) for x in values3])
+                # # Otherwise, we show a warning
+                else:
+                    print('Warning: unknown property ' + property_name)
+            except ValueError:
+                print("no gps fix")
 
 def serial_gps_data():
     try:
