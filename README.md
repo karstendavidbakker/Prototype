@@ -89,15 +89,15 @@ The online platform makes use of TU Delft’s Data Centric Design Hub for the in
 The local system represents the integration of the coding languages C++ and Python, and the online platform utilises HTML, CSS & JavaScript.
 
 
-**Tutorial:
+**Tutorial:**
 
-How to built a “city wheelchair problem mapping” prototype? **
+**How to built a “city wheelchair problem mapping” prototype? **
 
 **For Beginners**
 
 The aim of of this tutorial is to get the basic principles of IoT connected products, learning about the (coding) requirements and setting up connections to be able to gain practical skills. This with the goal to translate connect concepts ideas in concrete functional prototypes.
 
-*Goal & Purpose*
+Goal & Purpose
 
 For this project the purpose of this prototype was to validated the accuracy of the GPS data in an outdoor environment. Additionally this prototypes allows to gather insights in the the experience of individuals marking problems in the city.
 
@@ -172,17 +172,9 @@ Firstly, a range of sensors and actuators were established. Next, the team ident
 
     2. **Hardware development**
 
-The prototype features three 3D printed hardware components located at the following locations on the frame of the wheelchair:
-
-
-![alt_text](images/image8.png "image_tooltip")
-
-
-Each part was modelled using Fusion 360 and printed using a Prusa I3 MK3s FDM printer in PLA material.
+The prototype features three 3D printed hardware components located at three locations on the frame of the wheelchair. Each part was modelled using Fusion 360 and printed using a Prusa I3 MK3s FDM printer in PLA material.
 
 The housings were employed to achieve the following goals:
-
-
 
 *   To house the electronic components on the frame of the wheelchair, ensuring that they are held stably during folding and unfolding of the wheelchair.
 *   To protect them from environmental conditions such as dirt, rain and UV damage.
@@ -192,28 +184,25 @@ The housings were employed to achieve the following goals:
 In total, three iterations of housings were made. Incremental improvements were made to the system as follows:
 
 
-    **MK1 housings**
+**MK1 housings**
 
 
 Rationale: for the first time integrate the components onto the wheelchair frame.
 
 
-Description: this iteration proved successful in that the entire system could be integrated within the wheelchair frame, powered on its own source and operating autonomously.
 
+Description: this iteration proved successful in that the entire system could be integrated within the wheelchair frame, powered on its own source and operating autonomously.
 
 To improve: The zip-tie method for affixing the parts proved unstable, and should be replaced with a bolt-on feature. The location of the electronics housing should be changed to ensure that the wheelchair can be folded and stowed.
 
 
-
-
-
+![alt_text](images/image8.png "image_tooltip")
 
 
 **MK2 housings**
 
 
 Rationale: incorporate bolt-on fixings and test new housing location.
-
 
 
 Description: This iteration served as a stepping stone on which to test the relationship of the fixing hardware
@@ -233,16 +222,16 @@ Rationale: final prototype housing production.
 
 Description:
 
-
-
 ![alt_text](images/image6.png)
 
 
 L-R: electronics housing, button holder, IMU holder.
 
-3. **Arduino Microcontroller**
 
-Located on the wheelchair frame, the arduino Mega2560 microcontroller serves as the first system that the user interacts with in the WheeallCare concept
+    3. **Arduino Microcontroller**
+
+Located on the wheelchair frame, the Arduino Mega2560 microcontroller serves as the first system that the user interacts with in the WheelCare concept
+
 
 The responsibility of the Arduino Microcontroller is
 
@@ -281,10 +270,11 @@ System diagram:
 
 ![alt_text](images/image3.png "image_tooltip")
 
+![alt_text](System_diagran-01.png)
 
 **ARDUINO CODE**
 
-```c+
+```
 
 // HERE WE ARE GOING TO DEFINE SOME VARIABLES THAT CAN BE RECALLED LATER IN THE SCRIPT //
 
@@ -446,176 +436,13 @@ void loop() {
 
 ```
 
-4. **Raspberry Pi**
 
-The Raspberry Pi has two jobs. It acts as a processor for the data outputted from the Arduino and sends this data to ether the dcd hub for storage or to a website to generate markers. It also acts as the server that hosts the website used by the client to inspect marked hazards.
-
-```python
-#import all needed packages
-#for serial port
-import serial
-
-#for dcd hub interaction
-from dcd.entities.thing import Thing
-from dcd.entities.property import PropertyType
-from dotenv import load_dotenv
-import os
-
-# for site and websocket
-from flask import Flask, request, render_template
-from flask_socketio import SocketIO, emit, send
-
-#for date time and random variables
-import datetime
-import time
-from random import random
-
-#for parralel processing
-from threading import Thread
-
-#load .env file
-load_dotenv()
-#placeholder data for gps
-GPS_data = ["00.00000", "0.000000"]
-#dcd thing connection setup
-THING_ID = os.environ['THING_ID']
-THING_TOKEN = os.environ['THING_TOKEN']
-
-# define my thing using
-my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
-
-#populate thing
-my_thing.read()
-
-# Start a connection to the serial port, switch port if ther is an exception.
-try:
-    ser = serial.Serial('/dev/ttyACM0', 115200, timeout=2)
-except:
-    try:
-        ser = serial.Serial('/dev/ttyACM1', 115200, timeout=2)
-    except:
-        ser = serial.Serial('/dev/cu.usbmodem14431', 115200, timeout=2)
-
-# Read the next line from the serial port
-# and update the property values
-def serial_to_property_values():
-    # Read one line
-    line_bytes = ser.readline()
-    # If the line is not empty
-    if len(line_bytes) > 0:
-
-        # Convert the bytes into string
-        line = line_bytes.decode('utf-8')
-        print(line)
-        # property name is the first argument of the recieved string
-        property_name = line[0:3]
-        # Split the string using commas as separator, we get a list of strings
-        if property_name == "GPS":
-            #reformat incomming gps string, so google maps can read it
-            values = line.replace("N","").replace("E","").replace(".","")
-            values2 = values[:6]+"."+values[6:15]+"."+values[15:]
-            values3 = values2.replace(":", ",").split(',')
-        #if it is a IMU data point
-        else:
-            #format to a list type
-            values3 = line.replace(":", ",").split(',')
-        #strip of special tokens like /n /r enz.
-        print(values3)
-        # Use the first element of the list as property id
-        property_name = values3.pop(0)
-        # gps values get put into gps data variable
-        try:
-            if property_name == "GPS":
-                GPS_values = [float(i) for i in values3]
-                print(GPS_values)
-                GPS_values[1] = GPS_values[1]+0.148
-                GPS_values[0] = GPS_values[0]+0.0008
-                print(GPS_values)
-                return GPS_values
-            # update IMU values
-            else:
-                print(property_name)
-                prop_123 = my_thing.find_or_create_property(property_name,
-                                                               PropertyType.THREE_DIMENSIONS)
-                # If we find the property, we update the values (rest of the list)
-                if prop_123 is not None:
-                    prop_123.update_values([float(x) for x in values3])
-                # # Otherwise, we show a warning
-                else:
-                    print('Warning: unknown property ' + property_name)
-        except ValueError:
-            print("no gps fix")
+ \
 
 
-def serial_gps_data():
-    try:
-        while True:
-            print("emiting gps location")
-            #try:
-            print("begin serial_to_property_values")
-            GPS_data = serial_to_property_values()
-            #except:
-            #print("exception on serial_to_property_values")
-            if GPS_data is not None:
-                json = {"gps": GPS_data}
-                print(json)
-                socketio.emit('gpslocation', json, broadcast=True)
-            time.sleep(1)
-    except KeyboardInterrupt:
-        exit()
- # haalt data (connectie) uit serial van raspberry pie, Na try leest hij die poort uit, of anders na except een andere poort.
-
-current_time = int(datetime.datetime.utcnow().timestamp()*1000)
-
-# name site(created by flask) app
-app = Flask(__name__)
-
-socketio = SocketIO(app)
-# functions for the root folder
-
-@app.route('/') #testcomment
-# display welcome message
-def hello_world():
-    return 'Hello, World Vlammen!'
 
 
-@app.route('/home')
-def home():
-    return render_template('index.html')
-
-@app.route('/test')
-def test():
-    return render_template('testvisual.html')
-
-
-@app.route('/go')
-def go():
-    return render_template('go.html')
-
-
-@app.route('/gauge')
-def gauge():
-    return render_template('gauge.html')
-
-@app.route('/map3')
-def map3():
-    return render_template('maplocation3.html')
-
-@app.route('/map4')
-def map4():
-    return render_template('maplocation4.html')
-
-
-thread = Thread(target=serial_gps_data)
-thread.start()
-
-try:
-    if __name__ == '__main__':
-        socketio.run(app, host = '0.0.0.0')
-        # to give everyone from every pc access to web
-except KeyboardInterrupt:
-    exit()
-```
+    4. Raspberry Pi
 
 **Goal**
 
@@ -677,14 +504,18 @@ The Rpi is able to receive, process
 
 
 
-5. Web platform
-Concept evaluation matrix
+    5. Web platform
 
-Task designated to others
+    Concept evaluation matrix
 
-Reflection:
 
-Please give critical feedback on decisions matrix flow chart  - might be some lines wrong or we could add stuff
+    Task designated to others
+
+
+    Reflection:
+
+
+    Please give critical feedback on decisions matrix flow chart  - might be some lines wrong or we could add stuff
 
 
 <table>
