@@ -175,8 +175,7 @@ Firstly, a range of sensors and actuators were established. Next, the team ident
 The prototype features three 3D printed hardware components located at the following locations on the frame of the wheelchair:
 
 
-
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](images/image8.png "image_tooltip")
 
 
 Each part was modelled using Fusion 360 and printed using a Prusa I3 MK3s FDM printer in PLA material.
@@ -199,7 +198,6 @@ In total, three iterations of housings were made. Incremental improvements were 
 Rationale: for the first time integrate the components onto the wheelchair frame.
 
 
-     \
 Description: this iteration proved successful in that the entire system could be integrated within the wheelchair frame, powered on its own source and operating autonomously.
 
 
@@ -208,7 +206,7 @@ To improve: The zip-tie method for affixing the parts proved unstable, and shoul
 
 
 
-![alt_text](images/image8.png "image_tooltip")
+
 
 
 **MK2 housings**
@@ -242,13 +240,9 @@ Description:
 
 L-R: electronics housing, button holder, IMU holder.
 
+3. **Arduino Microcontroller**
 
-
-    3. **Arduino Microcontroller**
-
-Located on the wheelchair frame, the arduino Mega2560 microcontroller serves as the first system that the user interacts with in the WheelCare concept
-
-.
+Located on the wheelchair frame, the arduino Mega2560 microcontroller serves as the first system that the user interacts with in the WheeallCare concept
 
 The responsibility of the Arduino Microcontroller is
 
@@ -290,7 +284,7 @@ System diagram:
 
 **ARDUINO CODE**
 
-```
+```c+
 
 // HERE WE ARE GOING TO DEFINE SOME VARIABLES THAT CAN BE RECALLED LATER IN THE SCRIPT //
 
