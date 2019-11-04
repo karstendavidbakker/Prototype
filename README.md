@@ -268,11 +268,11 @@ Arduino system diagram:
 
 ![alt_text](images/image3.png "image_tooltip")
 
-![alt_text](System_diagram_rev2-01.png)
+![alt_text](images/System_diagram_rev2-01.png)
 
 Hardware diagram:
 
-![alt_text](System_diagran-01.png)
+![alt_text](images/System_diagran-01.png)
 
 **ARDUINO CODE**
 
