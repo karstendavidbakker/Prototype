@@ -86,15 +86,15 @@ The online platform makes use of TU Delft’s Data Centric Design Hub for the in
 The local system represents the integration of the coding languages C++ and Python, and the online platform utilises HTML, CSS & JavaScript.
 
 
-**Tutorial:**
+**Tutorial:
 
-**How to built a “city wheelchair problem mapping” prototype? **
+How to built a “city wheelchair problem mapping” prototype? **
 
 **For Beginners**
 
 The aim of of this tutorial is to get the basic principles of IoT connected products, learning about the (coding) requirements and setting up connections to be able to gain practical skills. This with the goal to translate connect concepts ideas in concrete functional prototypes.
 
-Goal & Purpose
+*Goal & Purpose*
 
 For this project the purpose of this prototype was to validated the accuracy of the GPS data in an outdoor environment. Additionally this prototypes allows to gather insights in the the experience of individuals marking problems in the city.
 
