@@ -81,9 +81,11 @@ Karsten Bakker - 4278887
 
     The WheelCare system is an IoT device used to identify locations and hazards that are unsafe or unsuitable for wheelchair users. Using the device, movement and location data can be captured and accessed online, where wheelchair users can be warned about treacherous or difficult journeys. Furthermore, this information can be used by government bodies and proprietors alike to make improvements to their buildings and facilities.
 
+![alt_text](images/Button_1 "image_tooltip")
 
     Should a user encounter a potential hazard or unsuitable terrain they can log this to the online site by using the system’s button module.  An accelerometer module affixed to the chair’s frame then logs a period of movement data and transmits this to the cloud where it is processed to identify the scale or type of the hazard. This information is then available to view on a map, to chart an area’s risks and their severity for wheelchair users.
 
+![alt_text](images/PB040299 "image_tooltip")
 
     The system architecture is described in the above diagram. At the heart is a Raspberry Pi, which is used to capture and send data to the cloud. An Arduino Mega microcontroller is responsible for operating the accelerometer and the push-button module.
 
@@ -229,7 +231,7 @@ Description: this iteration proved successful in that the entire system could be
     Rationale: incorporate bolt-on fixings and test new housing location.
 
 
-     \
+
 Description: This iteration served as a stepping stone on which to test the relationship of the fixing hardware
 
 
@@ -241,14 +243,14 @@ Description: This iteration served as a stepping stone on which to test the rela
 
     Rationale: final prototype housing production.
 
-![alt_text](images/Housing Diagram_REV3-01.png "image_tooltip")
+![alt_text](images/Housing Diagram_REV4-01.png)
 
-     \
+
 Description:
 
 
 
-![alt_text](images/image6.png "image_tooltip")
+![alt_text](images/image6.png)
 
 
 L-R: electronics housing, button holder, IMU holder.
@@ -499,10 +501,16 @@ Serial to server
 Collecting
 
 ![Flat ground - nominal terrain](images/Terrain_4.jpg)
-![Cobblestones - light terrain](images/Terrain_1.jpg)
-![Grass - intermediate terrain](images/Terrain_3.jpg)
-![Steps - extreme terrain](images/Terrain_2.jpg)
+Flat ground - nominal Terrain
 
+![Cobblestones - light terrain](images/Terrain_1.jpg)
+Cobblestones - light terrain
+
+![Grass - intermediate terrain](images/Terrain_3.jpg)
+Grass - intermediate terrain
+
+![Steps - extreme terrain](images/Terrain_2.jpg)
+Steps - extreme terrain
 
 Processing
 
