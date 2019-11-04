@@ -36,7 +36,7 @@ except:
     try:
         ser = serial.Serial('/dev/ttyACM1', 115200, timeout=2)
     except:
-        ser = serial.Serial('COM12', 115200, timeout=2)
+        ser = serial.Serial('/dev/cu.usbmodem14431', 115200, timeout=2)
 
 # Read the next line from the serial port
 # and update the property values
