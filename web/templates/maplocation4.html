@@ -23,30 +23,18 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5Ta592tcRaPkglMFLRcFqLCyzM4oppts&callback=initMap">
     </script>
-
+z
     <script type="text/javascript" charset="utf-8">
       var map;
       var socket = io();
       socket.on('connect', function() {
         console.log("connected");
-        // socket.emit('json', {data: 'I\'m connected!'});
       });
 
       socket.on('gpslocation', function(data) {
-          //subscribe to part //IS POSITION CORRECT HERE????
           console.log(data);
           const latitude = data.gps[0];
           const longitude = data.gps[1]
-        // const json = JSON.parse(locationobject);      //parse makes the string a json object. json= easy way organising data
-        // console.log(json);
-        // console.log(json.lat);                  //catch the "lat" part of the string?
-        // console.log(json.lng);                //console log means like serial print. but than on console.
-        // if ((json.lat!== undefined) && (json.lng !== undefined)) {     //IS POSITION CORRECT HERE????
-        //  document.getElementById("myBar").with = json.distance;
-            // var map = new google.maps.Map(document.getElementById('map'), {
-            //   zoom: 17,
-            //   center: {lat:lat[0], lng: lng[0]},
-            // });
 
            new google.maps.Marker({position: {lat:latitude, lng:longitude}, map: map}); //IS POSITION CORRECT to copy to above code?
         // }
