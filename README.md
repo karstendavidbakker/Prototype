@@ -173,7 +173,7 @@ The prototype features three 3D printed hardware components located at the follo
 
 
 
-![alt_text](images/image5.png "image_tooltip")
+![alt_text](images/Housing Diagram-01.png "image_tooltip")
 
 
 Each part was modelled using Fusion 360 and printed using a Prusa I3 MK3s FDM printer in PLA material.
@@ -226,6 +226,7 @@ Description: This iteration served as a stepping stone on which to test the rela
 
     Rationale: final prototype housing production.
 
+![alt_text](images/Housing Diagram_REV3-01.png "image_tooltip")
 
      \
 Description:
@@ -243,6 +244,7 @@ L-R: electronics housing, button holder, IMU holder.
 
 Located on the wheelchair frame, the arduino Mega2560 microcontroller serves as the first system that the user interacts with in the WheelCare concept
 
+![alt_text](images/System_diagram_rev2-01.png "image_tooltip")
 .
 
 The responsibility of the Arduino Microcontroller is
