@@ -12,11 +12,11 @@ Karsten Bakker	- 4278887
 
 ![Logo](images/2.png)
 
-![Wheel Chair Problem Spotted](images/3.1.png)
+![Wheel Chair Problem Spotted](images/3.1.png  | width=100)
 
 
 
-![Avoid obstacles by the online access to the marked locations](images/3.2.png)
+![Avoid obstacles by the online access to the marked locations](images/3.2.png =250x250)
 
 ![Manucipalities have access to Wheelchair problems locations and the executed wheel chair behaviour. Based on this data the stakeholder can give priority to the biggest problems and chose the prefered maintaince](images/3.3.png)
 
