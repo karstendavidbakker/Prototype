@@ -1,35 +1,40 @@
+#import all needed packages
+#for serial port
 import serial
 
+#for dcd hub interaction
 from dcd.entities.thing import Thing
 from dcd.entities.property import PropertyType
 from dotenv import load_dotenv
 import os
 
-# import flask
+# for site and websocket
 from flask import Flask, request, render_template
 from flask_socketio import SocketIO, emit, send
 
+#for date time and random variables
 import datetime
 import time
 from random import random
 
-from numpy import genfromtxt
+#for parralel processing
 from threading import Thread
 
-
+#load .env file
 load_dotenv()
-
+#placeholder data for gps
 GPS_data = ["00.00000", "0.000000"]
-
+#dcd thing connection setup
 THING_ID = os.environ['THING_ID']
 THING_TOKEN = os.environ['THING_TOKEN']
 
 # define my thing using
 my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
 
+#populate thing
 my_thing.read()
 
-# Start reading the serial port
+# Start a connection to the serial port, switch port if ther is an exception.
 try:
     ser = serial.Serial('/dev/ttyACM0', 115200, timeout=2)
 except:
@@ -43,29 +48,30 @@ except:
 def serial_to_property_values():
     # Read one line
     line_bytes = ser.readline()
-    # lezen van lijn/functie
     # If the line is not empty
     if len(line_bytes) > 0:
 
         # Convert the bytes into string
         line = line_bytes.decode('utf-8')
         print(line)
+        # property name is the first argument of the recieved string
         property_name = line[0:3]
-        print(line[0:3])
         # Split the string using commas as separator, we get a list of strings
         if property_name == "GPS":
+            #reformat incomming gps string, so google maps can read it
             values = line.replace("N","").replace("E","").replace(".","")
             values2 = values[:6]+"."+values[6:15]+"."+values[15:]
             values3 = values2.replace(":", ",").split(',')
+        #if it is a IMU data point
         else:
+            #format to a list type
             values3 = line.replace(":", ",").split(',')
+        #strip of special tokens like /n /r enz.
+        for i in values3:
+            i.strip()
         print(values3)
-
-        for x in values3:
-            print(x.strip())
         # Use the first element of the list as property id
         property_name = values3.pop(0)
-        print(property_name)
         # gps values get put into gps data variable
         if property_name == "GPS":
             GPS_values = [float(i) for i in values3]
@@ -91,9 +97,7 @@ def serial_gps_data():
             print("begin serial_to_property_values")
             GPS_data = serial_to_property_values()
             #except:
-            print("exception on serial_to_property_values")
-            #GPS_data = [0,0]
-            print(GPS_data)
+            #print("exception on serial_to_property_values")
             if GPS_data is not None:
                 json = {"gps": GPS_data}
                 print(json)
