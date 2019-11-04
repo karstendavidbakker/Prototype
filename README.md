@@ -145,7 +145,7 @@ For this project the purpose of this prototype was to validated the accuracy of 
 *   Rasberry Pi
 *   Digital Button
 
-[ADD
+
 
 **Tips & Tricks: 	**General and basic instructions to take into account when executing this (IoT) project.
 
