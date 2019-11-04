@@ -81,11 +81,11 @@ Karsten Bakker - 4278887
 
     The WheelCare system is an IoT device used to identify locations and hazards that are unsafe or unsuitable for wheelchair users. Using the device, movement and location data can be captured and accessed online, where wheelchair users can be warned about treacherous or difficult journeys. Furthermore, this information can be used by government bodies and proprietors alike to make improvements to their buildings and facilities.
 
-![alt_text](images/Button_1 "image_tooltip")
+![alt_text](images/Button_1.png)
 
     Should a user encounter a potential hazard or unsuitable terrain they can log this to the online site by using the system’s button module.  An accelerometer module affixed to the chair’s frame then logs a period of movement data and transmits this to the cloud where it is processed to identify the scale or type of the hazard. This information is then available to view on a map, to chart an area’s risks and their severity for wheelchair users.
 
-![alt_text](images/PB040299 "image_tooltip")
+![alt_text](images/PB040299.jpg)
 
     The system architecture is described in the above diagram. At the heart is a Raspberry Pi, which is used to capture and send data to the cloud. An Arduino Mega microcontroller is responsible for operating the accelerometer and the push-button module.
 
@@ -93,7 +93,7 @@ Karsten Bakker - 4278887
     It is hoped that the system will be purchased by wheelchair users who want to ensure a more convenient and autonomous life by foreseeing and thus avoiding potential hazards that might otherwise require assistance. Likewise, government bodies and proprietors who wish to provide safe and wheelchair-friendly facilities can purchase this system for use in mapping and research applications.
 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt_text](images/image1.png)
 The local system is powered using a standard power bank, and can operate for up to FIXME hours on a single charge.
 
 
