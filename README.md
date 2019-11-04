@@ -38,7 +38,7 @@ Final report- Team 6
 
 Submission date: Monday 4th November 2019
 
-Team members: \
+Team members:
 
 
 Jordan Kelly - 4917189
@@ -170,10 +170,11 @@ For this project the purpose of this prototype was to validated the accuracy of 
 
 
 
-|Wishes | Solutions|
-|Wheelchair users should be **motivated to share** their data|sharing data is allows wheelchair user to **get their problems solved** by municipalities|
-|Wheelchair users should **benefit from the data**| Wheelchair users can avoid obstacles in cities And thereby **travel safer and faster** |
-|Wheelchair data is of **interest to third parties**(manicipalities)|Municipalities get **direct customers feedback** in a structured way|
+| Wishes | Solutions |
+|--------|-----------|
+| Wheelchair users should be **motivated to share** their data | sharing data is allows wheelchair user to **get their problems solved** by municipalities|
+|Wheelchair users should **benefit from the data** | Wheelchair users can avoid obstacles in cities And thereby **travel safer and faster** |
+| Wheelchair data is of **interest to third parties**(municipalities) | Municipalities get **direct customers feedback** in a structured way |
 
 
 
