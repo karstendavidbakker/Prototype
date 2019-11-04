@@ -34,7 +34,7 @@ Final report- Team 6
 <p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Prototyping-Connected0.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/Prototyping-Connected0.png "image_tooltip")
+![alt_text](images/image7.png "image_tooltip")
 
 
 ---
@@ -70,7 +70,7 @@ Karsten Bakker - 4278887
     This report serves to outline the design development process for the WheelCare system - a connected Internet of Things product that hopes to aid in the improvement of facilities for wheelchair users.
 
 
-    This project is being completed as part of the ID5415 Prototyping connected products elective as  part of the MSc Integrated Product Design course at TU Delft, Netherlands. 
+    This project is being completed as part of the ID5415 Prototyping connected products elective as  part of the MSc Integrated Product Design course at TU Delft, Netherlands.
 
 
     The project brief is as follows:
@@ -79,28 +79,28 @@ Karsten Bakker - 4278887
     _‘While the population of wheelchair users is growing worldwide, it becomes urgent to design supportive technologies that fit their needs. We aim to develop products for improvement of the wheelchair users’ well-being. This design is a connected product that collects data from sensors, processes it in order to actuate user interactions embedded on the wheelchair.’_
 
 
-    The project hopes to integrate the local computing system into an internet-based data management platform, where the gathered information can be processed and made into comprehensible insights for the users of the system. and About the Internet of Things: 
+    The project hopes to integrate the local computing system into an internet-based data management platform, where the gathered information can be processed and made into comprehensible insights for the users of the system. and About the Internet of Things:
 
 2. Concept
 
     The WheelCare system is an IoT device used to identify locations and hazards that are unsafe or unsuitable for wheelchair users. Using the device, movement and location data can be captured and accessed online, where wheelchair users can be warned about treacherous or difficult journeys. Furthermore, this information can be used by government bodies and proprietors alike to make improvements to their buildings and facilities.
 
 
-    Should a user encounter a potential hazard or unsuitable terrain they can log this to the online site by using the system’s button module.  An accelerometer module affixed to the chair’s frame then logs a period of movement data and transmits this to the cloud where it is processed to identify the scale or type of the hazard. This information is then available to view on a map, to chart an area’s risks and their severity for wheelchair users. 
+    Should a user encounter a potential hazard or unsuitable terrain they can log this to the online site by using the system’s button module.  An accelerometer module affixed to the chair’s frame then logs a period of movement data and transmits this to the cloud where it is processed to identify the scale or type of the hazard. This information is then available to view on a map, to chart an area’s risks and their severity for wheelchair users.
 
 
-    The system architecture is described in the above diagram. At the heart is a Raspberry Pi, which is used to capture and send data to the cloud. An Arduino Mega microcontroller is responsible for operating the accelerometer and the push-button module. 
+    The system architecture is described in the above diagram. At the heart is a Raspberry Pi, which is used to capture and send data to the cloud. An Arduino Mega microcontroller is responsible for operating the accelerometer and the push-button module.
 
 
-    It is hoped that the system will be purchased by wheelchair users who want to ensure a more convenient and autonomous life by foreseeing and thus avoiding potential hazards that might otherwise require assistance. Likewise, government bodies and proprietors who wish to provide safe and wheelchair-friendly facilities can purchase this system for use in mapping and research applications. 
+    It is hoped that the system will be purchased by wheelchair users who want to ensure a more convenient and autonomous life by foreseeing and thus avoiding potential hazards that might otherwise require assistance. Likewise, government bodies and proprietors who wish to provide safe and wheelchair-friendly facilities can purchase this system for use in mapping and research applications.
 
 
-    
+
 
 <p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Prototyping-Connected1.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/Prototyping-Connected1.png "image_tooltip")
+![alt_text](images/image1.png "image_tooltip")
 The local system is powered using a standard power bank, and can operate for up to FIXME hours on a single charge.
 
 
@@ -120,7 +120,7 @@ The aim of of this tutorial is to get the basic principles of IoT connected prod
 
 Goal & Purpose
 
-For this project the purpose of this prototype was to validated the accuracy of the GPS data in an outdoor environment. Additionally this prototypes allows to gather insights in the the experience of individuals marking problems in the city. 
+For this project the purpose of this prototype was to validated the accuracy of the GPS data in an outdoor environment. Additionally this prototypes allows to gather insights in the the experience of individuals marking problems in the city.
 
 <span style="text-decoration:underline;">In this tutorial you will learn about the main following subjects:</span>
 
@@ -136,16 +136,16 @@ For this project the purpose of this prototype was to validated the accuracy of 
 *   Emitting GPS data from physical to online digital prototype
 *   Collecting and storage of sensory data on a hub  
 
-**<span style="text-decoration:underline;">Required Materials:</span>** 
+**<span style="text-decoration:underline;">Required Materials:</span>**
 
 
 
-*   3D printer or casing prototype toolings, 
-*   press button, 
-*   bolts, 
-*   hot glue, 
+*   3D printer or casing prototype toolings,
+*   press button,
+*   bolts,
+*   hot glue,
 *   Wheelchair
-*   wiring, 
+*   wiring,
 *   Resistor
 *   Zero PCB
 *   Soldering materials
@@ -189,11 +189,11 @@ Wishes
   <tr>
    <td>Wheelchair users should be <strong>motivated to share</strong> their data
    </td>
-   <td>Sharing data is allows wheelchair user to <strong>get their problems solved</strong> by municipalities 
+   <td>Sharing data is allows wheelchair user to <strong>get their problems solved</strong> by municipalities
    </td>
   </tr>
   <tr>
-   <td>Wheelchair users should <strong>benefit from the data</strong> 
+   <td>Wheelchair users should <strong>benefit from the data</strong>
    </td>
    <td>Wheelchair users can avoid obstacles in cities
 <p>
@@ -201,7 +201,7 @@ And thereby <strong>travel safer and faster </strong>
    </td>
   </tr>
   <tr>
-   <td>Wheelchair data is of <strong>interest to third parties </strong>(manicipalities) 
+   <td>Wheelchair data is of <strong>interest to third parties </strong>(manicipalities)
    </td>
    <td>Municipalities get <strong>direct customers feedback</strong> in a structured way
    </td>
@@ -223,8 +223,8 @@ The prototype features three 3D printed hardware components located at the follo
 <p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Prototyping-Connected2.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/Prototyping-Connected2.png "image_tooltip")
- 
+![alt_text](images/image5.png "image_tooltip")
+
 
 Each part was modelled using Fusion 360 and printed using a Prusa I3 MK3s FDM printer in PLA material.
 
@@ -232,7 +232,7 @@ The housings were employed to achieve the following goals:
 
 
 
-*   To house the electronic components on the frame of the wheelchair, ensuring that they are held stably during folding and unfolding of the wheelchair. 
+*   To house the electronic components on the frame of the wheelchair, ensuring that they are held stably during folding and unfolding of the wheelchair.
 *   To protect them from environmental conditions such as dirt, rain and UV damage.
 *   To securely affix the IMU in place on the frame, ensuring repeatability and validity between various readings. Should the sensor move throughout its lifetime, the way in which accelerometer data recorded across the three axes may change, resulting in incorrect or inaccurate labelling.
 *   To provide ease of use for users with reduced hand dexterity and motor function when interacting with small features (such as push-buttons and power switches).
@@ -247,7 +247,7 @@ The housings were employed to achieve the following goals:
 
 
      \
-Description: this iteration proved successful in that the entire system could be integrated within the wheelchair frame, powered on its own source and operating autonomously. 
+Description: this iteration proved successful in that the entire system could be integrated within the wheelchair frame, powered on its own source and operating autonomously.
 
 
     To improve: The zip-tie method for affixing the parts proved unstable, and should be replaced with a bolt-on feature. The location of the electronics housing should be changed to ensure that the wheelchair can be folded and stowed.
@@ -258,7 +258,7 @@ Description: this iteration proved successful in that the entire system could be
 <p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Prototyping-Connected3.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/Prototyping-Connected3.png "image_tooltip")
+![alt_text](images/image8.png "image_tooltip")
 
 
 **MK2 housings**
@@ -268,7 +268,7 @@ Description: this iteration proved successful in that the entire system could be
 
 
      \
-Description: This iteration served as a stepping stone on which to test the relationship of the fixing hardware 
+Description: This iteration served as a stepping stone on which to test the relationship of the fixing hardware
 
 
     To improve: The layout of the internal components must be altered to ensure that the frame can be folded properly.
@@ -281,14 +281,14 @@ Description: This iteration served as a stepping stone on which to test the rela
 
 
      \
-Description: 
+Description:
 
 
 
 <p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Prototyping-Connected4.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/Prototyping-Connected4.png "image_tooltip")
+![alt_text](images/image6.png "image_tooltip")
 
 
 L-R: electronics housing, button holder, IMU holder.
@@ -301,13 +301,13 @@ Located on the wheelchair frame, the arduino Mega2560 microcontroller serves as 
 
 .
 
-The responsibility of the Arduino Microcontroller is 
+The responsibility of the Arduino Microcontroller is
 
 
 
 *   To operate the Adafruit BN055 IMU accelerometer sensor
 *   To operate the momentary push-button
-*   To operate the Adafruit Ultimate GPS sensor. 
+*   To operate the Adafruit Ultimate GPS sensor.
 *   To relay the captured information via serial connection to the Raspberry Pi.
 
 The system was coded in such a way that:
@@ -327,10 +327,10 @@ The development process of the Arduino microcontroller was as follows:
 3. The IMU was added, and programmed to print X, Y and Z Euler angle data stream into the serial monitor.
 4. IMU programmed to operate when the push-button is used.
 5. IMU programmed to print X number of values, corresponding to ten seconds of data capture.
-6. IMU programmed to print the angular acceleration in place of euler angle. 
+6. IMU programmed to print the angular acceleration in place of euler angle.
 7. GPS module added to the arduino system. Raw data stream printed into the serial monitor.
 8. GPS data parsed and formatted to give readable information for the DCD hub.
-9. Final code formulated to include x1 GPS location and IMU data in a serial monitor readout once the button is pressed. 
+9. Final code formulated to include x1 GPS location and IMU data in a serial monitor readout once the button is pressed.
 
 System diagram:
 
@@ -339,7 +339,7 @@ System diagram:
 <p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Prototyping-Connected5.png). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/Prototyping-Connected5.png "image_tooltip")
+![alt_text](images/image3.png "image_tooltip")
 
 
 **ARDUINO CODE**
@@ -521,11 +521,11 @@ void loop() {
 
 **Goal**
 
-The goal of the raspberry pi is to serve as a hub between the arduino, webserver and dcd hub. When information comes in at the RPi it will process it. The imu data will be compared to a trained model in such a way that the outcome of this model is a label that can be sent to the dcd hub which serves an interface for the municipality. Furthermore the RPi runs the web server that shows the locations of hazzards for wheelchair users from a website. 
+The goal of the raspberry pi is to serve as a hub between the arduino, webserver and dcd hub. When information comes in at the RPi it will process it. The imu data will be compared to a trained model in such a way that the outcome of this model is a label that can be sent to the dcd hub which serves an interface for the municipality. Furthermore the RPi runs the web server that shows the locations of hazzards for wheelchair users from a website.
 
 **Steps**
 
-Development of the Rpi was done using a stepwise incremental approach. This helped reduce the complexity and determining the cause of errors that we came across. We started building connections based on random data. Saving actual data and running a blank webpage. And developed these further to combine their functionalities and converting them to services. 
+Development of the Rpi was done using a stepwise incremental approach. This helped reduce the complexity and determining the cause of errors that we came across. We started building connections based on random data. Saving actual data and running a blank webpage. And developed these further to combine their functionalities and converting them to services.
 
 Random to dcd
 
@@ -563,7 +563,7 @@ Ip service
 
 **Current and furture state**
 
-The Rpi is able to receive, process 
+The Rpi is able to receive, process
 
 
 
@@ -586,7 +586,7 @@ The Rpi is able to receive, process
    <td>
 #
    </td>
-   <td>Arguments for decision / reflection on decisions / improve for future prototype 
+   <td>Arguments for decision / reflection on decisions / improve for future prototype
    </td>
   </tr>
   <tr>
