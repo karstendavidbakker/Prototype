@@ -76,6 +76,7 @@ def serial_to_property_values():
                 GPS_values = [float(i) for i in values3]
                 print(GPS_values)
                 GPS_values[1] = GPS_values[1]+0.148
+                GPS_values[0] = GPS_values[0]+0.0008
                 print(GPS_values)
                 return GPS_values
             # update IMU values
