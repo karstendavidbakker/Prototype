@@ -446,10 +446,11 @@ void loop() {
 
 ```
 
-4. Raspberry Pi
+4. **Raspberry Pi**
+
 The Raspberry Pi has two jobs. It acts as a processor for the data outputted from the Arduino and sends this data to ether the dcd hub for storage or to a website to generate markers. It also acts as the server that hosts the website used by the client to inspect marked hazards.
 
-```Python
+```python
 #import all needed packages
 #for serial port
 import serial
