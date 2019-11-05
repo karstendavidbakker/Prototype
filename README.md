@@ -171,8 +171,8 @@ Firstly, a range of sensors and actuators were established. Next, the team ident
 
 
     2. **Hardware development**
-    
-    
+
+
 The development process for the Wheeall Care system followed a process of four iterative cycles:
 
 1. Foundation
@@ -189,6 +189,10 @@ In this design phase the discrete electronic, web, and hardware components were 
 
 The prototype features three 3D printed hardware components located at three locations on the frame of the wheelchair. Each part was modelled using Fusion 360 and printed using a Prusa I3 MK3s FDM printer in PLA material.
 
+The part files are available to download here:
+3.mf files are used specifically, as the printing parameters are contained within the file, according to our recommended settings and performance requirements.
+
+
 The housings are employed to achieve the following goals:
 
 *   To house the electronic components on the frame of the wheelchair, ensuring that they are held stably during folding and unfolding of the wheelchair.
@@ -204,8 +208,6 @@ In total, three iterations of housings were made. Incremental improvements were 
 
 Rationale: for the first time integrate the components onto the wheelchair frame.
 
-
-
 Description: this iteration proved successful in that the entire system could be integrated within the wheelchair frame, powered on its own source and operating autonomously.
 
 To improve: The zip-tie method for affixing the parts proved unstable, and should be replaced with a bolt-on feature. The location of the electronics housing should be changed to ensure that the wheelchair can be folded and stowed.
@@ -214,23 +216,24 @@ To improve: The zip-tie method for affixing the parts proved unstable, and shoul
 ![alt_text](images/image8.png "image_tooltip" =250x)
 
 
+
+
 **MK2 housings**
 
 
 Rationale: incorporate bolt-on fixings and test new housing location.
 
-
 Description: This iteration served as a stepping stone on which to test the relationship of the fixing hardware
 
-
 To improve: The layout of the internal components must be altered to ensure that the frame can be folded properly.
+
+
 
 
 **MK3 housings**
 
 
 Rationale: final prototype housing production.
-
 
 ![alt_text](images/Housing Diagram_REV4-01.png)
 
