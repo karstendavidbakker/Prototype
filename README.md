@@ -213,7 +213,7 @@ Description: this iteration proved successful in that the entire system could be
 To improve: The zip-tie method for affixing the parts proved unstable, and should be replaced with a bolt-on feature. The location of the electronics housing should be changed to ensure that the wheelchair can be folded and stowed.
 
 
-![alt_text](images/image8.png "image_tooltip" | {:height="36px" width="36px"})
+![alt_text](images/image8.png "image_tooltip" | :height="36px" width="36px")
 
 
 
