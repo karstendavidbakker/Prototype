@@ -299,7 +299,7 @@ Hardware diagram:
 
 **Assembly Steps**
 
-To assemble the arduino system follow the following steps:
+To assemble the arduino system follow the following steps. A prototyping board is used between the Arduino and the sensors to protect the sensitive arduino in the case that the cables are pulled, and to reduce the chance of connections coming loose. 
 
 1. Cut three lengths of electric cabling approximately 600mm in length, and remove 5mm of plastic covering from each end of the wires.
 2. Cut one length of cable shroud approximately 550mm in length.
@@ -330,6 +330,9 @@ To assemble the arduino system follow the following steps:
 25. Connect the GND pin on the IMU to hole C on the GND track of the arduino. 
 26. Connect the SCL pin of the IMU to the SCL pin of the Arduino.
 27. Connect the SDA pin of the IMU to the SDA pin of the Arduino.
+
+28. Connect the Vin pin D of the prototyping board to the 5V Vin pin of the Arduino.
+29. Connect the GND pin of the prototyping board to the GND pin of the Arduino.
 
 **ARDUINO CODE**
 
