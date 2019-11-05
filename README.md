@@ -125,7 +125,8 @@ For this project the purpose of this prototype was to validated the accuracy of 
 
 *   3D printer or casing prototype toolings,
 *   press button,
-*   bolts,
+*   M3 x 20mm SHCS bolts,
+*   M3 X 5mm brass inserts
 *   hot glue,
 *   Wheelchair
 *   wiring,
@@ -233,7 +234,6 @@ To improve: The layout of the internal components must be altered to ensure that
 
 
 
-
 **MK3 housings**
 
 
@@ -241,16 +241,45 @@ Rationale: final prototype housing production.
 
 ![alt text](images/Housing Diagram_REV4-01.png)
 
-
-Description:
-
 ![alt_text](images/image6.png)
 
 
 L-R: electronics housing, button holder, IMU holder.
 
 
-    3. **Arduino Microcontroller**
+**Assembly of the hardware**
+
+Button module: 
+
+1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
+2. Remove the part brim and remove any sharp edges.
+3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the x4 M3 x5mm brass inserts, such as the below image.
+
+![alt_text](images/Ìnserts.jpg)
+
+4. Once the electronics have been succesfully integrated (see following steps), affix the button module on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
+
+
+IMU module: 
+
+1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
+2. Remove the part brim and remove any sharp edges.
+3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the 2 M3 x5mm brass inserts into the fixing locations, such as the below image.
+
+4. Once the electronics have been succesfully integrated (see following steps), affix the IMU on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
+
+Electronics encolsure: 
+
+1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
+2. Remove the part brim and remove any sharp edges.
+
+4. Once the electronics have been succesfully integrated (see following steps), carefully place the components within the housing.
+5. Using the zip-ties, affix the housing to the underside of the wheelchair frame. 
+6. Using zip-ties, route and secure the cables on the frame such that they will not be snagged or pulled. 
+
+
+
+3. **Arduino Microcontroller**
 
 Located on the wheelchair frame, the Arduino Mega2560 microcontroller serves as the first system that the user interacts with in the WheelCare concept
 
@@ -333,6 +362,12 @@ To assemble the arduino system follow the following steps. A prototyping board i
 
 28. Connect the Vin pin D of the prototyping board to the 5V Vin pin of the Arduino.
 29. Connect the GND pin of the prototyping board to the GND pin of the Arduino.
+
+
+30. Connect the Arduino via USB connection to your PC. 
+31. In the Arduino IDE environment, load and upload the following code. 
+32. Remove the Arduino and conenct it via USB to pin 4 of the Pi.
+
 
 **ARDUINO CODE**
 
