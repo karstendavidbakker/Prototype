@@ -279,7 +279,7 @@ Electronics encolsure:
 
 
 
-3. **Arduino Microcontroller**
+    3. **Arduino Microcontroller**
 
 Located on the wheelchair frame, the Arduino Mega2560 microcontroller serves as the first system that the user interacts with in the WheelCare concept
 
@@ -368,6 +368,7 @@ To assemble the arduino system follow the following steps. A prototyping board i
 31. In the Arduino IDE environment, load and upload the following code. 
 32. Remove the Arduino and conenct it via USB to pin 4 of the Pi.
 
+![alt_text](images/PCB-01.png)
 
 **ARDUINO CODE**
 
