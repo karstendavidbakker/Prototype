@@ -88,6 +88,10 @@ The online platform makes use of TU Delft’s Data Centric Design Hub for the in
 
 The local system represents the integration of the coding languages C++ and Python, and the online platform utilises HTML, CSS & JavaScript.
 
+System diagam:
+
+![alt_text](images/System_diagram_rev2-01.png)
+
 
 **Tutorial:**
 
@@ -283,10 +287,6 @@ The development process of the Arduino microcontroller was as follows:
 9. Final code formulated to include x1 GPS location and IMU data in a serial monitor readout once the button is pressed.
 
 
-System diagam:
-
-![alt_text](images/System_diagram_rev2-01.png)
-
 
 Arduino system diagram:
 
@@ -295,6 +295,41 @@ Arduino system diagram:
 Hardware diagram:
 
 ![alt_text](images/System_diagran-01.png)
+
+
+**Assembly Steps**
+
+To assemble the arduino system follow the following steps:
+
+1. Cut three lengths of electric cabling approximately 600mm in length, and remove 5mm of plastic covering from each end of the wires.
+2. Cut one length of cable shroud approximately 550mm in length.
+3. Solder the cable ends to a pin of the push-button. It does not matter which pin of the button is not used. 
+4. On the button side with two wires, clearly assign and label GND and Vin on the far end of the wires. It does not matter which is which.
+5. Clearly lable the far end of the remaining cable as "digi-pin".
+6. Pass the length of cable shroud over the electric wiring. 
+7. Pass the cable through the hole orifice on the IMU holder.
+8. Solder a 10K ohm resister across the prototpying board, connecting GND and hole 8B.
+9. Solder the GND wire to track 1 of the prototyping board.
+10. Solder the Vin wire to hole A of the Vin track on the prototpying board.
+12. Solder the digi-pin to track 2A of the board. Connect this track to the Arduino digital pin 3. 
+12. Glue the button module in place on the 3D printed part.
+13. Glue the button pad in place on the button module.
+
+14. Connect the GPS Vin pin to hole B on the Vin track. 
+15. Connect the GPS GND to pin B on the GND track. 
+16. Connect the GPS Rxx pin to pin Txx on the Arduino. Ensure the correct setup before proceeding.
+17. Connect the GPS Txx pin to pin Rxx on the Arduino. Ensure the correct orientation before proceeding. 
+
+18. Cut four lengths of electric cabling approximately 400mm in length, and remove 5mm of plastic covering from each end of the wires.
+19. Cut one length of cable shroud approximately 450mm in length.
+20. Solder the cable ends to a pin of the push-button.
+21. Clearly label each cable.
+22. Pass the length of cable shroud over the electric wiring. 
+23. Pass the cable through the hole orifice on the IMU holder. 
+24. Connect the Vin pin on the IMU unit to hole C on the Vin track of the prototypting board.
+25. Connect the GND pin on the IMU to hole C on the GND track of the arduino. 
+26. Connect the SCL pin of the IMU to the SCL pin of the Arduino.
+27. Connect the SDA pin of the IMU to the SDA pin of the Arduino.
 
 **ARDUINO CODE**
 
