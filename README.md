@@ -171,10 +171,25 @@ Firstly, a range of sensors and actuators were established. Next, the team ident
 
 
     2. **Hardware development**
+    
+    
+The development process for the Wheeall Care system followed a process of four iterative cycles:
+
+1. Foundation
+2. Connection
+3. Collection
+4. Analysis
+
+**Phase 2: Connection**
+
+In this design phase the discrete electronic, web, and hardware components were compiled into a one integrated system. This process will be detailed per each respective part of the system. For the required resources and further information please follow the provided links.
+
+
+**Hardware development:**
 
 The prototype features three 3D printed hardware components located at three locations on the frame of the wheelchair. Each part was modelled using Fusion 360 and printed using a Prusa I3 MK3s FDM printer in PLA material.
 
-The housings were employed to achieve the following goals:
+The housings are employed to achieve the following goals:
 
 *   To house the electronic components on the frame of the wheelchair, ensuring that they are held stably during folding and unfolding of the wheelchair.
 *   To protect them from environmental conditions such as dirt, rain and UV damage.
@@ -196,7 +211,7 @@ Description: this iteration proved successful in that the entire system could be
 To improve: The zip-tie method for affixing the parts proved unstable, and should be replaced with a bolt-on feature. The location of the electronics housing should be changed to ensure that the wheelchair can be folded and stowed.
 
 
-![alt_text](images/image8.png "image_tooltip")
+![alt_text](images/image8.png "image_tooltip" =250)
 
 
 **MK2 housings**
