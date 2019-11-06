@@ -247,7 +247,7 @@ Rationale: final prototype housing production.
 <br>
 <br>
 <center>The configuration of the 3D-printed hardware</center>
-<br>
+
 <p style="text-align:center;"><img src="images/Housing Diagram_REV4-01.png" alt="Parts" style="height:400px;"></p>
 
 
@@ -256,12 +256,11 @@ Rationale: final prototype housing production.
 
 
 <center>3D images of the 3D-printed hardware</center>
-<br>
-<p style="text-align:center;"><img src="images/image6.png" alt="Parts" style="height:100px;"></p>
-<br>
-<br>
+
+<p style="text-align:center;"><img src="images/image6.png" alt="Parts" style="height:150px;"></p>
+
 <center>L-R: electronics housing, button holder, IMU holder.</center>
-<br>
+
 **<span style="text-decoration:underline;">Assembly of the hardware</span>**
 <br>
 <br>
@@ -277,14 +276,14 @@ Rationale: final prototype housing production.
 <br>
 <br>
 <center>M3 brass inserts in the printed parts</center>
-<br>
+
 <p style="text-align:center;"><img src="images/Ìnserts.jpg" alt="Parts" style="height:400px;"></p>
 <br>
 <br>
 <br>
 <center>Inserting the brass inserts into a printed part</center>
-<br>
-<p style="text-align:center;"><img src="images/P6120148B.gif"Parts"></p>
+
+![alt_text](images/P6120148B.gif)   
 <br>
 <br>
 <br>
