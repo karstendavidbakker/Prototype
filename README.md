@@ -298,6 +298,8 @@ Button module:
 
 IMU module: 
 
+
+
 1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
 2. Remove the part brim and remove any sharp edges.
 3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the 2 M3 x5mm brass inserts into the fixing locations, such as the below image.
@@ -308,6 +310,8 @@ IMU module:
 
 
 Electronics encolsure: 
+
+
 
 1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
 2. Remove the part brim and remove any sharp edges.
@@ -323,7 +327,12 @@ Electronics encolsure:
 
     3. **Arduino Microcontroller**
 
+
+
+
 Located on the wheelchair frame, the Arduino Mega2560 microcontroller serves as the first system that the user interacts with in the WheelCare concept
+
+
 
 
 The responsibility of the Arduino Microcontroller is
@@ -335,6 +344,9 @@ The responsibility of the Arduino Microcontroller is
 *   To operate the Adafruit Ultimate GPS sensor.
 *   To relay the captured information via serial connection to the Raspberry Pi.
 
+
+
+
 The system was coded in such a way that:
 
 
@@ -342,6 +354,9 @@ The system was coded in such a way that:
 *   The IMU and GPS sensor were constantly running to capture location and movement data.
 *   At the push of a button, ten seconds of IMU data and the current GPS location was sent to the serial monitor.
 *   Connected to the Pi via serial, this print of information could be translated to a .csv file by the pi for processing in the DCD hub.
+
+
+
 
 The development process of the Arduino microcontroller was as follows:
 
@@ -357,14 +372,26 @@ The development process of the Arduino microcontroller was as follows:
 8. GPS data parsed and formatted to give readable information for the DCD hub.
 9. Final code formulated to include x1 GPS location and IMU data in a serial monitor readout once the button is pressed.
 
-System diagam:
-
-![alt_text](images/System_diagram_rev2-01.png)
 
 
-Hardware diagram:
+<center>System diagam</center>
 
-![alt_text](images/System_diagran-01.png)
+
+
+<p style="text-align:center;"><img src="images/System_diagram_rev2-01.png" alt="Parts" style="height:400px;"></p>
+
+
+
+
+
+<center>Hardware diagram</center>
+
+
+<p style="text-align:center;"><img src="images/System_diagran-01.png" alt="Parts" style="height:400px;"></p>
+
+
+
+
 
 
 **Assembly Steps**
@@ -409,7 +436,13 @@ To assemble the arduino system follow the following steps. A prototyping board i
 31. In the Arduino IDE environment, load and upload the following code. 
 32. Remove the Arduino and conenct it via USB to pin 4 of the Pi.
 
-![alt_text](images/PCB-01.png)
+
+
+<p style="text-align:center;"><img src="images/PCB-01.png" alt="Parts" style="height:400px;"></p>
+
+
+
+
 
 **ARDUINO CODE**
 
