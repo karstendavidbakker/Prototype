@@ -91,6 +91,9 @@ The online platform makes use of TU Delft’s Data Centric Design Hub for the in
 The local system represents the integration of the coding languages C++ and Python, and the online platform utilises HTML, CSS & JavaScript.
 
 
+System diagram:
+
+![alt_text](images/image3.png "image_tooltip")
 
 
 **Tutorial:**
@@ -321,9 +324,6 @@ System diagam:
 
 ![alt_text](images/System_diagram_rev2-01.png)
 
-Arduino system diagram:
-
-![alt_text](images/image3.png "image_tooltip")
 
 Hardware diagram:
 
