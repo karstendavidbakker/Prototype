@@ -90,9 +90,7 @@ The online platform makes use of TU Delft’s Data Centric Design Hub for the in
 
 The local system represents the integration of the coding languages C++ and Python, and the online platform utilises HTML, CSS & JavaScript.
 
-System diagam:
 
-![alt_text](images/System_diagram_rev2-01.png)
 
 
 **Tutorial:**
@@ -258,7 +256,9 @@ Button module:
 3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the x4 M3 x5mm brass inserts, such as the below image.
 
 ![alt_text](images/Ìnserts.jpg)
+
 ![alt_text](images/P6120148B.gif)
+
 4. Once the electronics have been succesfully integrated (see following steps), affix the button module on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
 
 
@@ -317,7 +317,9 @@ The development process of the Arduino microcontroller was as follows:
 8. GPS data parsed and formatted to give readable information for the DCD hub.
 9. Final code formulated to include x1 GPS location and IMU data in a serial monitor readout once the button is pressed.
 
+System diagam:
 
+![alt_text](images/System_diagram_rev2-01.png)
 
 Arduino system diagram:
 
