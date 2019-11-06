@@ -243,9 +243,9 @@ To improve: The layout of the internal components must be altered to ensure that
 
 Rationale: final prototype housing production.
 
-![alt text](images/Housing Diagram_REV4-01.png)
+![alt text]()
+<p style="text-align:center;"><img src="images/Housing Diagram_REV4-01.png" alt="Parts" style="height:400px;">
 
-![alt_text](images/image6.png)
 <p style="text-align:center;"><img src="images/image6.png" alt="Parts" style="height:100px;">
 
 
