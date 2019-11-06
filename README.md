@@ -258,7 +258,7 @@ Button module:
 3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the x4 M3 x5mm brass inserts, such as the below image.
 
 ![alt_text](images/Ìnserts.jpg)
-
+![alt_text](images/P6120148B.gif)
 4. Once the electronics have been succesfully integrated (see following steps), affix the button module on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
 
 
