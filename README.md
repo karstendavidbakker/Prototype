@@ -178,8 +178,8 @@ Therefore the the following were seen as a problems and solutions taken in to ac
 Firstly, a range of sensors and actuators were established. Next, the team identified potential applications of the technologies. From this, three concepts emerged….?
 
 
+**<span style="text-decoration:underline;">2. Hardware development</span>**
 
-2. **Hardware development**
 
 
 The development process for the Wheeall Care system followed a process of four iterative cycles:
@@ -265,13 +265,13 @@ Rationale: final prototype housing production.
 
 
 
-
-__**Assembly of the hardware**_
-
+**<span style="text-decoration:underline;">Assembly of the hardware</span>**
 
 
 
-**Button module: 
+
+
+**Button module:** 
 
 1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
 2. Remove the part brim and remove any sharp edges.
@@ -296,7 +296,7 @@ __**Assembly of the hardware**_
 
 
 
-**IMU module: 
+**IMU module:** 
 
 
 
@@ -308,7 +308,7 @@ __**Assembly of the hardware**_
 
 
 
-**Electronics encolsure: 
+**Electronics encolsure:** 
 
 
 
@@ -323,8 +323,8 @@ __**Assembly of the hardware**_
 
 
 
+**<span style="text-decoration:underline;">3. Arduino Microcontroller Setup</span>**
 
-3. **Arduino Microcontroller**
 
 
 
@@ -392,8 +392,8 @@ The development process of the Arduino microcontroller was as follows:
 
 
 
+**<span style="text-decoration:underline;">Electronics assembly Steps</span>**
 
-**Assembly Steps**
 
 To assemble the arduino system follow the following steps. A prototyping board is used between the Arduino and the sensors to protect the sensitive arduino in the case that the cables are pulled, and to reduce the chance of connections coming loose. 
 
