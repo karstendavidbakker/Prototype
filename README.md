@@ -198,7 +198,7 @@ In this design phase the discrete electronic, web, and hardware components were 
 
 The prototype features three 3D printed hardware components located at three locations on the frame of the wheelchair. Each part was modelled using Fusion 360 and printed using a Prusa I3 MK3s FDM printer in PLA material.
 
-The part files are available to download [here] (karstendavidbakker/Prototype/3D_printing_repository) .
+The part files are available to download [here](https://github.com/karstendavidbakker/Prototype/tree/master/3D_printing_repository "Title") .
 3.mf files are used specifically, as the printing parameters are contained within the file, according to our recommended settings and performance requirements.
 
 
