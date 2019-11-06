@@ -282,9 +282,6 @@ Rationale: final prototype housing production.
 <br>
 <br>
 <center>Inserting the brass inserts into a printed part</center>
-
-![alt_text](images/P6120148B.gif)   
-<br>
 <p style="text-align:center;"><img src="images/P6120148B.gif" alt="Parts" style="height:400px;"></p>
 <br>
 <br>
