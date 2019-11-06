@@ -226,7 +226,7 @@ To improve: The zip-tie method for affixing the parts proved unstable, and shoul
 
 <br>
 <br>
-<p style="text-align:center;"><img src="images/image8.png "image_tooltip" alt="Parts" style="height:400px;"></p>
+<p style="text-align:center;"><img src="images/image8.png" "image_tooltip" alt="Parts" style="height:400px;"></p>
 <br>
 <br>
     
@@ -284,6 +284,8 @@ Rationale: final prototype housing production.
 <center>Inserting the brass inserts into a printed part</center>
 
 ![alt_text](images/P6120148B.gif)   
+<br>
+<p style="text-align:center;"><img src="images/P6120148B.gif" alt="Parts" style="height:400px;"></p>
 <br>
 <br>
 <br>
