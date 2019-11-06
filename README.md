@@ -222,9 +222,8 @@ Description: this iteration proved successful in that the entire system could be
 To improve: The zip-tie method for affixing the parts proved unstable, and should be replaced with a bolt-on feature. The location of the electronics housing should be changed to ensure that the wheelchair can be folded and stowed.
 
 
-![alt_text](images/image8.png "image_tooltip")
 
-
+<p style="text-align:center;"><img src="images/image8.png "image_tooltip" alt="Parts" style="height:400px;"></p>
 
 
 **MK2 housings**
@@ -243,21 +242,34 @@ To improve: The layout of the internal components must be altered to ensure that
 
 Rationale: final prototype housing production.
 
+
+
+
 <center>The configuration of the 3D-printed hardware</center>
+
 
 <p style="text-align:center;"><img src="images/Housing Diagram_REV4-01.png" alt="Parts" style="height:400px;"></p>
 
 
 
+
+
+
 <center>3D images of the 3D-printed hardware</center>
+
 
 <p style="text-align:center;"><img src="images/image6.png" alt="Parts" style="height:100px;"></p>
 
 
-L-R: electronics housing, button holder, IMU holder.
+<center>L-R: electronics housing, button holder, IMU holder.</center>
+
+
 
 
 **Assembly of the hardware**
+
+
+
 
 Button module: 
 
@@ -265,15 +277,23 @@ Button module:
 2. Remove the part brim and remove any sharp edges.
 3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the x4 M3 x5mm brass inserts, such as the below image.
 
+
+
 <center>M3 brass inserts in the printed parts</center>
 
 <p style="text-align:center;"><img src="images/Ìnserts.jpg" alt="Parts" style="height:400px;"></p>
 
+
+
 <center>Inserting the brass inserts into a printed part</center>
 
-![alt_text](images/P6120148B.gif)
+<p style="text-align:center;"><img src="images/P6120148B.gif"Parts" style="height:100px;"></p>
+
 
 4. Once the electronics have been succesfully integrated (see following steps), affix the button module on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
+
+
+
 
 
 IMU module: 
@@ -284,6 +304,9 @@ IMU module:
 
 4. Once the electronics have been succesfully integrated (see following steps), affix the IMU on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
 
+
+
+
 Electronics encolsure: 
 
 1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
@@ -292,6 +315,9 @@ Electronics encolsure:
 4. Once the electronics have been succesfully integrated (see following steps), carefully place the components within the housing.
 5. Using the zip-ties, affix the housing to the underside of the wheelchair frame. 
 6. Using zip-ties, route and secure the cables on the frame such that they will not be snagged or pulled. 
+
+
+
 
 
 
