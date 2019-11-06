@@ -213,9 +213,11 @@ The housings are employed to achieve the following goals:
 In total, three iterations of housings were made. Incremental improvements were made to the system as follows:
 <br>
 <br>
-**MK1 housings**
 <br>
 
+
+**MK1 housings**
+<br>
 Rationale: for the first time integrate the components onto the wheelchair frame.
 
 Description: this iteration proved successful in that the entire system could be integrated within the wheelchair frame, powered on its own source and operating autonomously.
@@ -225,25 +227,23 @@ To improve: The zip-tie method for affixing the parts proved unstable, and shoul
 <br>
 <br>
 <p style="text-align:center;"><img src="images/image8.png "image_tooltip" alt="Parts" style="height:400px;"></p>
-
 <br>
+<br>
+    
+    
 **MK2 housings**
-
-
-Rationale: incorporate bolt-on fixings and test new housing location.
-
-Description: This iteration served as a stepping stone on which to test the relationship of the fixing hardware
-
-To improve: The layout of the internal components must be altered to ensure that the frame can be folded properly.
-
-
 <br>
+Rationale: incorporate bolt-on fixings and test new housing location.
+Description: This iteration served as a stepping stone on which to test the relationship of the fixing hardware
+To improve: The layout of the internal components must be altered to ensure that the frame can be folded properly.
+<br>
+<br>
+<br>
+    
+    
 **MK3 housings**
-
-
+<br>
 Rationale: final prototype housing production.
-
-
 <br>
 <br>
 <center>The configuration of the 3D-printed hardware</center>
@@ -288,6 +288,9 @@ Rationale: final prototype housing production.
 <br>
 <br>
 <br>
+    
+    
+    
 **IMU module:** 
 <br>
 1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
@@ -296,6 +299,9 @@ Rationale: final prototype housing production.
 4. Once the electronics have been succesfully integrated (see following steps), affix the IMU on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
 <br>
 <br>
+
+
+
 **Electronics encolsure:** 
 <br>
 1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
@@ -305,15 +311,14 @@ Rationale: final prototype housing production.
 6. Using zip-ties, route and secure the cables on the frame such that they will not be snagged or pulled. 
 <br>
 <br>
+<br>
 **<span style="text-decoration:underline;">3. Arduino Microcontroller Setup</span>**
-
-
-
+<br>
+<br>
+<br>
 
 
 Located on the wheelchair frame, the Arduino Mega2560 microcontroller serves as the first system that the user interacts with in the WheelCare concept
-
-
 
 
 The responsibility of the Arduino Microcontroller is
@@ -324,14 +329,12 @@ The responsibility of the Arduino Microcontroller is
 *   To relay the captured information via serial connection to the Raspberry Pi.
 
 
-
-
 The system was coded in such a way that:
 <br>
 *   The IMU and GPS sensor were constantly running to capture location and movement data.
 *   At the push of a button, ten seconds of IMU data and the current GPS location was sent to the serial monitor.
 *   Connected to the Pi via serial, this print of information could be translated to a .csv file by the pi for processing in the DCD hub.
-
+<br>
 <br>
 <br>
 
@@ -348,7 +351,7 @@ The development process of the Arduino microcontroller was as follows:
 9. Final code formulated to include x1 GPS location and IMU data in a serial monitor readout once the button is pressed.
 <br>
 <br>
-
+<br>
 <center>System diagam</center>
 <br>
 <br>
@@ -365,8 +368,8 @@ The development process of the Arduino microcontroller was as follows:
 <br>
 
 **<span style="text-decoration:underline;">Electronics assembly Steps</span>**
-
-
+<br>
+<br>
 To assemble the arduino system follow the following steps. A prototyping board is used between the Arduino and the sensors to protect the sensitive arduino in the case that the cables are pulled, and to reduce the chance of connections coming loose. 
 
 1. Cut three lengths of electric cabling approximately 600mm in length, and remove 5mm of plastic covering from each end of the wires.
@@ -382,12 +385,12 @@ To assemble the arduino system follow the following steps. A prototyping board i
 12. Solder the digi-pin to track 2A of the board. Connect this track to the Arduino digital pin 3. 
 12. Glue the button module in place on the 3D printed part.
 13. Glue the button pad in place on the button module.
-
+<br>
 14. Connect the GPS Vin pin to hole B on the Vin track. 
 15. Connect the GPS GND to pin B on the GND track. 
 16. Connect the GPS Rxx pin to pin Txx on the Arduino. Ensure the correct setup before proceeding.
 17. Connect the GPS Txx pin to pin Rxx on the Arduino. Ensure the correct orientation before proceeding. 
-
+<br>
 18. Cut four lengths of electric cabling approximately 400mm in length, and remove 5mm of plastic covering from each end of the wires.
 19. Cut one length of cable shroud approximately 450mm in length.
 20. Solder the cable ends to a pin of the push-button.
@@ -398,23 +401,23 @@ To assemble the arduino system follow the following steps. A prototyping board i
 25. Connect the GND pin on the IMU to hole C on the GND track of the arduino. 
 26. Connect the SCL pin of the IMU to the SCL pin of the Arduino.
 27. Connect the SDA pin of the IMU to the SDA pin of the Arduino.
-
+<br>
 28. Connect the Vin pin D of the prototyping board to the 5V Vin pin of the Arduino.
 29. Connect the GND pin of the prototyping board to the GND pin of the Arduino.
-
-
+<br>
+<br>
 30. Connect the Arduino via USB connection to your PC. 
 31. In the Arduino IDE environment, load and upload the following code. 
 32. Remove the Arduino and conenct it via USB to pin 4 of the Pi.
-
-
+<br>
+<br>
 
 <p style="text-align:center;"><img src="images/PCB-01.png" alt="Parts" style="height:400px;"></p>
 
 
-
-
-
+<br>
+<br>
+<br>
 **ARDUINO CODE**
 
 ```
