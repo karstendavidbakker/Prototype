@@ -245,7 +245,7 @@ Rationale: final prototype housing production.
 
 <center>The configuration of the 3D-printed hardware</center>
 
-<p style="text-align:center;"><img src="images/Housing Diagram_REV4-01.png" alt="Parts" style="height:200px;"></p>
+<p style="text-align:center;"><img src="images/Housing Diagram_REV4-01.png" alt="Parts" style="height:400px;"></p>
 
 
 
