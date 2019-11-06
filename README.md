@@ -179,7 +179,7 @@ Firstly, a range of sensors and actuators were established. Next, the team ident
 
 
 
-    2. **Hardware development**
+2. **Hardware development**
 
 
 The development process for the Wheeall Care system followed a process of four iterative cycles:
@@ -266,12 +266,12 @@ Rationale: final prototype housing production.
 
 
 
-**Assembly of the hardware**
+__**Assembly of the hardware**_
 
 
 
 
-Button module: 
+**Button module: 
 
 1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
 2. Remove the part brim and remove any sharp edges.
@@ -296,20 +296,19 @@ Button module:
 
 
 
-IMU module: 
+**IMU module: 
 
 
 
 1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
 2. Remove the part brim and remove any sharp edges.
 3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the 2 M3 x5mm brass inserts into the fixing locations, such as the below image.
-
 4. Once the electronics have been succesfully integrated (see following steps), affix the IMU on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
 
 
 
 
-Electronics encolsure: 
+**Electronics encolsure: 
 
 
 
@@ -325,7 +324,7 @@ Electronics encolsure:
 
 
 
-    3. **Arduino Microcontroller**
+3. **Arduino Microcontroller**
 
 
 
