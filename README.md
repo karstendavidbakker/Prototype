@@ -246,7 +246,7 @@ Rationale: final prototype housing production.
 ![alt text](images/Housing Diagram_REV4-01.png)
 
 ![alt_text](images/image6.png)
-<img src="images/image6.png" alt="Parts" style="height:100px;">
+<p style="text-align:center;"><img src="images/image6.png" alt="Parts" style="height:100px;">
 
 
 L-R: electronics housing, button holder, IMU holder.
