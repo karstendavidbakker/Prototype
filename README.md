@@ -617,6 +617,9 @@ The Rpi is able to receive, process
 
     Please give critical feedback on decisions matrix flow chart  - might be some lines wrong or we could add stuff
 
+# Reflect on: At least 5 plausible options are
+clearly described, including 2
+innovatives. (report requirement)
 
 <table>
   <tr>
