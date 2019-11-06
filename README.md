@@ -265,7 +265,11 @@ Button module:
 2. Remove the part brim and remove any sharp edges.
 3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the x4 M3 x5mm brass inserts, such as the below image.
 
-![alt_text](images/Ìnserts.jpg)
+<center>M3 brass inserts in the printed parts</center>
+
+<p style="text-align:center;"><img src="images/Ìnserts.jpg" alt="Parts" style="height:400px;"></p>
+
+<center>Inserting the brass inserts into a printed part</center>
 
 ![alt_text](images/P6120148B.gif)
 
