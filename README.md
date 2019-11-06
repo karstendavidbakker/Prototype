@@ -126,21 +126,22 @@ For this project the purpose of this prototype was to validated the accuracy of 
 
 
 
-*   3D printer or casing prototype toolings,
-*   press button,
-*   M3 x 20mm SHCS bolts,
-*   M3 X 5mm brass inserts
-*   hot glue,
+*   3D printer or casing prototype toolings
+*   Push-button (momentary)
+*   M3 x 20mm SHCS bolts (10)
+*   M3 X 5mm brass inserts (10)
+*   Hot glue
 *   Wheelchair
-*   wiring,
-*   Resistor
-*   Zero PCB
+*   Hook-up wiring (multiple colors)
+*   Black cable shroud (1M) (5mm dia)
+*   10K-ohm resistor
+*   Prototyping board
 *   Soldering materials
-*   IMU arduino sensor type
-*   GPS Module
-*   Rasberry Pi
+*   IMU BN055 Arduino sensor type
+*   Adafruit Ulitmate GPS Module
+*   Rasberry Pi 3
 *   Digital Button
-
+*   Zip ties
 
 
 **Tips & Tricks: General and basic instructions to take into account when executing this (IoT) project.**
