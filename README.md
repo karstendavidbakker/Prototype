@@ -195,25 +195,26 @@ In this design phase the discrete electronic, web, and hardware components were 
 
 
 **Hardware development:**
-
+<br>
+<br>
 The prototype features three 3D printed hardware components located at three locations on the frame of the wheelchair. Each part was modelled using Fusion 360 and printed using a Prusa I3 MK3s FDM printer in PLA material.
 
 The part files are available to download [here](https://github.com/karstendavidbakker/Prototype/tree/master/3D_printing_repository "Title") .
 3.mf files are used specifically, as the printing parameters are contained within the file, according to our recommended settings and performance requirements.
-
-
+<br>
+<br>
 The housings are employed to achieve the following goals:
-
+<br>
 *   To house the electronic components on the frame of the wheelchair, ensuring that they are held stably during folding and unfolding of the wheelchair.
 *   To protect them from environmental conditions such as dirt, rain and UV damage.
 *   To securely affix the IMU in place on the frame, ensuring repeatability and validity between various readings. Should the sensor move throughout its lifetime, the way in which accelerometer data recorded across the three axes may change, resulting in incorrect or inaccurate labelling.
 *   To provide ease of use for users with reduced hand dexterity and motor function when interacting with small features (such as push-buttons and power switches).
-
+<br>
 In total, three iterations of housings were made. Incremental improvements were made to the system as follows:
-
-
+<br>
+<br>
 **MK1 housings**
-
+<br>
 
 Rationale: for the first time integrate the components onto the wheelchair frame.
 
@@ -221,11 +222,11 @@ Description: this iteration proved successful in that the entire system could be
 
 To improve: The zip-tie method for affixing the parts proved unstable, and should be replaced with a bolt-on feature. The location of the electronics housing should be changed to ensure that the wheelchair can be folded and stowed.
 
-
-
+<br>
+<br>
 <p style="text-align:center;"><img src="images/image8.png "image_tooltip" alt="Parts" style="height:400px;"></p>
 
-
+<br>
 **MK2 housings**
 
 
@@ -236,18 +237,17 @@ Description: This iteration served as a stepping stone on which to test the rela
 To improve: The layout of the internal components must be altered to ensure that the frame can be folded properly.
 
 
-
+<br>
 **MK3 housings**
 
 
 Rationale: final prototype housing production.
 
 
-
-
+<br>
+<br>
 <center>The configuration of the 3D-printed hardware</center>
-
-
+<br>
 <p style="text-align:center;"><img src="images/Housing Diagram_REV4-01.png" alt="Parts" style="height:400px;"></p>
 
 
@@ -256,73 +256,55 @@ Rationale: final prototype housing production.
 
 
 <center>3D images of the 3D-printed hardware</center>
-
-
+<br>
 <p style="text-align:center;"><img src="images/image6.png" alt="Parts" style="height:100px;"></p>
-
-
+<br>
+<br>
 <center>L-R: electronics housing, button holder, IMU holder.</center>
-
-
-
+<br>
 **<span style="text-decoration:underline;">Assembly of the hardware</span>**
-
-
-
-
-
+<br>
+<br>
+<br>
 **Button module:** 
-
+<br>
 1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
 2. Remove the part brim and remove any sharp edges.
 3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the x4 M3 x5mm brass inserts, such as the below image.
-
-
-
-<center>M3 brass inserts in the printed parts</center>
-
-<p style="text-align:center;"><img src="images/Ìnserts.jpg" alt="Parts" style="height:400px;"></p>
-
-
-
-<center>Inserting the brass inserts into a printed part</center>
-
-<p style="text-align:center;"><img src="images/P6120148B.gif"Parts" style="height:100px;"></p>
-
-
 4. Once the electronics have been succesfully integrated (see following steps), affix the button module on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
 
-
-
-
-
+<br>
+<br>
+<br>
+<center>M3 brass inserts in the printed parts</center>
+<br>
+<p style="text-align:center;"><img src="images/Ìnserts.jpg" alt="Parts" style="height:400px;"></p>
+<br>
+<br>
+<br>
+<center>Inserting the brass inserts into a printed part</center>
+<br>
+<p style="text-align:center;"><img src="images/P6120148B.gif"Parts" style="height:100px;"></p>
+<br>
+<br>
+<br>
 **IMU module:** 
-
-
-
+<br>
 1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
 2. Remove the part brim and remove any sharp edges.
 3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the 2 M3 x5mm brass inserts into the fixing locations, such as the below image.
 4. Once the electronics have been succesfully integrated (see following steps), affix the IMU on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
-
-
-
-
+<br>
+<br>
 **Electronics encolsure:** 
-
-
-
+<br>
 1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
 2. Remove the part brim and remove any sharp edges.
-
 4. Once the electronics have been succesfully integrated (see following steps), carefully place the components within the housing.
 5. Using the zip-ties, affix the housing to the underside of the wheelchair frame. 
 6. Using zip-ties, route and secure the cables on the frame such that they will not be snagged or pulled. 
-
-
-
-
-
+<br>
+<br>
 **<span style="text-decoration:underline;">3. Arduino Microcontroller Setup</span>**
 
 
@@ -335,9 +317,7 @@ Located on the wheelchair frame, the Arduino Mega2560 microcontroller serves as 
 
 
 The responsibility of the Arduino Microcontroller is
-
-
-
+<br>
 *   To operate the Adafruit BN055 IMU accelerometer sensor
 *   To operate the momentary push-button
 *   To operate the Adafruit Ultimate GPS sensor.
@@ -347,20 +327,16 @@ The responsibility of the Arduino Microcontroller is
 
 
 The system was coded in such a way that:
-
-
-
+<br>
 *   The IMU and GPS sensor were constantly running to capture location and movement data.
 *   At the push of a button, ten seconds of IMU data and the current GPS location was sent to the serial monitor.
 *   Connected to the Pi via serial, this print of information could be translated to a .csv file by the pi for processing in the DCD hub.
 
-
-
+<br>
+<br>
 
 The development process of the Arduino microcontroller was as follows:
-
-
-
+<br>
 1. Push-button added to display ‘1’ when pushed and ‘0’ when not pushed in the Serial monitor.
 2. A de-bounce was added to the code to improve the performance of the button.
 3. The IMU was added, and programmed to print X, Y and Z Euler angle data stream into the serial monitor.
@@ -370,27 +346,23 @@ The development process of the Arduino microcontroller was as follows:
 7. GPS module added to the arduino system. Raw data stream printed into the serial monitor.
 8. GPS data parsed and formatted to give readable information for the DCD hub.
 9. Final code formulated to include x1 GPS location and IMU data in a serial monitor readout once the button is pressed.
-
-
+<br>
+<br>
 
 <center>System diagam</center>
-
-
-
+<br>
+<br>
 <p style="text-align:center;"><img src="images/System_diagram_rev2-01.png" alt="Parts" style="height:400px;"></p>
-
-
-
-
-
+<br>
+<br>
+<br>
 <center>Hardware diagram</center>
-
-
+<br>
 <p style="text-align:center;"><img src="images/System_diagran-01.png" alt="Parts" style="height:400px;"></p>
-
-
-
-
+<br>
+<br>
+<br>
+<br>
 
 **<span style="text-decoration:underline;">Electronics assembly Steps</span>**
 
