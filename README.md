@@ -226,7 +226,7 @@ To improve: The zip-tie method for affixing the parts proved unstable, and shoul
 
 <br>
 <br>
-<p style="text-align:center;"><img src="images/image8.png" alt="Parts" style="height:400px;"></p>
+<p style="text-align:center;"><img src="images/image8.png" alt="Parts" style="height:600px;"></p>
 <br>
 <br>
     
@@ -248,7 +248,7 @@ Rationale: final prototype housing production.
 <br>
 <center>The configuration of the 3D-printed hardware</center>
 
-<p style="text-align:center;"><img src="images/Housing Diagram_REV4-01.png" alt="Parts" style="height:400px;"></p>
+<p style="text-align:center;"><img src="images/Housing Diagram_REV4-01.png" alt="Parts" style="height:600px;"></p>
 
 
 
@@ -257,7 +257,7 @@ Rationale: final prototype housing production.
 
 <center>3D images of the 3D-printed hardware</center>
 
-<p style="text-align:center;"><img src="images/image6.png" alt="Parts" style="height:150px;"></p>
+<p style="text-align:center;"><img src="images/image6.png" alt="Parts" style="height:200px;"></p>
 
 <center>L-R: electronics housing, button holder, IMU holder.</center>
 
@@ -353,13 +353,13 @@ The development process of the Arduino microcontroller was as follows:
 <center>System diagam</center>
 <br>
 <br>
-<p style="text-align:center;"><img src="images/System_diagram_rev2-01.png" alt="Parts" style="height:400px;"></p>
+<p style="text-align:center;"><img src="images/System_diagram_rev2-01.png" alt="Parts" style="height:600px;"></p>
 <br>
 <br>
 <br>
 <center>Hardware diagram</center>
 <br>
-<p style="text-align:center;"><img src="images/System_diagran-01.png" alt="Parts" style="height:400px;"></p>
+<p style="text-align:center;"><img src="images/System_diagran-01.png" alt="Parts" style="height:600px;"></p>
 <br>
 <br>
 <br>
