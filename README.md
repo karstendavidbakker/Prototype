@@ -226,7 +226,7 @@ To improve: The zip-tie method for affixing the parts proved unstable, and shoul
 
 <br>
 <br>
-<p style="text-align:center;"><img src="images/image8.png" "image_tooltip" alt="Parts" style="height:400px;"></p>
+<p style="text-align:center;"><img src="images/image8.png" alt="Parts" style="height:400px;"></p>
 <br>
 <br>
     
