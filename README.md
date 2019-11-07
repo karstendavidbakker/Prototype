@@ -267,7 +267,7 @@ Rationale: final prototype housing production.
 <br>
 **Button module:** 
 <br>
-1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
+1. Download the .3mf files [here](https://github.com/karstendavidbakker/Prototype/tree/master/3D_printing_repository "Title") and 3D print using the reccomended printing parameters.
 2. Remove the part brim and remove any sharp edges.
 3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the x4 M3 x5mm brass inserts, such as the below image.
 4. Once the electronics have been succesfully integrated (see following steps), affix the button module on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
@@ -291,7 +291,7 @@ Rationale: final prototype housing production.
     
 **IMU module:** 
 <br>
-1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
+1. Download the .3mf files [here](https://github.com/karstendavidbakker/Prototype/tree/master/3D_printing_repository "Title") and 3D print using the reccomended printing parameters.
 2. Remove the part brim and remove any sharp edges.
 3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the 2 M3 x5mm brass inserts into the fixing locations, such as the below image.
 4. Once the electronics have been succesfully integrated (see following steps), affix the IMU on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
@@ -302,7 +302,7 @@ Rationale: final prototype housing production.
 
 **Electronics encolsure:** 
 <br>
-1. Download the .3mf files accompanying this document and 3D print using the reccomended printing parameters.
+1. Download the .3mf files [here](https://github.com/karstendavidbakker/Prototype/tree/master/3D_printing_repository "Title") and 3D print using the reccomended printing parameters.
 2. Remove the part brim and remove any sharp edges.
 4. Once the electronics have been succesfully integrated (see following steps), carefully place the components within the housing.
 5. Using the zip-ties, affix the housing to the underside of the wheelchair frame. 
