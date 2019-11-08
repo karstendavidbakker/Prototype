@@ -718,10 +718,38 @@ future additions would be to evaluate the incomming imu data and predict what te
 
 
 **5. Web platform**
+the website you have created should look like this:
 
-Concept evaluation matrix
+![Open source Webserver to all wheelchair users - Connected to Wheallcare service to mark inaccesible locations](images/4.png)
 
-Task designated to others
+We made a new page by adding a route to the server.py script.
+
+```python
+@app.route('/map4')
+def map4():
+    return render_template('maplocation4.html')
+```
+
+To place markers on the map we use a google api. Which gets the gps coordinates in via a socket. By using the API for google maps this process becomes really easy. This can be seen below.
+
+```
+  socket.on('gpslocation', function(data) {
+          console.log(data);
+          const latitude = data.gps[0];
+          const longitude = data.gps[1]
+
+           new google.maps.Marker({position: {lat:latitude, lng:longitude}, map: map});
+```
+Making the API ready for use is as easy as importing it in your web page html file
+
+```
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5Ta592tcRaPkglMFLRcFqLCyzM4oppts&callback=initMap">
+    </script>
+```
+
 
 ---
 # 4. recommendations
