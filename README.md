@@ -995,7 +995,7 @@ The gps only works really well outdoors but is less suitable for indoor tracking
 
 
 ---
-# 5. Reflection:
+# 5. Decisions overview & Reflection:
 
 ![Open source Webserver to all wheelchair users - Connected to Wheallcare service to mark inaccesible locations](images/Decisions.png)
 
