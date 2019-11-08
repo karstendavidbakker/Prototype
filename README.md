@@ -4,16 +4,14 @@
 
 ## Final report- Team 6
 
+*to use this repository run the server.py code as a service on a rpi and the working arduino code on the arduino while being connected. go to the ipadress of the pi  ipadress/5000/map4 to see the working map to which markers are added. 
 
 ![alt_text](images/image7.png "image_tooltip")
 
 
 ---
 
-
-
-
-Team members:
+## Team members:
 
 
 Jordan Kelly - 4917189
@@ -25,19 +23,18 @@ Karsten Bakker - 4278887
 
 
 ---
-
-
 **Contents:**
 
 
 
 1. Introduction
 2. Concept description
-3. Method
+3  Instructable
 4. Recommendations
 5. Reflection
 
-  **1. Introduction**
+---
+ # 1. Introduction
 
 This report serves to outline the design development process for the WheelCare system - a connected Internet of Things product that hopes to aid in the improvement of facilities for wheelchair users.
 
@@ -53,7 +50,8 @@ The project brief is as follows:
 
 The project hopes to integrate the local computing system into an internet-based data management platform, where the gathered information can be processed and made into comprehensible insights for the users of the system. and About the Internet of Things:
 
-  **2. Concept description**
+---
+  # 2. Concept description
 
   The WheelCare system is an IoT device used to identify locations and hazards that are unsafe or unsuitable for wheelchair users. Using the device, movement and location data can be captured and accessed online, where wheelchair users can be warned about treacherous or difficult journeys. Furthermore, this information can be used by government bodies and proprietors alike to make improvements to their buildings and facilities.
 
@@ -79,17 +77,7 @@ The project hopes to integrate the local computing system into an internet-based
 
   The local system represents the integration of the coding languages C++ and Python, and the online platform utilises HTML, CSS & JavaScript.
 
-**3. Method:**
-
-1. Concept Selection
-
-To begin, a period of brainstorming was conducted with the team members to choose a suitable wheelchair-based solution.
-
-**To give expensive IoT devices the right to exists incentives to share data are of big interest:**
-
-Therefore the the following were seen as a problems and solutions taken in to account:
-
-
+  The key drivers of the concept are listed below.
 
 | Wishes | Solutions |
 |--------|-----------|
@@ -98,36 +86,8 @@ Therefore the the following were seen as a problems and solutions taken in to ac
 | Wheelchair data is of **interest to third parties**(municipalities) | Municipalities get **direct customers feedback** in a structured way |
 
 
-
-Firstly, a range of sensors and actuators were established. Next, the team identified potential applications of the technologies. From this, three concepts emerged….?
-
-**4. recommendations**
-
-**5. Reflection:**
-
-<table>
-  <tr>
-   <td>
-#
-   </td>
-   <td>Arguments for decision / reflection on decisions / improve for future prototype
-   </td>
-  </tr>
-  <tr>
-   <td>1.
-   </td>
-   <td>- Because our project group was familiar with working with Arduino the GPS module allowed us to rapidly make progress in gathering clean GPS data.
-<p>
--We looked in to extracting GPS data by the phone as this would allow our prototype to communicate via 4G with our server. The connection from phone to hub was eventually not satisfactory because ….????
-<p>
-- No information on the Lora GPS module could be found to get it to work in the time available.
-<p>
-The arduino GPS data turned out to be precise but not too accurate. Additionally this module provide restrictions in freedom of movement as it required a connected to the local WiFi to collect GPS data. In the future an added SIM-card module/phone/lora connection interesting to look into. Nonetheless this solutions was feasible to for setting up our prototype
-   </td>
-</table>
-
 ---
-
+# 3. Instructable
 # Tutorial: How to built a “city wheelchair problem mapping” prototype?
 *For Beginners*
 
@@ -197,7 +157,6 @@ Each part was modelled using Fusion 360 and printed using a Prusa I3 MK3s FDM pr
 The housings were employed to achieve the following goals:
 
 
-
 *   To house the electronic components on the frame of the wheelchair, ensuring that they are held stably during folding and unfolding of the wheelchair.
 *   To protect them from environmental conditions such as dirt, rain and UV damage.
 *   To securely affix the IMU in place on the frame, ensuring repeatability and validity between various readings. Should the sensor move throughout its lifetime, the way in which accelerometer data recorded across the three axes may change, resulting in incorrect or inaccurate labelling.
@@ -215,11 +174,6 @@ Description: this iteration proved successful in that the entire system could be
 
 
 To improve: The zip-tie method for affixing the parts proved unstable, and should be replaced with a bolt-on feature. The location of the electronics housing should be changed to ensure that the wheelchair can be folded and stowed.
-
-
-
-
-
 
 
 **MK2 housings**
@@ -462,7 +416,7 @@ void loop() {
 **Raspberry Pi**
 
 The Raspberry Pi has two jobs. It acts as a processor for the data outputted from the Arduino and sends this data to ether the dcd hub for storage or to a website to generate markers. It also acts as the server that hosts the website used by the client to inspect marked hazards.
-
+The final working script is the following: server.py
 ```python
 #import all needed packages
 #for serial port
@@ -637,25 +591,30 @@ The goal of the raspberry pi is to serve as a hub between the arduino, webserver
 **Steps**
 
 Development of the Rpi was done using a stepwise incremental approach. This helped reduce the complexity and determining the cause of errors that we came across. We started building connections based on random data. Saving actual data and running a blank webpage. And developed these further to combine their functionalities and converting them to services.
+underneath we list the list of seperate programs and their uses that were used to build towards the final connected product.
 
-Random to dcd
+*    Random to dcd - this is a program that runs on a computer and logs random data to the dcd hub. To test the connection to the dcd hub.
 
-Serial to terminal
+*    Serial to terminal - this script reads the serial of the arduino and prints it to the terminal of the rpi
 
-Serial to CSV
+*    Serial to CSV - this script saves the serial output of the arduino in a csv file on the rpi
 
-Serial to dcd
+*    Serial to dcd - this script logs serial input to the dcd hub testing both connections of the first two scripts
 
-Blank server
+*    Blank server - this script runs a webserver on a pc or rpi without site or interaction
 
-Random to server
+*    Random to server - this script sends random data to the server via a socket and tests this socket connection
 
-Serial to server
+*    Serial to server - this script is used to send serial information from the arduino to the rpi and sends it via a socket to the website which can then be seen by any user connected to the same wifi network.
+
+All of these scripts were were also used when backtracking problems to see if everything in the architecture was still working as it should.
 
 **Processing**
+A functionallity that this project tried to incorporate was the prediction of the terrain that the wheelchair was rolling on. This is done by using a machine learning algorithm. To set this up you will need to follow the following steps
 
-Collecting
+*Collecting
 
+To know how what features your algorithm should take in you will first need to take in data and see what the features are that set different classes apart from eachother. Classes are in our case nominal terrain, light terrain, intermediate terrain and extreme terrain. See the pictures below for reference.
 ![Flat ground - nominal terrain](images/Terrain_4.jpg)
 Flat ground - nominal Terrain
 
@@ -668,25 +627,60 @@ Grass - intermediate terrain
 ![Steps - extreme terrain](images/Terrain_2.jpg)
 Steps - extreme terrain
 
-Processing
+When looking at the data of these terrain types we found two features particularly intresting. the amplitude of the wave forms and the zero crossings. These both give information about the wave form that is created by the bumping of the wheel on the terrain. We also found that information on the waveform would best be analysed in a moving window kind of fashion in stead of just comparing 1 timestep to another.
 
-Labeling
+To collect this data collectmodel.py was writen. Sadly due to time issues we didn't solve the moving window code piece. This code should come down to a nested for loop that loops over the lines in a matrix and replaces the oldest with the newest array. 
 
-Training
+When collecting make sure the 500 samples that are taken are correct examples of the terrain you're collecting at that point. Wrong data throws the machine learning model off.
 
-Predicting
+*Processing
 
+processing of the data could be done in the same collectmodel.py and is already there.
+The zero crossing script looks like this. Where data is the moving window matrix. And zero_crossings gives the amount of zero crossings found.
+```python
+zero_crossings = len(np.where(np.diff(np.sign(data)))[0])
+```
+the maximum amplitude is found in a easier way.
+```python
+maximum = data.max()
+```
+these scripts need to be adapted to the colloms that they have affect on.
+
+*Labeling
+
+labeling is done automatically in the collectmodel.py script.
+
+*Training
+
+Training of the model can be done by opening the training.ipnyb jupyter notebook. Adjust the time and date to that over the recording of the collection data. And make a connection to your thing in the dcd hub, this is the place where your collected and labeled data has been stored.
+
+running the jupyter file should yield a confusion matrix that shows the certainty of the model that you trained as well as statistics about the accuracy and precision of your model. But most importantly it leaves you with a model.pickl file. This is your trained model that is used when predicting terrain. 
+
+*Predicting
+
+Prediction can be done by using predict.py script. The result variable could be sent to the webserver via a socket channel and used to show the current predicted terrain or this variable could be sent to the webserver together with the gps information and be placed in the discription of the marker. 
+
+This concludes the gathering and processing of data. 
 **Services**
+Services is a therm used before in this piece. It is a program that runs in the background of the raspberry pi. Giving you the ability to run several scripts at the same time. This connected product runs 3 services.
 
-Eduroam service
+*Eduroam service
 
-Webservice
+The eduroam service makes sure that the rpi connects to wifi on startup.
 
-Ip service
+*Webservice
+
+The webservice service runs the server.py script on startup. In this way you dont have to connect a screen and keyboard, or log in via ssh to your rpi to start the connected wheelchair functionality. 
+
+*Ip service
+
+The ip service script logs the current ip adress to the dcd hub so that you can always find the current ip adress and use this to connect to your rpi remotely via ssh. Which can by done by typing ssh pi@'ip adress here' in the terminal of your laptop. After which you can authenticate and control your rpi via the command terminal.
 
 **Current and furture state**
 
-The Rpi is able to receive, process
+The Rpi is able to receive, process and send data regarding acceleration and gps to the dcd hub and site respectively. The code is robust. Reportedly running hours on end. 
+
+future additions would be to evaluate the incomming imu data and predict what terrain type the wheelchair is rolling on. This prediction should then also be sent to the website and shown coupled to the gps marker placed.
 
 
 
@@ -695,3 +689,32 @@ The Rpi is able to receive, process
 Concept evaluation matrix
 
 Task designated to others
+
+---
+# 4. recommendations
+
+---
+# 5. Reflection:
+
+<table>
+  <tr>
+   <td>
+#
+   </td>
+   <td>Arguments for decision / reflection on decisions / improve for future prototype
+   </td>
+  </tr>
+  <tr>
+   <td>1.
+   </td>
+   <td>- Because our project group was familiar with working with Arduino the GPS module allowed us to rapidly make progress in gathering clean GPS data.
+<p>
+-We looked in to extracting GPS data by the phone as this would allow our prototype to communicate via 4G with our server. The connection from phone to hub was eventually not satisfactory because ….????
+<p>
+- No information on the Lora GPS module could be found to get it to work in the time available.
+<p>
+The arduino GPS data turned out to be precise but not too accurate. Additionally this module provide restrictions in freedom of movement as it required a connected to the local WiFi to collect GPS data. In the future an added SIM-card module/phone/lora connection interesting to look into. Nonetheless this solutions was feasible to for setting up our prototype
+   </td>
+</table>
+
+
