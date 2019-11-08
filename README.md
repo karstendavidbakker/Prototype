@@ -1,17 +1,8 @@
 <span style="text-decoration:underline;">Design Brief ID5415</span>
 
-# Team 6 members:
+# ID5415 - Prototyping Connected Products
 
-Jordan Kelly		- 4917189
-
-Casper Beers		- 4975421
-
-Karsten Bakker	- 4278887
-
-
-ID5415 - Prototyping Connected Products
-
-Final report- Team 6
+## Final report- Team 6
 
 
 ![alt_text](images/image7.png "image_tooltip")
@@ -20,7 +11,7 @@ Final report- Team 6
 ---
 
 
-Submission date: Monday 4th November 2019
+
 
 Team members:
 
@@ -46,7 +37,7 @@ Karsten Bakker - 4278887
 4. Recommendations
 5. Reflection
 
-1. Introduction
+  #1. Introduction
 
     This report serves to outline the design development process for the WheelCare system - a connected Internet of Things product that hopes to aid in the improvement of facilities for wheelchair users.
 
@@ -60,51 +51,44 @@ Karsten Bakker - 4278887
     _‘While the population of wheelchair users is growing worldwide, it becomes urgent to design supportive technologies that fit their needs. We aim to develop products for improvement of the wheelchair users’ well-being. This design is a connected product that collects data from sensors, processes it in order to actuate user interactions embedded on the wheelchair.’_
 
 
-The project hopes to integrate the local computing system into an internet-based data management platform, where the gathered information can be processed and made into comprehensible insights for the users of the system. and About the Internet of Things:
+    The project hopes to integrate the local computing system into an internet-based data management platform, where the gathered information can be processed and made into comprehensible insights for the users of the system. and About the Internet of Things:
 
-2. Concept description
+  #2. Concept description
 
-The WheelCare system is an IoT device used to identify locations and hazards that are unsafe or unsuitable for wheelchair users. Using the device, movement and location data can be captured and accessed online, where wheelchair users can be warned about treacherous or difficult journeys. Furthermore, this information can be used by government bodies and proprietors alike to make improvements to their buildings and facilities.
+  The WheelCare system is an IoT device used to identify locations and hazards that are unsafe or unsuitable for wheelchair users. Using the device, movement and location data can be captured and accessed online, where wheelchair users can be warned about treacherous or difficult journeys. Furthermore, this information can be used by government bodies and proprietors alike to make improvements to their buildings and facilities.
 
 ![alt_text](images/Button_1.png)
 
-Should a user encounter a potential hazard or unsuitable terrain they can log this to the online site by using the system’s button module.  An accelerometer module affixed to the chair’s frame then logs a period of movement data and transmits this to the cloud where it is processed to identify the scale or type of the hazard. This information is then available to view on a map, to chart an area’s risks and their severity for wheelchair users.
+  Should a user encounter a potential hazard or unsuitable terrain they can log this to the online site by using the system’s button module.  An accelerometer module affixed to the chair’s frame then logs a period of movement data and transmits this to the cloud where it is processed to identify the scale or type of the hazard. This information is then available to view on a map, to chart an area’s risks and their severity for wheelchair users.
 
 ![alt_text](images/PB040299.jpg)
 
-The system architecture is described in the above diagram. At the heart is a Raspberry Pi, which is used to capture and send data to the cloud. An Arduino Mega microcontroller is responsible for operating the accelerometer and the push-button module.
+  The system architecture is described in the above diagram. At the heart is a Raspberry Pi, which is used to capture and send data to the cloud. An Arduino Mega microcontroller is responsible for operating the accelerometer and the push-button module.
 
 
-![alt_text](images/Part_diagram-01.png)
-
-It is hoped that the system will be purchased by wheelchair users who want to ensure a more convenient and autonomous life by foreseeing and thus avoiding potential hazards that might otherwise require assistance. Likewise, government bodies and proprietors who wish to provide safe and wheelchair-friendly facilities can purchase this system for use in mapping and research applications.
+  It is hoped that the system will be purchased by wheelchair users who want to ensure a more convenient and autonomous life by foreseeing and thus avoiding potential hazards that might otherwise require assistance. Likewise, government bodies and proprietors who wish to provide safe and wheelchair-friendly facilities can purchase this system for use in mapping and research applications.
 
 
 ![alt_text](images/image1.png)
 
-The local system is powered using a standard power bank, and can operate for up to FIXME hours on a single charge.
+  The local system is powered using a standard power bank, and can operate for up to FIXME hours on a single charge.
 
 
-The online platform makes use of TU Delft’s Data Centric Design Hub for the information processing system.
+  The online platform makes use of TU Delft’s Data Centric Design Hub for the information processing system.
 
 
-The local system represents the integration of the coding languages C++ and Python, and the online platform utilises HTML, CSS & JavaScript.
+  The local system represents the integration of the coding languages C++ and Python, and the online platform utilises HTML, CSS & JavaScript.
 
+  #3. Method
+**Tutorial:
 
-System diagram:
-
-![alt_text](images/image3.png "image_tooltip")
-
-
-**Tutorial:**
-
-**How to built a “city wheelchair problem mapping” prototype? **
+How to built a “city wheelchair problem mapping” prototype? **
 
 **For Beginners**
 
 The aim of of this tutorial is to get the basic principles of IoT connected products, learning about the (coding) requirements and setting up connections to be able to gain practical skills. This with the goal to translate connect concepts ideas in concrete functional prototypes.
 
-Goal & Purpose
+*Goal & Purpose*
 
 For this project the purpose of this prototype was to validated the accuracy of the GPS data in an outdoor environment. Additionally this prototypes allows to gather insights in the the experience of individuals marking problems in the city.
 
@@ -126,22 +110,20 @@ For this project the purpose of this prototype was to validated the accuracy of 
 
 
 
-*   3D printer or casing prototype toolings
-*   Push-button (momentary)
-*   M3 x 20mm SHCS bolts (10)
-*   M3 X 5mm brass inserts (10)
-*   Hot glue
+*   3D printer or casing prototype toolings,
+*   press button,
+*   bolts,
+*   hot glue,
 *   Wheelchair
-*   Hook-up wiring (multiple colors)
-*   Black cable shroud (1M) (5mm dia)
-*   10K-ohm resistor
-*   Prototyping board
+*   wiring,
+*   Resistor
+*   Zero PCB
 *   Soldering materials
-*   IMU BN055 Arduino sensor type
-*   Adafruit Ulitmate GPS Module
-*   Rasberry Pi 3
+*   IMU arduino sensor type
+*   GPS Module
+*   Rasberry Pi
 *   Digital Button
-*   Zip ties
+
 
 
 **Tips & Tricks: General and basic instructions to take into account when executing this (IoT) project.**
@@ -153,7 +135,7 @@ For this project the purpose of this prototype was to validated the accuracy of 
 *   Integrated print() functions in between lines of code to validate the output of your program
 *   Note that setting up IoT connections are in general difficult. Testing pieces of code individually could ease tackling this complexity. Recommended when rewriting files is to make a backup from the last operating status.
 
-3. Method:
+  3. Method:
 
     1. Concept Selection
 
@@ -178,166 +160,102 @@ Therefore the the following were seen as a problems and solutions taken in to ac
 Firstly, a range of sensors and actuators were established. Next, the team identified potential applications of the technologies. From this, three concepts emerged….?
 
 
-**<span style="text-decoration:underline;">2. Hardware development</span>**
+
+    2. **Hardware development**
+
+The prototype features three 3D printed hardware components located at the following locations on the frame of the wheelchair:
+
+
+![alt_text](images/image8.png "image_tooltip")
+
+
+Each part was modelled using Fusion 360 and printed using a Prusa I3 MK3s FDM printer in PLA material.
+
+The housings were employed to achieve the following goals:
 
 
 
-The development process for the Wheeall Care system followed a process of four iterative cycles:
-
-1. Foundation
-2. Connection
-3. Collection
-4. Analysis
-
-**Phase 2: Connection**
-
-In this design phase the discrete electronic, web, and hardware components were compiled into a one integrated system. This process will be detailed per each respective part of the system. For the required resources and further information please follow the provided links.
-
-
-**Hardware development:**
-<br>
-<br>
-The prototype features three 3D printed hardware components located at three locations on the frame of the wheelchair. Each part was modelled using Fusion 360 and printed using a Prusa I3 MK3s FDM printer in PLA material.
-
-The part files are available to download [here](https://github.com/karstendavidbakker/Prototype/tree/master/3D_printing_repository "Title") .
-3.mf files are used specifically, as the printing parameters are contained within the file, according to our recommended settings and performance requirements.
-<br>
-<br>
-The housings are employed to achieve the following goals:
-<br>
 *   To house the electronic components on the frame of the wheelchair, ensuring that they are held stably during folding and unfolding of the wheelchair.
 *   To protect them from environmental conditions such as dirt, rain and UV damage.
 *   To securely affix the IMU in place on the frame, ensuring repeatability and validity between various readings. Should the sensor move throughout its lifetime, the way in which accelerometer data recorded across the three axes may change, resulting in incorrect or inaccurate labelling.
 *   To provide ease of use for users with reduced hand dexterity and motor function when interacting with small features (such as push-buttons and power switches).
-<br>
+
 In total, three iterations of housings were made. Incremental improvements were made to the system as follows:
-<br>
-<br>
-<br>
 
 
-**MK1 housings**
-<br>
+    **MK1 housings**
+
+
 Rationale: for the first time integrate the components onto the wheelchair frame.
+
 
 Description: this iteration proved successful in that the entire system could be integrated within the wheelchair frame, powered on its own source and operating autonomously.
 
+
 To improve: The zip-tie method for affixing the parts proved unstable, and should be replaced with a bolt-on feature. The location of the electronics housing should be changed to ensure that the wheelchair can be folded and stowed.
 
-<br>
-<br>
-<p style="text-align:center;"><img src="images/image8.png" alt="Parts" style="height:600px;"></p>
-<br>
-<br>
-    
-    
+
+
+
+
+
+
 **MK2 housings**
-<br>
+
+
 Rationale: incorporate bolt-on fixings and test new housing location.
+
+
+
 Description: This iteration served as a stepping stone on which to test the relationship of the fixing hardware
+
+
 To improve: The layout of the internal components must be altered to ensure that the frame can be folded properly.
-<br>
-<br>
-<br>
-    
-    
+
+
 **MK3 housings**
-<br>
+
+
 Rationale: final prototype housing production.
-<br>
-<br>
-<center>The configuration of the 3D-printed hardware</center>
-
-<p style="text-align:center;"><img src="images/Housing Diagram_REV4-01.png" alt="Parts" style="height:600px;"></p>
 
 
+![alt_text](images/Housing Diagram_REV4-01.png)
 
+
+Description:
 
 
 
-<center>3D images of the 3D-printed hardware</center>
-
-<p style="text-align:center;"><img src="images/image6.png" alt="Parts" style="height:200px;"></p>
-
-<center>L-R: electronics housing, button holder, IMU holder.</center>
-
-**<span style="text-decoration:underline;">Assembly of the hardware</span>**
-<br>
-<br>
-<br>
-**Button module:** 
-<br>
-1. Download the .3mf files [here](https://github.com/karstendavidbakker/Prototype/tree/master/3D_printing_repository "Title") and 3D print using the reccomended printing parameters.
-2. Remove the part brim and remove any sharp edges.
-3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the x4 M3 x5mm brass inserts, such as the below image.
-4. Once the electronics have been succesfully integrated (see following steps), affix the button module on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
-
-<br>
-<br>
-<br>
-<center>M3 brass inserts in the printed parts</center>
-
-<p style="text-align:center;"><img src="images/Ìnserts.jpg" alt="Parts" style="height:400px;"></p>
-<br>
-<br>
-<br>
-<center>Inserting the brass inserts into a printed part</center>
-<p style="text-align:center;"><img src="images/P6120148B.gif" alt="Parts" style="height:400px;"></p>
-<br>
-<br>
-<br>
-    
-    
-    
-**IMU module:** 
-<br>
-1. Download the .3mf files [here](https://github.com/karstendavidbakker/Prototype/tree/master/3D_printing_repository "Title") and 3D print using the reccomended printing parameters.
-2. Remove the part brim and remove any sharp edges.
-3. Using a the pointed tip of soldering iron heated to 200deg, carefully press in the 2 M3 x5mm brass inserts into the fixing locations, such as the below image.
-4. Once the electronics have been succesfully integrated (see following steps), affix the IMU on the frame of the wheelchair with the M3 x 20mm SHCS bolts. 
-<br>
-<br>
+![alt_text](images/image6.png)
 
 
+L-R: electronics housing, button holder, IMU holder.
 
-**Electronics encolsure:** 
-<br>
-1. Download the .3mf files [here](https://github.com/karstendavidbakker/Prototype/tree/master/3D_printing_repository "Title") and 3D print using the reccomended printing parameters.
-2. Remove the part brim and remove any sharp edges.
-4. Once the electronics have been succesfully integrated (see following steps), carefully place the components within the housing.
-5. Using the zip-ties, affix the housing to the underside of the wheelchair frame. 
-6. Using zip-ties, route and secure the cables on the frame such that they will not be snagged or pulled. 
-<br>
-<br>
-<br>
-**<span style="text-decoration:underline;">3. Arduino Microcontroller Setup</span>**
-<br>
-<br>
-<br>
+3. **Arduino Microcontroller**
 
-
-Located on the wheelchair frame, the Arduino Mega2560 microcontroller serves as the first system that the user interacts with in the WheelCare concept
-
+Located on the wheelchair frame, the arduino Mega2560 microcontroller serves as the first system that the user interacts with in the WheeallCare concept
 
 The responsibility of the Arduino Microcontroller is
-<br>
+
+
+
 *   To operate the Adafruit BN055 IMU accelerometer sensor
 *   To operate the momentary push-button
 *   To operate the Adafruit Ultimate GPS sensor.
 *   To relay the captured information via serial connection to the Raspberry Pi.
 
-
 The system was coded in such a way that:
-<br>
+
+
+
 *   The IMU and GPS sensor were constantly running to capture location and movement data.
 *   At the push of a button, ten seconds of IMU data and the current GPS location was sent to the serial monitor.
 *   Connected to the Pi via serial, this print of information could be translated to a .csv file by the pi for processing in the DCD hub.
-<br>
-<br>
-<br>
 
 The development process of the Arduino microcontroller was as follows:
-<br>
+
+
+
 1. Push-button added to display ‘1’ when pushed and ‘0’ when not pushed in the Serial monitor.
 2. A de-bounce was added to the code to improve the performance of the button.
 3. The IMU was added, and programmed to print X, Y and Z Euler angle data stream into the serial monitor.
@@ -347,78 +265,17 @@ The development process of the Arduino microcontroller was as follows:
 7. GPS module added to the arduino system. Raw data stream printed into the serial monitor.
 8. GPS data parsed and formatted to give readable information for the DCD hub.
 9. Final code formulated to include x1 GPS location and IMU data in a serial monitor readout once the button is pressed.
-<br>
-<br>
-<br>
-<center>System diagam</center>
-<br>
-<br>
-<p style="text-align:center;"><img src="images/System_diagram_rev2-01.png" alt="Parts" style="height:600px;"></p>
-<br>
-<br>
-<br>
-<center>Hardware diagram</center>
-<br>
-<p style="text-align:center;"><img src="images/System_diagran-01.png" alt="Parts" style="height:600px;"></p>
-<br>
-<br>
-<br>
-<br>
 
-**<span style="text-decoration:underline;">Electronics assembly Steps</span>**
-<br>
-<br>
-To assemble the arduino system follow the following steps. A prototyping board is used between the Arduino and the sensors to protect the sensitive arduino in the case that the cables are pulled, and to reduce the chance of connections coming loose. 
-
-1. Cut three lengths of electric cabling approximately 600mm in length, and remove 5mm of plastic covering from each end of the wires.
-2. Cut one length of cable shroud approximately 550mm in length.
-3. Solder the cable ends to a pin of the push-button. It does not matter which pin of the button is not used. 
-4. On the button side with two wires, clearly assign and label GND and Vin on the far end of the wires. It does not matter which is which.
-5. Clearly lable the far end of the remaining cable as "digi-pin".
-6. Pass the length of cable shroud over the electric wiring. 
-7. Pass the cable through the hole orifice on the IMU holder.
-8. Solder a 10K ohm resister across the prototpying board, connecting GND and hole 8B.
-9. Solder the GND wire to track 1 of the prototyping board.
-10. Solder the Vin wire to hole A of the Vin track on the prototpying board.
-12. Solder the digi-pin to track 2A of the board. Connect this track to the Arduino digital pin 3. 
-12. Glue the button module in place on the 3D printed part.
-13. Glue the button pad in place on the button module.
-<br>
-14. Connect the GPS Vin pin to hole B on the Vin track. 
-15. Connect the GPS GND to pin B on the GND track. 
-16. Connect the GPS Rxx pin to pin Txx on the Arduino. Ensure the correct setup before proceeding.
-17. Connect the GPS Txx pin to pin Rxx on the Arduino. Ensure the correct orientation before proceeding. 
-<br>
-18. Cut four lengths of electric cabling approximately 400mm in length, and remove 5mm of plastic covering from each end of the wires.
-19. Cut one length of cable shroud approximately 450mm in length.
-20. Solder the cable ends to a pin of the push-button.
-21. Clearly label each cable.
-22. Pass the length of cable shroud over the electric wiring. 
-23. Pass the cable through the hole orifice on the IMU holder. 
-24. Connect the Vin pin on the IMU unit to hole C on the Vin track of the prototypting board.
-25. Connect the GND pin on the IMU to hole C on the GND track of the arduino. 
-26. Connect the SCL pin of the IMU to the SCL pin of the Arduino.
-27. Connect the SDA pin of the IMU to the SDA pin of the Arduino.
-<br>
-28. Connect the Vin pin D of the prototyping board to the 5V Vin pin of the Arduino.
-29. Connect the GND pin of the prototyping board to the GND pin of the Arduino.
-<br>
-<br>
-30. Connect the Arduino via USB connection to your PC. 
-31. In the Arduino IDE environment, load and upload the following code. 
-32. Remove the Arduino and conenct it via USB to pin 4 of the Pi.
-<br>
-<br>
-
-<p style="text-align:center;"><img src="images/PCB-01.png" alt="Parts" style="height:400px;"></p>
+System diagram:
 
 
-<br>
-<br>
-<br>
+
+![alt_text](images/image3.png "image_tooltip")
+
+
 **ARDUINO CODE**
 
-```
+```c+
 
 // HERE WE ARE GOING TO DEFINE SOME VARIABLES THAT CAN BE RECALLED LATER IN THE SCRIPT //
 
@@ -580,13 +437,176 @@ void loop() {
 
 ```
 
+**Raspberry Pi**
 
- \
+The Raspberry Pi has two jobs. It acts as a processor for the data outputted from the Arduino and sends this data to ether the dcd hub for storage or to a website to generate markers. It also acts as the server that hosts the website used by the client to inspect marked hazards.
+
+```python
+#import all needed packages
+#for serial port
+import serial
+
+#for dcd hub interaction
+from dcd.entities.thing import Thing
+from dcd.entities.property import PropertyType
+from dotenv import load_dotenv
+import os
+
+# for site and websocket
+from flask import Flask, request, render_template
+from flask_socketio import SocketIO, emit, send
+
+#for date time and random variables
+import datetime
+import time
+from random import random
+
+#for parralel processing
+from threading import Thread
+
+#load .env file
+load_dotenv()
+#placeholder data for gps
+GPS_data = ["00.00000", "0.000000"]
+#dcd thing connection setup
+THING_ID = os.environ['THING_ID']
+THING_TOKEN = os.environ['THING_TOKEN']
+
+# define my thing using
+my_thing = Thing(thing_id=THING_ID, token=THING_TOKEN)
+
+#populate thing
+my_thing.read()
+
+# Start a connection to the serial port, switch port if ther is an exception.
+try:
+    ser = serial.Serial('/dev/ttyACM0', 115200, timeout=2)
+except:
+    try:
+        ser = serial.Serial('/dev/ttyACM1', 115200, timeout=2)
+    except:
+        ser = serial.Serial('/dev/cu.usbmodem14431', 115200, timeout=2)
+
+# Read the next line from the serial port
+# and update the property values
+def serial_to_property_values():
+    # Read one line
+    line_bytes = ser.readline()
+    # If the line is not empty
+    if len(line_bytes) > 0:
+
+        # Convert the bytes into string
+        line = line_bytes.decode('utf-8')
+        print(line)
+        # property name is the first argument of the recieved string
+        property_name = line[0:3]
+        # Split the string using commas as separator, we get a list of strings
+        if property_name == "GPS":
+            #reformat incomming gps string, so google maps can read it
+            values = line.replace("N","").replace("E","").replace(".","")
+            values2 = values[:6]+"."+values[6:15]+"."+values[15:]
+            values3 = values2.replace(":", ",").split(',')
+        #if it is a IMU data point
+        else:
+            #format to a list type
+            values3 = line.replace(":", ",").split(',')
+        #strip of special tokens like /n /r enz.
+        print(values3)
+        # Use the first element of the list as property id
+        property_name = values3.pop(0)
+        # gps values get put into gps data variable
+        try:
+            if property_name == "GPS":
+                GPS_values = [float(i) for i in values3]
+                print(GPS_values)
+                GPS_values[1] = GPS_values[1]+0.148
+                GPS_values[0] = GPS_values[0]+0.0008
+                print(GPS_values)
+                return GPS_values
+            # update IMU values
+            else:
+                print(property_name)
+                prop_123 = my_thing.find_or_create_property(property_name,
+                                                               PropertyType.THREE_DIMENSIONS)
+                # If we find the property, we update the values (rest of the list)
+                if prop_123 is not None:
+                    prop_123.update_values([float(x) for x in values3])
+                # # Otherwise, we show a warning
+                else:
+                    print('Warning: unknown property ' + property_name)
+        except ValueError:
+            print("no gps fix")
 
 
+def serial_gps_data():
+    try:
+        while True:
+            print("emiting gps location")
+            #try:
+            print("begin serial_to_property_values")
+            GPS_data = serial_to_property_values()
+            #except:
+            #print("exception on serial_to_property_values")
+            if GPS_data is not None:
+                json = {"gps": GPS_data}
+                print(json)
+                socketio.emit('gpslocation', json, broadcast=True)
+            time.sleep(1)
+    except KeyboardInterrupt:
+        exit()
+ # haalt data (connectie) uit serial van raspberry pie, Na try leest hij die poort uit, of anders na except een andere poort.
+
+current_time = int(datetime.datetime.utcnow().timestamp()*1000)
+
+# name site(created by flask) app
+app = Flask(__name__)
+
+socketio = SocketIO(app)
+# functions for the root folder
+
+@app.route('/') #testcomment
+# display welcome message
+def hello_world():
+    return 'Hello, World Vlammen!'
 
 
-    4. Raspberry Pi
+@app.route('/home')
+def home():
+    return render_template('index.html')
+
+@app.route('/test')
+def test():
+    return render_template('testvisual.html')
+
+
+@app.route('/go')
+def go():
+    return render_template('go.html')
+
+
+@app.route('/gauge')
+def gauge():
+    return render_template('gauge.html')
+
+@app.route('/map3')
+def map3():
+    return render_template('maplocation3.html')
+
+@app.route('/map4')
+def map4():
+    return render_template('maplocation4.html')
+
+
+thread = Thread(target=serial_gps_data)
+thread.start()
+
+try:
+    if __name__ == '__main__':
+        socketio.run(app, host = '0.0.0.0')
+        # to give everyone from every pc access to web
+except KeyboardInterrupt:
+    exit()
+```
 
 **Goal**
 
@@ -648,22 +668,15 @@ The Rpi is able to receive, process
 
 
 
-    5. Web platform
+5. Web platform
+Concept evaluation matrix
 
-    Concept evaluation matrix
+Task designated to others
 
+Reflection:
 
-    Task designated to others
+Please give critical feedback on decisions matrix flow chart  - might be some lines wrong or we could add stuff
 
-
-    Reflection:
-
-
-    Please give critical feedback on decisions matrix flow chart  - might be some lines wrong or we could add stuff
-
-# Reflect on: At least 5 plausible options are
-clearly described, including 2
-innovatives. (report requirement)
 
 <table>
   <tr>
@@ -684,107 +697,6 @@ innovatives. (report requirement)
 <p>
 The arduino GPS data turned out to be precise but not too accurate. Additionally this module provide restrictions in freedom of movement as it required a connected to the local WiFi to collect GPS data. In the future an added SIM-card module/phone/lora connection interesting to look into. Nonetheless this solutions was feasible to for setting up our prototype
    </td>
-  </tr>
-  <tr>
-   <td>2.
-   </td>
-   <td>-
-<p>
--
-<p>
--
-   </td>
-  </tr>
-  <tr>
-   <td>3.
-   </td>
-   <td>-
-<p>
--
-<p>
--
-   </td>
-  </tr>
-  <tr>
-   <td>4.
-   </td>
-   <td>-
-<p>
--
-<p>
--
-   </td>
-  </tr>
-  <tr>
-   <td>5.
-   </td>
-   <td>-
-<p>
--
-<p>
--
-   </td>
-  </tr>
-  <tr>
-   <td>6.
-   </td>
-   <td>-
-<p>
--
-<p>
--
-   </td>
-  </tr>
-  <tr>
-   <td>7.
-   </td>
-   <td>-
-<p>
--
-<p>
--
-   </td>
-  </tr>
-  <tr>
-   <td>8.
-   </td>
-   <td>-
-<p>
--
-<p>
--
-   </td>
-  </tr>
-  <tr>
-   <td>9.
-   </td>
-   <td>-
-<p>
--
-<p>
--
-   </td>
-  </tr>
-  <tr>
-   <td>10.
-   </td>
-   <td>-
-<p>
--
-<p>
--
-   </td>
-  </tr>
-  <tr>
-   <td>11.
-   </td>
-   <td>-
-<p>
--
-<p>
--
-   </td>
-  </tr>
 </table>
 
 ![Front Page](images/0.png)
