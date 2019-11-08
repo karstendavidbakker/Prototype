@@ -719,7 +719,238 @@ future additions would be to evaluate the incomming imu data and predict what te
 
 **5. Web platform**
 
-The website you have created should look like this:
+```
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+```
+
+- A Browser's viewport is the area of web page in which the content is visible to the user.
+
+- The HTML <script> src Attribute is used to specify the URL of external JavaScript file. The External JavaScript file is used to run on the same script on several pages on a website.
+
+- The charset attribute specifies the character encoding used in an external script file.
+
+https://fontawesome.com/ enables you to create this external JavaScript file easily for different types and styles of icons you want to place on your webpage.  This can be done in the body of the text by by. 
+
+<i class="fas fa-map-marker-alt" style=font-size:350px;color:blue;>
+
+
+Create google a interactive maps on your webpage
+
+```
+  <title>Marker Clustering</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+                integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I="
+                crossorigin="anonymous"></script>
+```
+
+For this prototype multiple GPS locations need to be marked: 
+
+You can use the MarkerClusterer library in combination with the Maps JavaScript API to combine markers and simplify the display of markers on the map.
+
+Find file on github: https://github.com/googlemaps/v3-utility-library/tree/master/markerclusterer
+
+
+```
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5Ta592tcRaPkglMFLRcFqLCyzM4oppts&callback=initMap">
+    </script>
+```
+
+By this piece of code the clusterer gets added to the map
+src attributes loads maps with key as API
+
+Get the map to operate and output markers by:
+
+STEP0: 	Create a google developers account
+
+STEP1:		 Get google maps API key
+         https://developers.google.com/maps/documentation/embed/get-api-key
+
+STEP2: 	Get the desired map for you web application 
+        https://console.cloud.google.com/google/maps-apis/api-list?folder=&organizationId=&project=wheelchaircitymap
+
+        Recommended For this tutorial get a “places” or “geolocation” API
+
+STEP3: 	Include an API key with every Maps JavaScript API request. 
+        In the following example, replace YOUR_API_KEY with your API key:
+
+         <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=[YOUR-KEY]&callback=initMap">
+        </script>
+
+STEP3: 	 Activate account: credit card credentials required.
+
+Note:  Often not mentioned in tutorials causing a hassle in getting API to work: Fully activate Google Developers account by linking credit card credentials (Free for first trial functions)
+
+
+
+Create portal to the web - SOCKET.IO
+
+
+```
+      var map;
+      var socket = io();
+      socket.on('connect', function() {
+        console.log("connected");
+      });
+
+      socket.on('gpslocation', function(data) {
+          console.log(data);
+          const latitude = data.gps[0];
+          const longitude = data.gps[1]
+
+           new google.maps.Marker({position: {lat:latitude, lng:longitude}, map: map});
+
+```
+
+Create variable ‘map’ to later call in the body of the script by <div id="map"></div>
+
+- Socket.IO allows you to emit and receive custom events. Besides connect, message and disconnect.
+
+- You can create new events like the google marker.
+
+     By this created “portal” this piece of code communicates with:	
+
+    “socketio.emit('gpslocation', json, broadcast=True)”    
+    //Written and running in “server.py” file
+
+RECOMMENDED:  include Console.log functions to validate output of the program.
+
+Latitude and longitude are later in this code defined as variables as this information will change over time based on the incoming GPS data.
+
+
+
+HTML writing functionalities
+
+```
+  <style>
+    
+      #map {
+        height: 100%;
+      }
+
+      h1{
+        font-size: 90px;
+        color: #Black;
+        font: Helvetica;
+      }
+
+      h2{
+        font-size: 60px;
+        color: blue;
+        font: Helvetica;
+      }
+
+      h3{
+        font-size: 60px;
+        color:  Black;
+        font: Helvetica;
+      }
+
+      h4{
+        font-size: 20px;
+        color:  #FFFFFF;
+        font: Helvetica;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 1;
+        padding: 0;
+      }
+
+
+  </style>
+</head>
+```
+
+- Always set the map height explicitly to define the size of the div element that contains the map.
+
+- Explain the webpage visitor how to user the prototype and button module by adding text to your webpage.
+
+- Presetting Headers allows easy and structure writing.
+
+- Adjust to preference by changing style: color/font/size/margins etc.
+
+TIP: First get the google maps API Running in as an individual script loading different js. files on your webpage.
+
+
+```
+  <body>
+
+
+    <i class="fas fa-map-marker-alt" style=font-size:100px;color:black;>       <i class="fab fa-accessible-icon"style=font-size:100px;color:black;></i></i>
+    <h4>WheeallCare© City Map</h4>
+
+    <h1><center>WheeallCare© City Map</center></h1>
+
+    <h2><center>- Avoid inaccesible wheelchair spots</center></h2>
+
+    <h2><center>- Share difficult obstacles with other wheelchair users </center></h2>
+    <h2><center>- Allow manicuplaties to improve the city & your wheelchair trip</center></h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center><i class="fas fa-map-marker-alt" style=font-size:350px;color:blue;>       <i class="fab fa-accessible-icon"style=font-size:350x;color:blue;></i></i><h2>Drop Your Mark with WheallCare© Module</center></h2>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3><center><i>Make the city Wheelchair proof & Enjoy careless rolling ...</i></center></h3>
+
+    <div id="map"></div>
+    <script>
+    var i;
+    var latitude; 
+    var longtitude; 
+    var lat //= [52.001737,52,51,56];
+    var lng //= [4.372825,5,53,5];
+    var loc = {};
+    var locations = [];
+
+    function initMap() {
+
+      map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 18,
+        center: {lat:52.001737, lng: 4.372825},
+      });
+    }
+
+    </script>
+  </body>
+  <body style="background-color:white;">
+</html>
+```
+
+Recommended to set the var’s lat and lng first to number to register if a marker is created (do not directly link this to your data file)
+
+document.getElementById() returns the element of specified id. In this case the earlier defined map.
+
+(Useful) Sources: 
+     Geeksforgeeks.com
+     Google Developers
+     javatpoint.com
+     W3schools.com
+     datacentricdesign.github.io
+     https://socket.io/docs
+
+
+**The website you have created should look like this:
 
 ![Open source Webserver to all wheelchair users - Connected to Wheallcare service to mark inaccesible locations](images/4.png)
 
