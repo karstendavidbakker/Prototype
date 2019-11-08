@@ -416,7 +416,39 @@ void loop() {
 **Raspberry Pi**
 
 The Raspberry Pi has two jobs. It acts as a processor for the data outputted from the Arduino and sends this data to ether the dcd hub for storage or to a website to generate markers. It also acts as the server that hosts the website used by the client to inspect marked hazards.
-The final working script is the following: server.py
+
+A Raspberry pi runs on raspbian. There is a plethora of tutorials on how you can install this on your raspberry.
+
+Once Raspbian is installed you'll need internet. Hook your rpi up to a screen, mouse and keyboard. And log in to your regular wifi via the icon in the top right corner.
+
+once this is installed you can install the most important packages. 
+
+git you can install by typing
+```
+$ sudo apt install git-all
+```
+
+after this is installed you can download this repository to you rpi by cloning it
+```
+sudo mkdir Prototype
+cd Prototype
+git init
+git remote add origin https://github.com/karstendavidbakker/Prototype.git
+git fetch
+git pull
+```
+now you have all our files in a folder named Prototype.
+
+
+When you have set up the arduino as stated before you can run the server.py script to start a server and start logging your gps and imu data!
+you can do this by:
+```
+cd Prototype/web/
+python3 server.py
+```
+
+
+The final working script is the following:
 ```python
 #import all needed packages
 #for serial port
@@ -633,7 +665,7 @@ To collect this data collectmodel.py was writen. Sadly due to time issues we did
 
 When collecting make sure the 500 samples that are taken are correct examples of the terrain you're collecting at that point. Wrong data throws the machine learning model off.
 
-*Processing
+*Processing*
 
 processing of the data could be done in the same collectmodel.py and is already there.
 The zero crossing script looks like this. Where data is the moving window matrix. And zero_crossings gives the amount of zero crossings found.
@@ -646,33 +678,34 @@ maximum = data.max()
 ```
 these scripts need to be adapted to the colloms that they have affect on.
 
-*Labeling
+*Labeling*
 
 labeling is done automatically in the collectmodel.py script.
 
-*Training
+*Training*
 
 Training of the model can be done by opening the training.ipnyb jupyter notebook. Adjust the time and date to that over the recording of the collection data. And make a connection to your thing in the dcd hub, this is the place where your collected and labeled data has been stored.
 
 running the jupyter file should yield a confusion matrix that shows the certainty of the model that you trained as well as statistics about the accuracy and precision of your model. But most importantly it leaves you with a model.pickl file. This is your trained model that is used when predicting terrain. 
 
-*Predicting
+*Predicting*
 
 Prediction can be done by using predict.py script. The result variable could be sent to the webserver via a socket channel and used to show the current predicted terrain or this variable could be sent to the webserver together with the gps information and be placed in the discription of the marker. 
 
 This concludes the gathering and processing of data. 
 **Services**
+
 Services is a therm used before in this piece. It is a program that runs in the background of the raspberry pi. Giving you the ability to run several scripts at the same time. This connected product runs 3 services.
 
-*Eduroam service
+*Eduroam service*
 
 The eduroam service makes sure that the rpi connects to wifi on startup.
 
-*Webservice
+*Webservice*
 
 The webservice service runs the server.py script on startup. In this way you dont have to connect a screen and keyboard, or log in via ssh to your rpi to start the connected wheelchair functionality. 
 
-*Ip service
+*Ip service*
 
 The ip service script logs the current ip adress to the dcd hub so that you can always find the current ip adress and use this to connect to your rpi remotely via ssh. Which can by done by typing ssh pi@'ip adress here' in the terminal of your laptop. After which you can authenticate and control your rpi via the command terminal.
 
