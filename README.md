@@ -742,9 +742,6 @@ future additions would be to evaluate the incomming imu data and predict what te
 
 https://fontawesome.com/ enables you to create this external JavaScript file easily for different types and styles of icons you want to place on your webpage.  This can be done in the body of the text by by. 
 
-<i class="fas fa-map-marker-alt" style=font-size:350px;color:blue;>
-
-
 Create google a interactive maps on your webpage
 
 ```
