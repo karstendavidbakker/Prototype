@@ -4,7 +4,7 @@
 
 ## Final report- Team 6
 
-*to use this repository run the server.py code as a service on a rpi and the working arduino code on the arduino while being connected. go to the ipadress of the pi  ipadress/5000/map4 to see the working map to which markers are added. 
+*to use this repository run the server.py code as a service on a rpi and the working arduino code on the arduino while being connected. go to the ipadress of the pi  ipadress/5000/map4 to see the working map to which markers are added.* 
 
 ![alt_text](images/image7.png "image_tooltip")
 
