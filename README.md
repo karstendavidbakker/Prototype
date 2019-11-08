@@ -78,15 +78,14 @@ The project hopes to integrate the local computing system into an internet-based
 
 
   The local system represents the integration of the coding languages C++ and Python, and the online platform utilises HTML, CSS & JavaScript.
-  **3. Method:**
 
-    1. Concept Selection
+**3. Method:**
+
+1. Concept Selection
 
 To begin, a period of brainstorming was conducted with the team members to choose a suitable wheelchair-based solution.
 
-
-    **To give expensive IoT devices the right to exists incentives to share data are of big interest:**
-
+**To give expensive IoT devices the right to exists incentives to share data are of big interest:**
 
 Therefore the the following were seen as a problems and solutions taken in to account:
 
@@ -101,12 +100,10 @@ Therefore the the following were seen as a problems and solutions taken in to ac
 
 
 Firstly, a range of sensors and actuators were established. Next, the team identified potential applications of the technologies. From this, three concepts emerged….?
+
 **4. recommendations**
 
 **5. Reflection:**
-
-Please give critical feedback on decisions matrix flow chart  - might be some lines wrong or we could add stuff
-
 
 <table>
   <tr>
@@ -131,7 +128,7 @@ The arduino GPS data turned out to be precise but not too accurate. Additionally
 
 ---
 
-**Tutorial:How to built a “city wheelchair problem mapping” prototype?**
+# Tutorial: How to built a “city wheelchair problem mapping” prototype?
 *For Beginners*
 
 The aim of of this tutorial is to get the basic principles of IoT connected products, learning about the (coding) requirements and setting up connections to be able to gain practical skills. This with the goal to translate connect concepts ideas in concrete functional prototypes.
@@ -187,7 +184,7 @@ For this project the purpose of this prototype was to validated the accuracy of 
 
 
 
-    2. **Hardware development**
+**Hardware development**
 
 The prototype features three 3D printed hardware components located at the following locations on the frame of the wheelchair:
 
@@ -208,8 +205,7 @@ The housings were employed to achieve the following goals:
 
 In total, three iterations of housings were made. Incremental improvements were made to the system as follows:
 
-
-    **MK1 housings**
+**MK1 housings**
 
 
 Rationale: for the first time integrate the components onto the wheelchair frame.
@@ -694,23 +690,8 @@ The Rpi is able to receive, process
 
 
 
-5. Web platform
+**5. Web platform**
+
 Concept evaluation matrix
 
 Task designated to others
-
-![Front Page](images/0.png)
-
-![Logo](images/2.png)
-
-![Wheel Chair Problem Spotted](images/3.1.png  | width=100)
-
-
-
-![Avoid obstacles by the online access to the marked locations](images/3.2.png =250x250)
-
-![Manucipalities have access to Wheelchair problems locations and the executed wheel chair behaviour. Based on this data the stakeholder can give priority to the biggest problems and chose the prefered maintaince](images/3.3.png)
-
-![IoT architecture](images/1.jpeg)
-
-![Open source Webserver to all wheelchair users - Connected to Wheallcare service to mark inaccesible locations](images/4.png)
