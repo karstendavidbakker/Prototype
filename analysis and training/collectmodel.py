@@ -90,8 +90,11 @@ def serial_to_property_values(class_index): #,ser)
             # use analysis on this Window
             data.to_json()
             statisticValues = np.array(data)
-            #std
-            #zerocross
+            #zerocross gives the amount of points where the next data point is above zero and the last is not
+            zero_crossings = len(np.where(np.diff(np.sign(data)))[0])
+            #maximum
+            maximum = data.max()
+
             #
         else:
             return False
