@@ -718,7 +718,8 @@ future additions would be to evaluate the incomming imu data and predict what te
 
 
 **5. Web platform**
-the website you have created should look like this:
+
+The website you have created should look like this:
 
 ![Open source Webserver to all wheelchair users - Connected to Wheallcare service to mark inaccesible locations](images/4.png)
 
@@ -730,16 +731,7 @@ def map4():
     return render_template('maplocation4.html')
 ```
 
-To place markers on the map we use a google api. Which gets the gps coordinates in via a socket. By using the API for google maps this process becomes really easy. This can be seen below.
-
-```
-  socket.on('gpslocation', function(data) {
-          console.log(data);
-          const latitude = data.gps[0];
-          const longitude = data.gps[1]
-
-           new google.maps.Marker({position: {lat:latitude, lng:longitude}, map: map});
-```
+To place markers on the map we use a google api. Which gets the gps coordinates in via a socket. By using the API for google maps this process becomes really easy. 
 Making the API ready for use is as easy as importing it in your web page html file
 
 ```
@@ -749,10 +741,30 @@ Making the API ready for use is as easy as importing it in your web page html fi
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5Ta592tcRaPkglMFLRcFqLCyzM4oppts&callback=initMap">
     </script>
 ```
+making a marker from the imported data can be done like so:
+
+```
+  socket.on('gpslocation', function(data) {
+          console.log(data);
+          const latitude = data.gps[0];
+          const longitude = data.gps[1]
+
+           new google.maps.Marker({position: {lat:latitude, lng:longitude}, map: map});
+```
 
 
 ---
-# 4. recommendations
+# 4. Recommendations
+
+The wheeallcare project has much potential. With outsiders asking if we have plans to sell it during the exposition. The case is intresting for municiplity and wheelchair users. However it is not in a final state.
+
+The machine learning part of the system needs to be further developed to become effective. Furthermore conversation with muncipality needs to start to see what actual information they need to make places more accesable. 
+
+The unit should also be made water resistant to enable outdoor use.
+
+The gps only works really well outdoors but is less suitable for indoor tracking. This could be reformulated to use indoor bluetooth beacon or wifi tracking to give a more accurate position.
+
+
 
 ---
 # 5. Reflection:
@@ -770,11 +782,14 @@ Making the API ready for use is as easy as importing it in your web page html fi
    </td>
    <td>- Because our project group was familiar with working with Arduino the GPS module allowed us to rapidly make progress in gathering clean GPS data.
 <p>
--We looked in to extracting GPS data by the phone as this would allow our prototype to communicate via 4G with our server. The connection from phone to hub was eventually not satisfactory because ….????
+- We looked in to extracting GPS data by the phone as this would allow our prototype to communicate via 4G with our server. The connection from phone to hub was eventually not satisfactory because ….????
 <p>
 - No information on the Lora GPS module could be found to get it to work in the time available.
 <p>
-The arduino GPS data turned out to be precise but not too accurate. Additionally this module provide restrictions in freedom of movement as it required a connected to the local WiFi to collect GPS data. In the future an added SIM-card module/phone/lora connection interesting to look into. Nonetheless this solutions was feasible to for setting up our prototype
+- The arduino GPS data turned out to be precise but not too accurate. Additionally this module provide restrictions in freedom of movement as it required a connected to the local WiFi to collect GPS data. In the future an added SIM-card module/phone/lora connection interesting to look into. Nonetheless this solutions was feasible to for setting up our prototype
+   </td>
+   <td>
+ The building of the connected product could have been sped up if a clear roadmap and building strategy was defined before building. Making connections requiered far more time than at first thought. 
    </td>
 </table>
 
