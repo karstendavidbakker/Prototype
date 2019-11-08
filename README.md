@@ -37,23 +37,23 @@ Karsten Bakker - 4278887
 4. Recommendations
 5. Reflection
 
-  #1. Introduction
+  **1. Introduction**
 
-    This report serves to outline the design development process for the WheelCare system - a connected Internet of Things product that hopes to aid in the improvement of facilities for wheelchair users.
-
-
-    This project is being completed as part of the ID5415 Prototyping connected products elective as  part of the MSc Integrated Product Design course at TU Delft, Netherlands.
+This report serves to outline the design development process for the WheelCare system - a connected Internet of Things product that hopes to aid in the improvement of facilities for wheelchair users.
 
 
-    The project brief is as follows:
+This project is being completed as part of the ID5415 Prototyping connected products elective as  part of the MSc Integrated Product Design course at TU Delft, Netherlands.
+
+
+The project brief is as follows:
 
 
     _‘While the population of wheelchair users is growing worldwide, it becomes urgent to design supportive technologies that fit their needs. We aim to develop products for improvement of the wheelchair users’ well-being. This design is a connected product that collects data from sensors, processes it in order to actuate user interactions embedded on the wheelchair.’_
 
 
-    The project hopes to integrate the local computing system into an internet-based data management platform, where the gathered information can be processed and made into comprehensible insights for the users of the system. and About the Internet of Things:
+The project hopes to integrate the local computing system into an internet-based data management platform, where the gathered information can be processed and made into comprehensible insights for the users of the system. and About the Internet of Things:
 
-  #2. Concept description
+  **2. Concept description**
 
   The WheelCare system is an IoT device used to identify locations and hazards that are unsafe or unsuitable for wheelchair users. Using the device, movement and location data can be captured and accessed online, where wheelchair users can be warned about treacherous or difficult journeys. Furthermore, this information can be used by government bodies and proprietors alike to make improvements to their buildings and facilities.
 
@@ -78,13 +78,61 @@ Karsten Bakker - 4278887
 
 
   The local system represents the integration of the coding languages C++ and Python, and the online platform utilises HTML, CSS & JavaScript.
+  **3. Method:**
 
-  #3. Method
-**Tutorial:
+    1. Concept Selection
 
-How to built a “city wheelchair problem mapping” prototype? **
+To begin, a period of brainstorming was conducted with the team members to choose a suitable wheelchair-based solution.
 
-**For Beginners**
+
+    **To give expensive IoT devices the right to exists incentives to share data are of big interest:**
+
+
+Therefore the the following were seen as a problems and solutions taken in to account:
+
+
+
+| Wishes | Solutions |
+|--------|-----------|
+| Wheelchair users should be **motivated to share** their data | sharing data is allows wheelchair user to **get their problems solved** by municipalities|
+|Wheelchair users should **benefit from the data** | Wheelchair users can avoid obstacles in cities And thereby **travel safer and faster** |
+| Wheelchair data is of **interest to third parties**(municipalities) | Municipalities get **direct customers feedback** in a structured way |
+
+
+
+Firstly, a range of sensors and actuators were established. Next, the team identified potential applications of the technologies. From this, three concepts emerged….?
+**4. recommendations**
+
+**5. Reflection:**
+
+Please give critical feedback on decisions matrix flow chart  - might be some lines wrong or we could add stuff
+
+
+<table>
+  <tr>
+   <td>
+#
+   </td>
+   <td>Arguments for decision / reflection on decisions / improve for future prototype
+   </td>
+  </tr>
+  <tr>
+   <td>1.
+   </td>
+   <td>- Because our project group was familiar with working with Arduino the GPS module allowed us to rapidly make progress in gathering clean GPS data.
+<p>
+-We looked in to extracting GPS data by the phone as this would allow our prototype to communicate via 4G with our server. The connection from phone to hub was eventually not satisfactory because ….????
+<p>
+- No information on the Lora GPS module could be found to get it to work in the time available.
+<p>
+The arduino GPS data turned out to be precise but not too accurate. Additionally this module provide restrictions in freedom of movement as it required a connected to the local WiFi to collect GPS data. In the future an added SIM-card module/phone/lora connection interesting to look into. Nonetheless this solutions was feasible to for setting up our prototype
+   </td>
+</table>
+
+---
+
+**Tutorial:How to built a “city wheelchair problem mapping” prototype?**
+*For Beginners*
 
 The aim of of this tutorial is to get the basic principles of IoT connected products, learning about the (coding) requirements and setting up connections to be able to gain practical skills. This with the goal to translate connect concepts ideas in concrete functional prototypes.
 
@@ -135,29 +183,7 @@ For this project the purpose of this prototype was to validated the accuracy of 
 *   Integrated print() functions in between lines of code to validate the output of your program
 *   Note that setting up IoT connections are in general difficult. Testing pieces of code individually could ease tackling this complexity. Recommended when rewriting files is to make a backup from the last operating status.
 
-  3. Method:
 
-    1. Concept Selection
-
-To begin, a period of brainstorming was conducted with the team members to choose a suitable wheelchair-based solution.
-
-
-    **To give expensive IoT devices the right to exists incentives to share data are of big interest:**
-
-
-Therefore the the following were seen as a problems and solutions taken in to account:
-
-
-
-| Wishes | Solutions |
-|--------|-----------|
-| Wheelchair users should be **motivated to share** their data | sharing data is allows wheelchair user to **get their problems solved** by municipalities|
-|Wheelchair users should **benefit from the data** | Wheelchair users can avoid obstacles in cities And thereby **travel safer and faster** |
-| Wheelchair data is of **interest to third parties**(municipalities) | Municipalities get **direct customers feedback** in a structured way |
-
-
-
-Firstly, a range of sensors and actuators were established. Next, the team identified potential applications of the technologies. From this, three concepts emerged….?
 
 
 
@@ -672,32 +698,6 @@ The Rpi is able to receive, process
 Concept evaluation matrix
 
 Task designated to others
-
-Reflection:
-
-Please give critical feedback on decisions matrix flow chart  - might be some lines wrong or we could add stuff
-
-
-<table>
-  <tr>
-   <td>
-#
-   </td>
-   <td>Arguments for decision / reflection on decisions / improve for future prototype
-   </td>
-  </tr>
-  <tr>
-   <td>1.
-   </td>
-   <td>- Because our project group was familiar with working with Arduino the GPS module allowed us to rapidly make progress in gathering clean GPS data.
-<p>
--We looked in to extracting GPS data by the phone as this would allow our prototype to communicate via 4G with our server. The connection from phone to hub was eventually not satisfactory because ….????
-<p>
-- No information on the Lora GPS module could be found to get it to work in the time available.
-<p>
-The arduino GPS data turned out to be precise but not too accurate. Additionally this module provide restrictions in freedom of movement as it required a connected to the local WiFi to collect GPS data. In the future an added SIM-card module/phone/lora connection interesting to look into. Nonetheless this solutions was feasible to for setting up our prototype
-   </td>
-</table>
 
 ![Front Page](images/0.png)
 
