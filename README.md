@@ -780,17 +780,36 @@ The gps only works really well outdoors but is less suitable for indoor tracking
   <tr>
    <td>1.
    </td>
-   <td>- Because our project group was familiar with working with Arduino the GPS module allowed us to rapidly make progress in gathering clean GPS data.
-<p>
-- We looked in to extracting GPS data by the phone as this would allow our prototype to communicate via 4G with our server. The connection from phone to hub was eventually not satisfactory because ….????
-<p>
-- No information on the Lora GPS module could be found to get it to work in the time available.
-<p>
-- The arduino GPS data turned out to be precise but not too accurate. Additionally this module provide restrictions in freedom of movement as it required a connected to the local WiFi to collect GPS data. In the future an added SIM-card module/phone/lora connection interesting to look into. Nonetheless this solutions was feasible to for setting up our prototype
+   <td>Because our project group was familiar with working with Arduino the GPS module allowed us to rapidly make progress in gathering clean GPS data.
    </td>
+   <tr>
+    <td>2.
+     </td>
+    <td>
+- We looked in to extracting GPS data by the phone as this would allow our prototype to communicate via 4G with our server. The connection from phone to hub was eventually not satisfactory because it was unclear how to import the data from the dcd hub.
    <td>
+   </tr>
+     <tr>
+    <td>3.
+     </td>
+    <td>
+No information on the Lora GPS module could be found to get it to work in the time available.
+   <td>
+   </tr>
+      <tr>
+    <td>4.
+     </td>
+    <td>
+The arduino GPS data turned out to be precise but not too accurate. Additionally this module provide restrictions in freedom of movement as it required a connected to the local WiFi to collect GPS data. In the future an added SIM-card module/phone/lora connection interesting to look into. Nonetheless this solutions was feasible to for setting up our prototype
+   <td>
+   </tr>
+   <tr>
+    <td>5.
+     </td>
+    <td>
  The building of the connected product could have been sped up if a clear roadmap and building strategy was defined before building. Making connections requiered far more time than at first thought. 
-   </td>
+   <td>
+   </tr>
 </table>
 
 
